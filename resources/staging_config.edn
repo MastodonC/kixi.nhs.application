@@ -2,123 +2,123 @@
              :fields-to-extract [:indicator_value :year :period_of_coverage :lower_ci :upper_ci :breakdown
                                  :level_description :level]
              :conditions [{:field :level_description :values #{"England"}}]
-             :resource-id "fe5836ec-4862-489c-a4ec-db7bf91de9cf"}
+             :resource-id "e8bbf627-6bb1-48f5-95e8-cf943ad16b37"}
             {:indicator-id "45"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :lower_ci :upper_ci]
              :conditions [{:field :level_description :values #{"England"}}]
-             :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"}
+             :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"}
             {:indicator-id "46"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :lower_ci :upper_ci]
              :conditions [{:field :level_description :values #{"England"}}]
-             :resource-id "9963285f-752f-4dbb-8c02-07868ae52905"}
+             :resource-id "5ca47971-5d9e-4b50-93f0-8a8ecc90c072"}
             {:indicator-id "47"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :lower_ci :upper_ci]
              :conditions [{:field :level_description :values #{"England"}}]
-             :resource-id "02d26183-1a69-4540-8254-00216622124e"}
+             :resource-id "bcdaf636-32d0-4122-9828-e01c14d95f0b"}
             {:indicator-id "48"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :lower_ci :upper_ci]
              :conditions [{:field :level_description :values #{"England"}}]
-             :resource-id "db911491-ac1b-4148-ab8c-a2e8596d5257"}
+             :resource-id "9c81f9a3-6301-4faf-90f0-b9f50d2aae39"}
             {:indicator-id "52"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :level :values #{"England"}}]
-             :resource-id "81c8e579-cdeb-401e-bf1a-2e3bde98fc39"}
+             :resource-id "d0fc162e-b3e4-45b7-8e1d-caffda4e463a"}
             {:indicator-id "56"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :breakdown :values #{"England"}}]
-             :resource-id "eb192498-8c9c-4746-a40a-a098dff69e46"}
+             :resource-id "18a8f547-be9b-4180-a8f6-4b5dccdfdc62"}
             {:indicator-id "58"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :level :values #{"England"}}]
-             :resource-id "2102f836-072a-42a6-b4ca-ac6aa2f96562"}
+             :resource-id "169d8ede-292d-48aa-8134-01078bf2b85a"}
             {:indicator-id "22"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :level :values #{"England"}}]
-             :resource-id "2b10e7b4-c799-44f9-81d6-3a42f4260893"}
+             :resource-id "620c1ebe-8f6c-48f6-8dfc-a9f2e68b2467"}
             {:indicator-id "24"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :level :values #{"England"}}]
-             :resource-id "8b2dbabb-9b0a-4ea6-b357-74200ae4f311"}
+             :resource-id "bb15bca9-9716-4d00-bc5f-8b8be88d60bc"}
             {:indicator-id "27"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :level :values #{"England"}}]
-             :resource-id "e2386960-b9e1-4d9f-ba8b-6d79c5c62d94"}
+             :resource-id "738b4af1-2691-40ae-a548-6ab6a6fd3415"}
             {:indicator-id "28"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :level :values #{"England"}}]
-             :resource-id "bf9fff22-599e-4d58-8b78-961bc6773d62"}
+             :resource-id "c44d0bd9-4d85-4aed-8051-5136f8d359a3"}
             {:indicator-id "43"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :level :values #{"England"}}]
-             :resource-id "e1ec7ee1-d387-45e3-a0dd-3c8e3162e0e0"}
+             :resource-id "c05f9627-8932-4db8-b1d6-ccb29197158d"}
             {:indicator-id "65"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :level :values #{"England"}}]
-             :resource-id "e39649c2-e4dd-49b3-bb9d-ae7d7b69bd2d"}
+             :resource-id "5b1607c5-82d8-43b2-a5f6-6c7383627787"}
             {:indicator-id "66"
-             :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
+             :fields-to-extract [:cdi_count :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :level :values #{"England"}}]
-             :resource-id "5c932116-a89c-4efc-9db9-f4b36e812ef7"}
+             :resource-id "0a7ab959-fb42-4c13-baff-06646b9bdc75"}
             {:indicator-id "44"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :level :values #{"England"}}]
-             :resource-id "f581825b-cf3e-4f5d-a358-190dcc3f8a0e"}
+             :resource-id "52a33b3d-d8aa-4934-b769-62f73ec67e1e"}
             {:indicator-id "61"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :level :values #{"England"}}]
-             :resource-id "f581825b-cf3e-4f5d-a358-190dcc3f8a0e"}
+             :resource-id "1fa9756c-ea6c-4bbf-9c7e-7c4928ed3772"}
             {:indicator-id "62"
              :fields-to-extract [:indicator_value_rate :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :level :values #{"England"}}]
-             :resource-id "aaa57c54-c747-4eb8-aa9e-f3da798372f3"}
+             :resource-id "01652770-ee37-4b47-b83b-f3a9627c3cd2"}
             {:indicator-id "54"
              :fields-to-extract [:indicator_value :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :level :values #{"England"}}]
-             :resource-id "3cb3fc90-3944-455a-97f0-50c9680184c7"}
+             :resource-id "0e10c436-ac0a-44f0-af86-483676b81981"}
             {:indicator-id "33"
              :fields-to-extract [:average_health_gain :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :procedure :values #{"Hip replacement"}}
                           {:field :breakdown :values #{"England"}}]
-             :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
+             :resource-id "bb927580-4a09-4089-b118-cb43f9b45eb2"}
             {:indicator-id "34"
              :fields-to-extract [:average_health_gain :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :procedure :values #{"Knee replacement"}}
                           {:field :breakdown :values #{"England"}}]
-             :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
+             :resource-id "bb927580-4a09-4089-b118-cb43f9b45eb2"}
             {:indicator-id "35"
              :fields-to-extract [:average_health_gain :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :procedure :values #{"Groin hernia"}}
                           {:field :breakdown :values #{"England"}}]
-             :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
+             :resource-id "bb927580-4a09-4089-b118-cb43f9b45eb2"}
             {:indicator-id "36"
              :fields-to-extract [:average_health_gain :year :period_of_coverage :breakdown :level :level_description
                                  :upper_ci :lower_ci]
              :conditions [{:field :procedure :values #{"Varicose vein"}}
                           {:field :breakdown :values #{"England"}}]
-             :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}]
+             :resource-id "bb927580-4a09-4089-b118-cb43f9b45eb2"}]
  :internal-calculations {:ethnicity [{:indicator-id "213"
-                                      :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"
+                                      :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"
                                       :numerators {:fields-to-extract [:numerator :year :period_of_coverage
                                                                        :breakdown :level :level_description
                                                                        :upper_ci :lower_ci]
@@ -137,8 +137,8 @@
                                                          :conditions [{:field :level_description
                                                                        :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}}
                                      {:indicator-id "214"
-                                      :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"
-                                      :numerators {:fields-to-extract [:numerator :year :period_of_coverage
+                                      :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"
+ 				      :numerators {:fields-to-extract [:numerator :year :period_of_coverage
                                                                        :breakdown :level :level_description
                                                                        :upper_ci :lower_ci]
                                                    :conditions [{:field :level_description
@@ -156,10 +156,10 @@
                                                          :conditions [{:field :level_description
                                                                        :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}}
                                      {:indicator-id "215"
-                                      :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"
+                                      :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"
                                       :numerators {:fields-to-extract [:numerator :year :period_of_coverage
-                                                                       :breakdown :level :level_description
-                                                                       :upper_ci :lower_ci]
+								       :breakdown :level :level_description
+								       :upper_ci :lower_ci] 
                                                    :conditions [{:field :level_description
                                                                  :values #{"Chinese" "Arab" "Any other ethnic group"}}]}
                                       :denominators {:fields-to-extract [:denominator :year :period_of_coverage
@@ -173,10 +173,10 @@
                                                          :conditions [{:field :level_description
                                                                        :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}}
                                      {:indicator-id "216"
-                                      :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"
+                                      :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"
                                       :numerators {:fields-to-extract [:numerator :year :period_of_coverage
-                                                                       :breakdown :level :level_description
-                                                                       :upper_ci :lower_ci]
+								       :breakdown :level :level_description
+								       :upper_ci :lower_ci] 
                                                    :conditions [{:field :level_description
                                                                  :values #{"White and Black Caribbean" "White and Black African"
                                                                            "White and Asian" "Any other Mixed / multiple ethnic background"}}]}
@@ -192,10 +192,10 @@
                                                          :conditions [{:field :level_description
                                                                        :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}}
                                      {:indicator-id "217"
-                                      :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"
+                                      :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"
                                       :numerators {:fields-to-extract [:numerator :year :period_of_coverage
-                                                                       :breakdown :level :level_description
-                                                                       :upper_ci :lower_ci]
+								       :breakdown :level :level_description
+								       :upper_ci :lower_ci] 
                                                    :conditions [{:field :level_description
                                                                  :values #{"Irish" "Gypsy or Irish Traveller"
                                                                            "Any other White background"}}]}
@@ -211,7 +211,7 @@
                                                          :conditions [{:field :level_description
                                                                        :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}}]
                          :deprivation [{:indicator-id "212"
-                                        :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"
+                                        :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"
                                         :fields-to-extract [:indicator_value :year
                                                             :period_of_coverage :level
                                                             :breakdown :level :level_description
@@ -219,7 +219,7 @@
                                         :conditions [{:field :breakdown
                                                       :values #{"Deprivation decile"}}]}]
                          :gender [{:indicator-id "211"
-                                   :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"
+                                   :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"
                                    :fields-to-extract [:indicator_value :year
                                                        :period_of_coverage :level
                                                        :breakdown :level :level_description
@@ -227,7 +227,7 @@
                                    :conditions [{:field :breakdown
                                                  :values #{"Gender"}}]}]
                          :end-of-life-care {:indicator-id "57"
-                                            :resource-id "4db8fb10-3f21-47bc-9ba8-f3cdb067d542"
+                                            :resource-id "3f6786f6-f0c7-4287-86b0-bd8cf48b5cac"
                                             :fields-to-extract [:indicator_value :question_response :year
                                                                 :period_of_coverage
                                                                 :breakdown :level :level_description
@@ -246,43 +246,43 @@
                                       :conditions []
                                       :sum-field :cdi_count
                                       :resource-id "14b766af-ebb4-4ad0-9eda-ab115699d587"}]}
- :constitution [{:resource-id "0b788e3c-260c-473d-ae63-d1b767812538"
+ :constitution [{:resource-id "215f73ee-41b3-40fa-8ea7-b6d13f1337ec"
                  :indicator-id "132"
                  :metadata {:year "2014/2015" :period_of_coverage "01/04/2014 - 30/06/2014"}
                  :division-fields [:within_14_days :total]}
-                {:resource-id "3ed8da4b-f64f-41f8-8810-2419de89153b"
+                {:resource-id "afb3049d-78f6-4048-9a4e-6638d2688e0d"
                  :indicator-id "133"
                  :metadata {:year "2014/2015" :period_of_coverage "01/04/2014 - 30/06/2014"}
                  :division-fields [:within_14_days :total]}
-                {:resource-id "86f08607-b629-43ea-921e-295d7d1c2757"
+                {:resource-id "0a873564-0a18-4edc-b7e8-5cadc40eecec"
                  :indicator-id "134"
                  :metadata {:year "2014/2015" :period_of_coverage "01/04/2014 - 30/06/2014"}
                  :division-fields [:after_31_days :total]}
-                {:resource-id "cd72e034-5e13-4f6a-8e0a-bd4984bd5867"
+                {:resource-id "0a873564-0a18-4edc-b7e8-5cadc40eecec"
                  :indicator-id "135"
                  :metadata {:year "2014/2015" :period_of_coverage "01/04/2014 - 30/06/2014"}
                  :division-fields [:after_31_days :total]}
-                {:resource-id "79c8c4af-aa36-4d05-ac51-abc5c2d7cb03"
+                {:resource-id "e560de1c-8a06-49a6-969c-11535c3ef2e6"
                  :indicator-id "136"
                  :metadata {:year "2014/2015" :period_of_coverage "01/04/2014 - 30/06/2014"}
                  :division-fields [:after_31_days :total]}
-                {:resource-id "6f72db7e-e997-4226-9df6-9d375b05eb4d"
+                {:resource-id "dadfd925-f491-46f3-92c1-f84959325969"
                  :indicator-id "137"
                  :metadata {:year "2014/2015" :period_of_coverage "01/04/2014 - 30/06/2014"}
                  :division-fields [:after_31_days :total]}
-                {:resource-id "75840e5a-dd10-4390-aa3e-64dc0a15c172"
+                {:resource-id "e01fc8b5-6c9b-4a56-9063-4b170cc97dee"
                  :indicator-id "138"
                  :metadata {:year "2014/2015" :period_of_coverage "01/04/2014 - 30/06/2014"}
                  :division-fields [:after_62_days :total_treated]}
-                {:resource-id "ce88b376-e119-484c-877d-58b701766701"
+                {:resource-id "d07d271c-5933-4eb2-a70b-ef7551563269"
                  :indicator-id "139"
                  :metadata {:year "2014/2015" :period_of_coverage "01/04/2014 - 30/06/2014"}
                  :division-fields [:after_62_days :total_treated]}
-                {:resource-id "32b83bff-0678-400d-825d-c9c892eb038b"
+                {:resource-id "212b6adb-3196-4854-af7d-1f146a2d3ec9"
                  :indicator-id "140"
                  :metadata {:year "2014/2015" :period_of_coverage "01/04/2014 - 30/06/2014"}
                  :division-fields [:after_62_days :total_treated]}]
- :friends-and-family [{:resource-id "9d6a0eba-d3f4-4a2c-934d-30dfeab5ef02"
+ :friends-and-family [{:resource-id "d06bdecf-3663-4dc8-8be0-a04accd5b4cb"
                        :indicator-id "49a"
                        :headers "resources/headers/friends_and_family.edn"
                        :worksheets ["IP Eng"]
