@@ -3,6 +3,7 @@ lein: lein2
 script:
 - lein cljfmt check
 - lein eastwood
+- lein test
 branches:
   only:
     - master
