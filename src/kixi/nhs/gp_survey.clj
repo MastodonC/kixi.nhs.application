@@ -2,7 +2,7 @@
   (:require [kixi.nhs.xls :as xls]
             [kixi.nhs.data.transform :as transform]))
 
-(defn sum
+(defn sum-good-access
   "Add two cells.
   Returns a single numeric value."
   [data]
@@ -30,7 +30,7 @@
     (->> (xls/process-xls ckan-client recipe)
          first ;; we just work on a single worksheet
          (transform/filter-dataset recipe)
-         sum
+         sum-good-access
          val->seq
          (transform/enrich-dataset recipe))))
 
