@@ -52,15 +52,6 @@
 (defn list-all-datasets [system]
   (storage/all-datasets-names (:ckan-client system)))
 
-(defn combine-multiple-datasets
-  "Returns the number of created rows (211). It's a result of
-  extracting data for 2013 for CCGs from specified datasets
-  and grouping it by CCG."
-  [system]
-  (count (combine-multiple-datasets (:ckan-client system)
-                                    "7a69bc84-fffd-4750-b22b-fc66a5ea0728"
-                                    "7381b851-7a50-4b8c-b64e-155eadbe5694")))
-
 (defn output-multiple-datasets
   "Splits dataset by year and outputs data into separate resources."
   [system field resource_id title]
@@ -86,8 +77,6 @@
 
 
 ;; Examples
-
-;; (combine-multiple-datasets system)
 
 ;;(list-all-datasets system)
 
