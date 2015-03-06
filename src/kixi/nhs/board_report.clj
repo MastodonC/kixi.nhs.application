@@ -56,7 +56,7 @@
                                                                      :values #{(tf/unparse custom-formatter timestamp)}})]
         (->> data
              (transform/filter-dataset updated-recipe)
-             (transform/sum-sequence (:sum-field recipe-map)) ;; returns a single map since it's summing up all maps
+             (transform/sum-sequence (:sum-field recipe-map) nil) ;; returns a single map since it's summing up all maps
              (enrich timestamp) ;; this dataset has uncommon field names, updating it to match others
              (conj []) ;; dataset returned should be a sequence of maps
              (transform/enrich-dataset recipe-map)
