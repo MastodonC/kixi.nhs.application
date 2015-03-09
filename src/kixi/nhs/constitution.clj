@@ -19,9 +19,7 @@
   year and period of coverage."
   [[k1 k2] metadata breakdown level level-description data]
   (merge metadata
-         {:level level
-          :breakdown breakdown
-          :value (str (transform/divide (total k1 data)
+         {:value (str (transform/divide (total k1 data)
                                         (total k2 data)))}))
 
 (defn per-team-area
@@ -51,14 +49,16 @@
   (->> data
        (remove #(empty? (:area_team_code_1 %)))))
 
+;; TODO lenses
+;;  team-area-data (per-team-area fields (:metadata recipe) data)
+
 (defn process-recipe [ckan-client recipe]
   (let [data           (scrub (storage/get-resource-data ckan-client (:resource-id recipe)))
-        fields         (:division-fields recipe)
-        region-data    (per-region fields (:metadata recipe) data)
-        team-area-data (per-team-area fields (:metadata recipe) data)]
-    (->> (conj team-area-data
-               region-data)
-         (transform/enrich-dataset recipe))))
+        fields         (:division-fields recipe)]
+    (when (seq data)
+      (let [region-data    (per-region fields (:metadata recipe) data)]
+        (->> [region-data]
+             (transform/enrich-dataset recipe))))))
 
 (defn analysis [ckan-client recipes]
   (mapcat #(process-recipe ckan-client %) recipes))

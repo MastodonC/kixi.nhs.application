@@ -49,15 +49,11 @@
 (defn final-dataset
   "Performs calculations and creates a final form of the
   resulting dataset. Enriches each map with indicator id."
-  [indicator-id numerator-sums denominator-sums indicator-values]
+  [recipe-map numerator-sums denominator-sums indicator-values]
   (->> (divide-sums numerator-sums denominator-sums)
        (clojure.set/join indicator-values)
        (map subtract-indicator-value)
-       (map #(assoc % :level (str "\"" (-> numerator-sums first :level)
-                                  "\" / \""
-                                  (-> indicator-values first :level) "\"")
-                    :breakdown (-> indicator-values first :breakdown)))
-       (transform/enrich-dataset {:indicator-id indicator-id})))
+       (transform/enrich-dataset recipe-map)))
 
 (defn ethnicity-analysis
   "Patient experience of primary care - GP Services using
@@ -67,7 +63,7 @@
         numerator-sums       (sums-for-field (:numerators recipe) :numerator data)
         denominator-sums     (sums-for-field (:denominators recipe) :denominator data)]
 
-    (final-dataset (:indicator-id recipe) numerator-sums denominator-sums indicator-values)))
+    (final-dataset recipe numerator-sums denominator-sums indicator-values)))
 
 (defn process-ethnicity-analysis [ckan-client recipe]
   (let  [resource_id (:resource-id recipe)

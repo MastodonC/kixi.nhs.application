@@ -90,10 +90,12 @@
   [recipe-map m]
   (let [{:keys [indicator-id metadata]} recipe-map]
     (-> m
-        ;; period_of_coverage is a PK so cannot be null. Using year if it's empty
-        (cond-> (empty? (:period_of_coverage m)) (assoc :period_of_coverage (:year m)))
         (merge metadata)
-        (assoc :indicator_id indicator-id))))
+        (cond-> (empty? (:indicator_id m)) (assoc :indicator_id indicator-id))
+        (cond-> (and (empty? (:period_of_coverage m))
+                     (empty? (:period_of_coverage metadata)))
+          (assoc :period_of_coverage (:year m)))
+        (clojure.set/rename-keys (:fields-to-rename recipe-map)))))
 
 (defn enrich-dataset
   "Enrichs dataset with indicator-id."

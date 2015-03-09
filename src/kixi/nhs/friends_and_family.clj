@@ -8,15 +8,15 @@
   for England, including Independent
   Sector Providers."
   [ckan-client recipe]
-  (let [field (:field recipe)]
-    (->> (xls/process-xls ckan-client recipe)
-         first
-         (transform/filter-dataset recipe)
-         (transform/enrich-dataset recipe)
-         (map #(-> %
-                   (dissoc :area-team)
-                   (update-in [field] str)
-                   (clojure.set/rename-keys {field :value}))))))
+  (let [field (:field recipe)
+        data  (first (xls/process-xls ckan-client recipe))]
+    (when (seq data)
+      (->> data
+           (transform/filter-dataset recipe)
+           (transform/enrich-dataset recipe)
+           (map #(-> %
+                     (dissoc :area-team)
+                     (update-in [:value] str)))))))
 
 (defn analysis
   "Receives a sequence of F&F recipes.
