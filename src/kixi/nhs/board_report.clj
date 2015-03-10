@@ -114,7 +114,7 @@
         new-dataset-id  (storage/create-new-dataset ckan-client new-dataset)
         new-resource    (json/encode {:package_id new-dataset-id
                                       :url "http://fix-me" ;; url is mandatory
-                                      :description "Board report resource"})
+                                      :description "Board report resource - Testing"})
         new-resource-id (storage/create-new-resource ckan-client new-dataset-id new-resource)
         records         (create-boardreport-dataset ckan-client config)
         data            (data/prepare-resource-for-insert new-dataset-id new-resource-id

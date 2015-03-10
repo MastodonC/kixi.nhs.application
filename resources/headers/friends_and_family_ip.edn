@@ -1,0 +1,37 @@
+{"Dec" {"IP Eng" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "Nov" {"IP Eng" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "Oct" {"IP Eng" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "Sept" {"IP Eng" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                   :percentage-recommended :percentage-not-recommended
+                   :empty
+                   :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "Aug" {"IP Eng" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "Jul" {"IP Eng" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score 
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "Jun" {"IP Eng" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score 
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "May" {"IP Eng" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score 
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "Apr" {"IP Eng" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score 
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}}
+

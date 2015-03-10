@@ -1,0 +1,45 @@
+{"Dec" {"AE Eng" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "Nov" {"AE Eng" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "Oct" {"AE Eng" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "Sept" {"AE Eng" [:emtpy-col
+                   :area-team-code :area-team :total-responses :total-eligible :response-rate
+                   :percentage-recommended :percentage-not-recommended
+                   :empty
+                   :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "Aug" {"AE Eng" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "Jul" {"AE Eng" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score 
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "Jun" {"AE Eng" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score 
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "May" {"AE Eng" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score 
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "Apr" {"AE Eng" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score 
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}}

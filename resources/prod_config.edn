@@ -421,54 +421,936 @@
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ;; Friends and Family
 
- :friends-and-family [{:resource-id "d06bdecf-3663-4dc8-8be0-a04accd5b4cb"
-                       :indicator-id "49a"
-                       :headers "resources/headers/friends_and_family.edn"
-                       :worksheets ["IP Eng"]
-                       :scrub-details {:offset 9
-                                       :last-row 39}
-                       :field :friends-and-family-test-score
-                       :fields-to-extract [:friends-and-family-test-score :area-team
-                                           :year :period_of_coverage]
-                       :fields-to-rename {:year :date
-                                          :friends-and-family-test-score :value}
-                       :conditions [{:field :area-team
-                                     :values #{"England (including Independent Sector Providers)"}}]
-                       :metadata {:sub_lens_resource_id ""
-                                  :lens_value "England"
-                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+ :friends-and-family [
+                      ;; 49a
                       {:resource-id "7c6e7801-b3a7-4e30-a2c1-21715dd8b699"
                        :indicator-id "49a"
-                       :headers "resources/headers/friends_and_family.edn"
+                       :headers "resources/headers/friends_and_family_ip.edn"
                        :worksheets ["IP Eng"]
+                       :month "Dec"
                        :scrub-details {:offset 9
                                        :last-row 39}
                        :field :friends-and-family-test-score
-                       :fields-to-extract [:friends-and-family-test-score :area-team
-                                           :year :period_of_coverage :level :breakdown]
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
                        :fields-to-rename {:year :date
-                                          :friends-and-family-test-score :value}
+                                          :percentage-recommended :value}
                        :conditions [{:field :area-team
                                      :values #{"England (including Independent Sector Providers)"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
                                   :date "01-12-2014" :period_of_coverage "2014 December"}}
-                      {:resource-id "7cff105c-e5d3-4ffe-a6f0-a68f6f98d730"
+                      {:resource-id "ee515c00-46ce-4486-8d2f-10f2ba08fa37"
                        :indicator-id "49a"
-                       :headers "resources/headers/friends_and_family.edn"
+                       :headers "resources/headers/friends_and_family_ip.edn"
                        :worksheets ["IP Eng"]
+                       :month "Nov"
                        :scrub-details {:offset 9
                                        :last-row 39}
                        :field :friends-and-family-test-score
-                       :fields-to-extract [:friends-and-family-test-score :area-team
-                                           :year :period_of_coverage :level :breakdown]
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
                        :fields-to-rename {:year :date
-                                          :friends-and-family-test-score :value}
+                                          :percentage-recommended :value}
                        :conditions [{:field :area-team
                                      :values #{"England (including Independent Sector Providers)"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-10-2014" :period_of_coverage "2014 October"}}]
+                                  :date "01-11-2014" :period_of_coverage "2014 November"}}
+                      {:resource-id "7cff105c-e5d3-4ffe-a6f0-a68f6f98d730"
+                       :indicator-id "49a"
+                       :headers "resources/headers/friends_and_family_ip.edn"
+                       :worksheets ["IP Eng"]
+                       :month "Oct"
+                       :scrub-details {:offset 9
+                                       :last-row 39}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England (including Independent Sector Providers)"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-10-2014" :period_of_coverage "2014 October"}}
+                      {:resource-id "0ef6ce02-6bf7-41ad-a6bd-4e81dafeb46f"
+                       :indicator-id "49a"
+                       :headers "resources/headers/friends_and_family_ip.edn"
+                       :worksheets ["IP Eng"]
+                       :month "Sept"
+                       :scrub-details {:offset 9
+                                       :last-row 39}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England (including Independent Sector Providers)"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-09-2014" :period_of_coverage "2014 September"}}
+                      {:resource-id "d06bdecf-3663-4dc8-8be0-a04accd5b4cb"
+                       :indicator-id "49a"
+                       :headers "resources/headers/friends_and_family_ip.edn"
+                       :worksheets ["IP Eng"]
+                       :month "Aug"
+                       :scrub-details {:offset 9
+                                       :last-row 39}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England (including Independent Sector Providers)"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+                      {:resource-id "f9672278-f75f-43c8-ba4f-e1aa0f88a788"
+                       :indicator-id "49a"
+                       :headers "resources/headers/friends_and_family_ip.edn"
+                       :worksheets ["IP Eng"]
+                       :month "Jul"
+                       :scrub-details {:offset 9
+                                       :last-row 39}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England (including Independent Sector Providers)"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-07-2014" :period_of_coverage "2014 July"}}
+                      {:resource-id "962e4977-5cf9-411f-a8c6-08ac6fa140a0"
+                       :indicator-id "49a"
+                       :headers "resources/headers/friends_and_family_ip.edn"
+                       :worksheets ["IP Eng"]
+                       :month "Jun"
+                       :scrub-details {:offset 9
+                                       :last-row 39}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England (including Independent Sector Providers)"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-06-2014" :period_of_coverage "2014 June"}}
+                      {:resource-id "ceb0066f-9b08-4328-9ee8-c9013119e72c"
+                       :indicator-id "49a"
+                       :headers "resources/headers/friends_and_family_ip.edn"
+                       :worksheets ["IP Eng"]
+                       :month "May"
+                       :scrub-details {:offset 9
+                                       :last-row 39}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England (including Independent Sector Providers)"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-05-2014" :period_of_coverage "2014 May"}}
+                      {:resource-id "221aef97-2516-4438-a2cf-df6df2e9afb6"
+                       :indicator-id "49a"
+                       :headers "resources/headers/friends_and_family_ip.edn"
+                       :worksheets ["IP Eng"]
+                       :month "Apr"
+                       :scrub-details {:offset 9
+                                       :last-row 39}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England (including Independent Sector Providers)"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-04-2014" :period_of_coverage "2014 April"}}
+                      ;; 49b
+                      {:resource-id "b39552dd-b247-4a69-ba4e-b0140925fa7e"
+                       :indicator-id "49b"
+                       :headers "resources/headers/friends_and_family_ae.edn"
+                       :worksheets ["AE Eng"]
+                       :month "Dec"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-12-2014" :period_of_coverage "2014 December"}}
+                      {:resource-id "409e3c16-d3af-4ea8-af6b-f5e3aa6d81aa"
+                       :indicator-id "49b"
+                       :headers "resources/headers/friends_and_family_ae.edn"
+                       :worksheets ["AE Eng"]
+                       :month "Nov"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-11-2014" :period_of_coverage "2014 November"}}
+                      {:resource-id "414b501c-6120-4c5e-af1d-cef313af05bd"
+                       :indicator-id "49b"
+                       :headers "resources/headers/friends_and_family_ae.edn"
+                       :worksheets ["AE Eng"]
+                       :month "Oct"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-10-2014" :period_of_coverage "2014 October"}}
+                      {:resource-id "a3d06bfe-a989-463f-804b-765d5ccd4b6e"
+                       :indicator-id "49b"
+                       :headers "resources/headers/friends_and_family_ae.edn"
+                       :worksheets ["AE Eng"]
+                       :month "Sept"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-09-2014" :period_of_coverage "2014 September"}}
+                      {:resource-id "cab91f89-b7de-495d-9404-8f7c5583fa4c"
+                       :indicator-id "49b"
+                       :headers "resources/headers/friends_and_family_ae.edn"
+                       :worksheets ["AE Eng"]
+                       :month "Aug"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+                      {:resource-id "1efbf51d-f6b6-45de-be93-7fcdf1da3e6c"
+                       :indicator-id "49b"
+                       :headers "resources/headers/friends_and_family_ae.edn"
+                       :worksheets ["AE Eng"]
+                       :month "Jul"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-07-2014" :period_of_coverage "2014 July"}}
+                      {:resource-id "40c22907-b0f5-4a74-9890-8e325f331a47"
+                       :indicator-id "49b"
+                       :headers "resources/headers/friends_and_family_ae.edn"
+                       :worksheets ["AE Eng"]
+                       :month "Jun"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-06-2014" :period_of_coverage "2014 June"}}
+                      {:resource-id "65f463f2-357c-477e-8ebc-ee25f6992a2e"
+                       :indicator-id "49b"
+                       :headers "resources/headers/friends_and_family_ae.edn"
+                       :worksheets ["AE Eng"]
+                       :month "May"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage] 
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-05-2014" :period_of_coverage "2014 May"}}
+                      {:resource-id "79446e86-bb78-4da2-933a-d09d31594921"
+                       :indicator-id "49b"
+                       :headers "resources/headers/friends_and_family_ae.edn"
+                       :worksheets ["AE Eng"]
+                       :month "Apr"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-04-2014" :period_of_coverage "2014 April"}}
+                      ;; 50a
+                      {:resource-id "d47e1e79-597b-4462-b8e0-fcb5c305e8d1"
+                       :indicator-id "50a"
+                       :headers "resources/headers/friends_and_family_mat_q1.edn"
+                       :worksheets ["MAT_Qu1_Eng"]
+                       :month "Dec"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-12-2014" :period_of_coverage "2014 December"}}
+                      {:resource-id "7e994e37-b08c-41ef-ad66-dd0316edfaae"
+                       :indicator-id "50a"
+                       :headers "resources/headers/friends_and_family_mat_q1.edn"
+                       :worksheets ["MAT_Qu1_Eng"]
+                       :month "Nov"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-11-2014" :period_of_coverage "2014 November"}}
+                      {:resource-id "1506f149-0e31-428c-ae65-2dbe55b57b1a"
+                       :indicator-id "50a"
+                       :headers "resources/headers/friends_and_family_mat_q1.edn"
+                       :worksheets ["MAT_Qu1_Eng"]
+                       :month "Oct"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-10-2014" :period_of_coverage "2014 October"}}
+                      {:resource-id "bbb1a014-ab45-4e06-9a8f-1ded3d3d29d4"
+                       :indicator-id "50a"
+                       :headers "resources/headers/friends_and_family_mat_q1.edn"
+                       :worksheets ["MAT_Qu1_Eng"]
+                       :month "Sept"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-09-2014" :period_of_coverage "2014 September"}}
+                      {:resource-id "eae7a64d-eee8-47d7-8456-a45520fd3eff"
+                       :indicator-id "50a"
+                       :headers "resources/headers/friends_and_family_mat_q1.edn"
+                       :worksheets ["MAT_Qu1_Eng"]
+                       :month "Aug"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+                      {:resource-id "f9b4fd7d-d29e-4509-a044-515c4280e7c6"
+                       :indicator-id "50a"
+                       :headers "resources/headers/friends_and_family_mat_q1.edn"
+                       :worksheets ["MAT_Qu1_Eng"]
+                       :month "Jul"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-07-2014" :period_of_coverage "2014 July"}}
+                      {:resource-id "45c2fea1-5d18-425c-8df6-eccc1a555be3"
+                       :indicator-id "50a"
+                       :headers "resources/headers/friends_and_family_mat_q1.edn"
+                       :worksheets ["MAT_Qu1_Eng"]
+                       :month "Jun"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-06-2014" :period_of_coverage "2014 June"}}
+                      {:resource-id "4c867a1e-918e-4ce8-a6f6-29d2005b2837"
+                       :indicator-id "50a"
+                       :headers "resources/headers/friends_and_family_mat_q1.edn"
+                       :worksheets ["MAT_Qu1_Eng"]
+                       :month "May"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage] 
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-05-2014" :period_of_coverage "2014 May"}}
+                      {:resource-id "62f117a9-324d-4dc1-b2fe-e3c064d01d86"
+                       :indicator-id "50a"
+                       :headers "resources/headers/friends_and_family_mat_q1.edn"
+                       :worksheets ["MAT_Qu1_Eng"]
+                       :month "Apr"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-04-2014" :period_of_coverage "2014 April"}}
+                      ;; 50b
+                      {:resource-id "d47e1e79-597b-4462-b8e0-fcb5c305e8d1"
+                       :indicator-id "50b"
+                       :headers "resources/headers/friends_and_family_mat_q2.edn"
+                       :worksheets ["MAT_Qu2_Eng"]
+                       :month "Dec"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-12-2014" :period_of_coverage "2014 December"}}
+                      {:resource-id "7e994e37-b08c-41ef-ad66-dd0316edfaae"
+                       :indicator-id "50b"
+                       :headers "resources/headers/friends_and_family_mat_q2.edn"
+                       :worksheets ["MAT_Qu2_Eng"]
+                       :month "Nov"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-11-2014" :period_of_coverage "2014 November"}}
+                      {:resource-id "1506f149-0e31-428c-ae65-2dbe55b57b1a"
+                       :indicator-id "50b"
+                       :headers "resources/headers/friends_and_family_mat_q2.edn"
+                       :worksheets ["MAT_Qu2_Eng"]
+                       :month "Oct"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-10-2014" :period_of_coverage "2014 October"}}
+                      {:resource-id "bbb1a014-ab45-4e06-9a8f-1ded3d3d29d4"
+                       :indicator-id "50b"
+                       :headers "resources/headers/friends_and_family_mat_q2.edn"
+                       :worksheets ["MAT_Qu2_Eng"]
+                       :month "Sept"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-09-2014" :period_of_coverage "2014 September"}}
+                      {:resource-id "eae7a64d-eee8-47d7-8456-a45520fd3eff"
+                       :indicator-id "50b"
+                       :headers "resources/headers/friends_and_family_mat_q2.edn"
+                       :worksheets ["MAT_Qu2_Eng"]
+                       :month "Aug"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+                      {:resource-id "f9b4fd7d-d29e-4509-a044-515c4280e7c6"
+                       :indicator-id "50b"
+                       :headers "resources/headers/friends_and_family_mat_q2.edn"
+                       :worksheets ["MAT_Qu2_Eng"]
+                       :month "Jul"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-07-2014" :period_of_coverage "2014 July"}}
+                      {:resource-id "45c2fea1-5d18-425c-8df6-eccc1a555be3"
+                       :indicator-id "50b"
+                       :headers "resources/headers/friends_and_family_mat_q2.edn"
+                       :worksheets ["MAT_Qu2_Eng"]
+                       :month "Jun"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-06-2014" :period_of_coverage "2014 June"}}
+                      {:resource-id "4c867a1e-918e-4ce8-a6f6-29d2005b2837"
+                       :indicator-id "50b"
+                       :headers "resources/headers/friends_and_family_mat_q2.edn"
+                       :worksheets ["MAT_Qu2_Eng"]
+                       :month "May"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage] 
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-05-2014" :period_of_coverage "2014 May"}}
+                      {:resource-id "62f117a9-324d-4dc1-b2fe-e3c064d01d86"
+                       :indicator-id "50b"
+                       :headers "resources/headers/friends_and_family_mat_q2.edn"
+                       :worksheets ["MAT_Qu2_Eng"]
+                       :month "Apr"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-04-2014" :period_of_coverage "2014 April"}}
+                      ;; 50c
+                      {:resource-id "d47e1e79-597b-4462-b8e0-fcb5c305e8d1"
+                       :indicator-id "50c"
+                       :headers "resources/headers/friends_and_family_mat_q3.edn"
+                       :worksheets ["MAT_Qu3_Eng"]
+                       :month "Dec"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-12-2014" :period_of_coverage "2014 December"}}
+                      {:resource-id "7e994e37-b08c-41ef-ad66-dd0316edfaae"
+                       :indicator-id "50c"
+                       :headers "resources/headers/friends_and_family_mat_q3.edn"
+                       :worksheets ["MAT_Qu3_Eng"]
+                       :month "Nov"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-11-2014" :period_of_coverage "2014 November"}}
+                      {:resource-id "1506f149-0e31-428c-ae65-2dbe55b57b1a"
+                       :indicator-id "50c"
+                       :headers "resources/headers/friends_and_family_mat_q3.edn"
+                       :worksheets ["MAT_Qu3_Eng"]
+                       :month "Oct"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-10-2014" :period_of_coverage "2014 October"}}
+                      {:resource-id "bbb1a014-ab45-4e06-9a8f-1ded3d3d29d4"
+                       :indicator-id "50c"
+                       :headers "resources/headers/friends_and_family_mat_q3.edn"
+                       :worksheets ["MAT_Qu3_Eng"]
+                       :month "Sept"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-09-2014" :period_of_coverage "2014 September"}}
+                      {:resource-id "eae7a64d-eee8-47d7-8456-a45520fd3eff"
+                       :indicator-id "50c"
+                       :headers "resources/headers/friends_and_family_mat_q3.edn"
+                       :worksheets ["MAT_Qu3_Eng"]
+                       :month "Aug"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+                      {:resource-id "f9b4fd7d-d29e-4509-a044-515c4280e7c6"
+                       :indicator-id "50c"
+                       :headers "resources/headers/friends_and_family_mat_q3.edn"
+                       :worksheets ["MAT_Qu3_Eng"]
+                       :month "Jul"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-07-2014" :period_of_coverage "2014 July"}}
+                      {:resource-id "45c2fea1-5d18-425c-8df6-eccc1a555be3"
+                       :indicator-id "50c"
+                       :headers "resources/headers/friends_and_family_mat_q3.edn"
+                       :worksheets ["MAT_Qu3_Eng"]
+                       :month "Jun"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-06-2014" :period_of_coverage "2014 June"}}
+                      {:resource-id "4c867a1e-918e-4ce8-a6f6-29d2005b2837"
+                       :indicator-id "50c"
+                       :headers "resources/headers/friends_and_family_mat_q3.edn"
+                       :worksheets ["MAT_Qu3_Eng"]
+                       :month "May"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage] 
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-05-2014" :period_of_coverage "2014 May"}}
+                      {:resource-id "62f117a9-324d-4dc1-b2fe-e3c064d01d86"
+                       :indicator-id "50c"
+                       :headers "resources/headers/friends_and_family_mat_q3.edn"
+                       :worksheets ["MAT_Qu3_Eng"]
+                       :month "Apr"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-04-2014" :period_of_coverage "2014 April"}}
+                      ;; 50d
+                      {:resource-id "d47e1e79-597b-4462-b8e0-fcb5c305e8d1"
+                       :indicator-id "50d"
+                       :headers "resources/headers/friends_and_family_mat_q4.edn"
+                       :worksheets ["MAT_Qu4_Eng"]
+                       :month "Dec"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-12-2014" :period_of_coverage "2014 December"}}
+                      {:resource-id "7e994e37-b08c-41ef-ad66-dd0316edfaae"
+                       :indicator-id "50d"
+                       :headers "resources/headers/friends_and_family_mat_q4.edn"
+                       :worksheets ["MAT_Qu4_Eng"]
+                       :month "Nov"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-11-2014" :period_of_coverage "2014 November"}}
+                      {:resource-id "1506f149-0e31-428c-ae65-2dbe55b57b1a"
+                       :indicator-id "50d"
+                       :headers "resources/headers/friends_and_family_mat_q4.edn"
+                       :worksheets ["MAT_Qu4_Eng"]
+                       :month "Oct"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-10-2014" :period_of_coverage "2014 October"}}
+                      {:resource-id "bbb1a014-ab45-4e06-9a8f-1ded3d3d29d4"
+                       :indicator-id "50d"
+                       :headers "resources/headers/friends_and_family_mat_q4.edn"
+                       :worksheets ["MAT_Qu4_Eng"]
+                       :month "Sept"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-09-2014" :period_of_coverage "2014 September"}}
+                      {:resource-id "eae7a64d-eee8-47d7-8456-a45520fd3eff"
+                       :indicator-id "50d"
+                       :headers "resources/headers/friends_and_family_mat_q4.edn"
+                       :worksheets ["MAT_Qu4_Eng"]
+                       :month "Aug"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+
+                       :fields-to-extract [:percentage-recommended :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+                      {:resource-id "f9b4fd7d-d29e-4509-a044-515c4280e7c6"
+                       :indicator-id "50d"
+                       :headers "resources/headers/friends_and_family_mat_q4.edn"
+                       :worksheets ["MAT_Qu4_Eng"]
+                       :month "Jul"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-07-2014" :period_of_coverage "2014 July"}}
+                      {:resource-id "45c2fea1-5d18-425c-8df6-eccc1a555be3"
+                       :indicator-id "50d"
+                       :headers "resources/headers/friends_and_family_mat_q4.edn"
+                       :worksheets ["MAT_Qu4_Eng"]
+                       :month "Jun"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-06-2014" :period_of_coverage "2014 June"}}
+                      {:resource-id "4c867a1e-918e-4ce8-a6f6-29d2005b2837"
+                       :indicator-id "50d"
+                       :headers "resources/headers/friends_and_family_mat_q4.edn"
+                       :worksheets ["MAT_Qu4_Eng"]
+                       :month "May"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage] 
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-05-2014" :period_of_coverage "2014 May"}}
+                      {:resource-id "62f117a9-324d-4dc1-b2fe-e3c064d01d86"
+                       :indicator-id "50d"
+                       :headers "resources/headers/friends_and_family_mat_q4.edn"
+                       :worksheets ["MAT_Qu4_Eng"]
+                       :month "Apr"
+                       :scrub-details {:offset 9
+                                       :last-row 37}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:extremely-likely :likely :area-team
+                                           :total-responses :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :percentage-recommended :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-04-2014" :period_of_coverage "2014 April"}}]
 
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ;; GP Survey
