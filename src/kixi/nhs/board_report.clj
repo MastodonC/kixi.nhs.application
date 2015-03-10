@@ -115,11 +115,11 @@
                                       :description "Board report resource"})
         new-resource-id (storage/create-new-resource ckan-client new-dataset-id new-resource)
         records         (create-boardreport-dataset ckan-client config)
-        data            (data/prepare-resource-for-insert new-dataset-id new-resource new-resource-id
+        data            (data/prepare-resource-for-insert new-dataset-id new-resource-id
                                                           {"records"     records
                                                            "fields"      (:fields board-report-schema)
                                                            "primary_key" (:primary-key board-report-schema)})]
-    (storage/insert-new-resource ckan-client new-dataset-id new-resource data)))
+    (storage/insert-new-resource ckan-client new-dataset-id data)))
 
 (defn insert-board-report-resource
   "Uses existing dataset and adds a new resource
