@@ -102,7 +102,7 @@
            (transform/split-by-key :year)
            (map deprivation-groups-avg)
            (deprivation-analysis)
-           (map #(assoc % :level level :breakdown breakdown))))))
+           (transform/enrich-dataset recipe-map)))))
 
 (defn analysis
   "Receives a sequence of deprivation recipes.

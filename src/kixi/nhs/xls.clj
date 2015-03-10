@@ -14,7 +14,8 @@
   Returns a lazy sequence with maps of seqs
   that represent worksheets."
   [url]
-  (xls/lazy-workbook (xls/workbook-xssf url)))
+  (when url
+    (xls/lazy-workbook (xls/workbook-xssf url))))
 
 (defn add-headers
   "Enriches each sequence (row) of data
@@ -100,8 +101,7 @@
   (->> data
        (scrub (:scrub-details recipe))
        (mapv #(add-headers headers %))
-       (mapv #(merge metadata %))
-       (transform/enrich-dataset recipe)))
+       (mapv #(merge metadata %))))
 
 (defn process-xls
   "Retrieves spreadsheet and its headers,
@@ -114,8 +114,9 @@
         headers              (edn/read-string (slurp headers))
         spreadsheet          (-> (retrieve-xls-url ckan-client resource-id)
                                  read-in-xls)]
-    (map #(process-worksheet
-           recipe
-           (get headers %)
-           (:metadata recipe)
-           (get spreadsheet %)) worksheets)))
+    (when (seq spreadsheet)
+      (map #(process-worksheet
+             recipe
+             (get headers %)
+             (:metadata recipe)
+             (get spreadsheet %)) worksheets))))

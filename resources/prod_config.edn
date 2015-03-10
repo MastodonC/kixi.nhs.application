@@ -1,206 +1,443 @@
-{:datasets [{:indicator-id "23"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :level_description :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "e8bbf627-6bb1-48f5-95e8-cf943ad16b37"}
-            {:indicator-id "45"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :level_description :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"}
-            {:indicator-id "46"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :level_description :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "5ca47971-5d9e-4b50-93f0-8a8ecc90c072"}
-            {:indicator-id "47"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :level_description :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "bcdaf636-32d0-4122-9828-e01c14d95f0b"}
-            {:indicator-id "48"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :level_description :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "9c81f9a3-6301-4faf-90f0-b9f50d2aae39"}
-            {:indicator-id "52"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :level :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "3e6f1dac-74f7-4051-8282-1d0c458d9e7c"}
-            {:indicator-id "56"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :breakdown :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "18a8f547-be9b-4180-a8f6-4b5dccdfdc62"}
-            {:indicator-id "58"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :level :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "c877fca5-5d8a-4f63-a592-57ac1cf576e1"}
-            {:indicator-id "22"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :level :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "620c1ebe-8f6c-48f6-8dfc-a9f2e68b2467"}
-            {:indicator-id "24"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :level :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "bb15bca9-9716-4d00-bc5f-8b8be88d60bc"}
-            {:indicator-id "27"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :level :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "738b4af1-2691-40ae-a548-6ab6a6fd3415"}
-            {:indicator-id "28"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :level :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "c44d0bd9-4d85-4aed-8051-5136f8d359a3"}
-            {:indicator-id "43"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :level :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "c05f9627-8932-4db8-b1d6-ccb29197158d"}
-            {:indicator-id "44"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :level :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "52a33b3d-d8aa-4934-b769-62f73ec67e1e"}
-            {:indicator-id "61"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :level :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "1fa9756c-ea6c-4bbf-9c7e-7c4928ed3772"}
-            {:indicator-id "62"
-             :fields-to-extract [:indicator_value_rate :year :period_of_coverage]
-             :conditions [{:field :level :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "01652770-ee37-4b47-b83b-f3a9627c3cd2"}
-            {:indicator-id "54"
-             :fields-to-extract [:indicator_value :year :period_of_coverage]
-             :conditions [{:field :level :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "3cb3fc90-3944-455a-97f0-50c9680184c7"}
-            {:indicator-id "33"
-             :fields-to-extract [:average_health_gain :year :period_of_coverage]
-             :conditions [{:field :procedure :values #{"Hip replacement"}}
-                          {:field :breakdown :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
-            {:indicator-id "34"
-             :fields-to-extract [:average_health_gain :year :period_of_coverage]
-             :conditions [{:field :procedure :values #{"Knee replacement"}}
-                          {:field :breakdown :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
-            {:indicator-id "35"
-             :fields-to-extract [:average_health_gain :year :period_of_coverage]
-             :conditions [{:field :procedure :values #{"Groin hernia"}}
-                          {:field :breakdown :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
-            {:indicator-id "36"
-             :fields-to-extract [:average_health_gain :year :period_of_coverage]
-             :conditions [{:field :procedure :values #{"Varicose vein"}}
-                          {:field :breakdown :values #{"England"}}]
-             :metadata {:level "England"}
-             :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}]
- :internal-calculations {:ethnicity [{:indicator-id "213"
-                                      :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"
-                                      :numerators {:fields-to-extract [:numerator :year :period_of_coverage]
-                                                   :conditions [{:field :level_description :values #{"Pakistani" "Indian"
-                                                                                                     "Bangladeshi"
-                                                                                                     "Any other Asian background"}}]}
-                                      :denominators {:fields-to-extract [:denominator :year :period_of_coverage]
-                                                     :conditions [{:field :level_description :values #{"Pakistani" "Indian"
-                                                                                                       "Bangladeshi"
-                                                                                                       "Any other Asian background"}}]}
-                                      :indicator-values {:fields-to-extract [:indicator_value :year :period_of_coverage]
-                                                         :conditions [{:field :level_description
-                                                                       :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}}
-                                     {:indicator-id "214"
-                                      :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"
-                                      :numerators {:fields-to-extract [:numerator :year :period_of_coverage]
-                                                   :conditions [{:field :level_description
-                                                                 :values #{"Afican" "Caribbean"
-                                                                           "Any other Black / African / Caribbean background"}}]}
-                                      :denominators {:fields-to-extract [:denominator :year :period_of_coverage]
-                                                     :conditions [{:field :level_description
-                                                                   :values #{"Afican" "Caribbean"
-                                                                             "Any other Black / African / Caribbean background"}}]}
-                                      :indicator-values {:fields-to-extract [:indicator_value :year :period_of_coverage]
-                                                         :conditions [{:field :level_description
-                                                                       :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}}
-                                     {:indicator-id "215"
-                                      :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"
-                                      :numerators {:fields-to-extract [:numerator :year :period_of_coverage]
-                                                   :conditions [{:field :level_description
-                                                                 :values #{"Chinese" "Arab" "Any other ethnic group"}}]}
-                                      :denominators {:fields-to-extract [:denominator :year :period_of_coverage]
-                                                     :conditions [{:field :level_description
-                                                                   :values #{"Chinese" "Arab" "Any other ethnic group"}}]}
-                                      :indicator-values {:fields-to-extract [:indicator_value :year :period_of_coverage]
-                                                         :conditions [{:field :level_description
-                                                                       :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}}
-                                     {:indicator-id "216"
-                                      :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"
-                                      :numerators {:fields-to-extract [:numerator :year :period_of_coverage]
-                                                   :conditions [{:field :level_description
-                                                                 :values #{"White and Black Caribbean" "White and Black African"
-                                                                           "White and Asian" "Any other Mixed / multiple ethnic background"}}]}
-                                      :denominators {:fields-to-extract [:denominator :year :period_of_coverage]
-                                                     :conditions [{:field :level_description
-                                                                   :values #{"White and Black Caribbean" "White and Black African"
-                                                                             "White and Asian" "Any other Mixed / multiple ethnic background"}}]}
-                                      :indicator-values {:fields-to-extract [:indicator_value :year :period_of_coverage]
-                                                         :conditions [{:field :level_description
-                                                                       :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}}
-                                     {:indicator-id "217"
-                                      :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"
-                                      :numerators {:fields-to-extract [:numerator :year :period_of_coverage]
-                                                   :conditions [{:field :level_description
-                                                                 :values #{"Irish" "Gypsy or Irish Traveller"
-                                                                           "Any other White background"}}]}
-                                      :denominators {:fields-to-extract [:denominator :year :period_of_coverage]
-                                                     :conditions [{:field :level_description
-                                                                   :values #{"Irish" "Gypsy or Irish Traveller"
-                                                                             "Any other White background"}}]}
-                                      :indicator-values {:fields-to-extract [:indicator_value :year :period_of_coverage]
-                                                         :conditions [{:field :level_description
-                                                                       :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}}]
-                         :deprivation [{:indicator-id "212"
-                                        :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"
-                                        :fields-to-extract [:indicator_value :year
-                                                            :period_of_coverage :level]
-                                        :conditions [{:field :breakdown
-                                                      :values #{"Deprivation decile"}}]}]
-                         :gender [{:indicator-id "211"
-                                   :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"
-                                   :fields-to-extract [:indicator_value :year
-                                                       :period_of_coverage :level]
-                                   :conditions [{:field :breakdown
-                                                 :values #{"Gender"}}]}]
-                         :end-of-life-care {:indicator-id "57"
-                                            :resource-id "4db8fb10-3f21-47bc-9ba8-f3cdb067d542"
-                                            :fields-to-extract [:indicator_value :question_response :year
-                                                                :period_of_coverage]
-                                            :conditions [{:field :question_response
-                                                          :values #{"Outstanding"
-                                                                    "Excellent"
-                                                                    "Good"}}]}
-                         :incidence [{:indicator-id "65"
-                                      :fields-to-extract [:mrsa_count :reporting_period :level]
-                                      :conditions []
-                                      :sum-field :mrsa_count
-                                      :resource-id "4b59deda-f204-453c-a7f6-e3ab6e29eb7d"}
-                                     {:indicator-id "66"
-                                      :fields-to-extract [:cdi_count :reporting_period :level]
-                                      :conditions []
-                                      :sum-field :cdi_count
-                                      :resource-id "14b766af-ebb4-4ad0-9eda-ab115699d587"}]}
- :friends-and-family [{:resource-id "2ea33fe4-a330-4282-ac45-0cea51508acb"
+{:board-report-details {:owner_org "nhsebr"
+                        :title "Board report dataset"
+                        :name "board_report"
+                        :author "NHSE Board Report"}
+
+ ;; Experience
+
+ :simple-datasets [;; Proportion of people feeling supported to manage their condition
+                   {:indicator-id "23"
+                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :level_description :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "e8bbf627-6bb1-48f5-95e8-cf943ad16b37"}
+
+                   ;; Patient experience of primary care - GP Services
+                   {:indicator-id "45"
+                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :level_description :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"}
+
+                   ;; Patient experience of primary care - GP Out of Hours Services
+                   {:indicator-id "46"
+                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :level_description :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "5ca47971-5d9e-4b50-93f0-8a8ecc90c072"}
+
+                   ;; Patient experience of primary care - NHS Dental Services
+                   {:indicator-id "47"
+                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :level_description :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "bcdaf636-32d0-4122-9828-e01c14d95f0b"}
+
+                   ;; Patient experience of hospital care
+                   {:indicator-id "48"
+                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :level_description :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "9c81f9a3-6301-4faf-90f0-b9f50d2aae39"}
+
+                   ;; Responsiveness to in-patients’ personal needs
+                   {:indicator-id "52"
+                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :level :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "3e6f1dac-74f7-4051-8282-1d0c458d9e7c"}
+
+                   ;; Women’s experience of maternity services
+                   {:indicator-id "56"
+                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :breakdown :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "18a8f547-be9b-4180-a8f6-4b5dccdfdc62"}
+
+                   ;; Patient experience of community mental health services
+                   {:indicator-id "58"
+                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :level :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "c877fca5-5d8a-4f63-a592-57ac1cf576e1"}
+
+                   ;; Health related quality of life for people with long-term conditions
+                   {:indicator-id "22"
+                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :level :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "620c1ebe-8f6c-48f6-8dfc-a9f2e68b2467"}
+
+                   ;; Employment of people with long-term conditions
+                   {:indicator-id "24"
+                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :level :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "bb15bca9-9716-4d00-bc5f-8b8be88d60bc"}
+
+                   ;; Health-related quality of life for carers
+                   {:indicator-id "27"
+                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :level :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "738b4af1-2691-40ae-a548-6ab6a6fd3415"}
+
+                   ;; Employment of people with mental illness
+                   {:indicator-id "28"
+                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :level :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "c44d0bd9-4d85-4aed-8051-5136f8d359a3"}
+
+                   ;; Proportion of Older People (65 and over) who were still at home
+                   ;; 91 days after discharge from hospital into reablement/rehabilitation services
+                   {:indicator-id "43"
+                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :level :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "c05f9627-8932-4db8-b1d6-ccb29197158d"}
+
+                   ;; Proportion offered rehabilitation following discharge from acute or community hospital
+                   {:indicator-id "44"
+                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :level :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "52a33b3d-d8aa-4934-b769-62f73ec67e1e"}
+
+                   ;; Patient safety incident reporting
+                   {:indicator-id "61"
+                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :level :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "1fa9756c-ea6c-4bbf-9c7e-7c4928ed3772"}
+
+                   ;; Safety incidents resulting in severe harm or death
+                   {:indicator-id "62"
+                    :fields-to-extract [:indicator_value_rate :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :level :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "01652770-ee37-4b47-b83b-f3a9627c3cd2"}
+
+                   ;; Total health gain as assessed by patients for elective
+                   ;; procedures: Hip replacement
+                   {:indicator-id "33"
+                    :fields-to-extract [:average_health_gain :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :procedure :values #{"Hip replacement"}}
+                                 {:field :breakdown :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
+
+                   ;; Total health gain as assessed by patients for elective
+                   ;; procedures: Knee replacement
+                   {:indicator-id "34"
+                    :fields-to-extract [:average_health_gain :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :procedure :values #{"Knee replacement"}}
+                                 {:field :breakdown :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
+
+                   ;; Total health gain as assessed by patients for elective
+                   ;; procedures: Groin hernia
+                   {:indicator-id "35"
+                    :fields-to-extract [:average_health_gain :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :procedure :values #{"Groin hernia"}}
+                                 {:field :breakdown :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
+
+                   ;; Total health gain as assessed by patients for elective
+                   ;; procedures: Varicose veins
+                   {:indicator-id "36"
+                    :fields-to-extract [:average_health_gain :year :period_of_coverage]
+                    :fields-to-rename {:year :date
+                                       :indicator_value :value
+                                       :indicator_value_rate :value
+                                       :average_health_gain :value}
+                    :conditions [{:field :procedure :values #{"Varicose vein"}}
+                                 {:field :breakdown :values #{"England"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}
+                    :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}]
+
+ ;; Inequalities
+
+ :gender [;; Patient experience of primary care - GP Services
+          ;; Gender comparison
+          {:indicator-id "211"
+           :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"
+           :fields-to-extract [:indicator_value :year
+                               :period_of_coverage :level]
+           :fields-to-rename {:year :date
+                              :indicator_value :value}
+           :conditions [{:field :breakdown
+                         :values #{"Gender"}}]
+           :metadata {:sub_lens_resource_id ""
+                      :lens_value "England"}}]
+
+ :deprivation [;; Patient experience of primary care - GP Services
+               ;; Deprivation analysis
+               {:indicator-id "212"
+                :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"
+                :fields-to-extract [:indicator_value :year
+                                    :period_of_coverage :level]
+                :fields-to-rename {:year :date
+                                   :indicator_value :value}
+                :conditions [{:field :breakdown
+                              :values #{"Deprivation decile"}}]
+                :metadata {:sub_lens_resource_id ""
+                           :lens_value "England"}}]
+
+ :ethnicity [;; Patient experience of primary care - GP Services
+             ;; White British compared to Asian or Asian British
+             {:indicator-id "213"
+              :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"
+              :numerators {:fields-to-extract [:numerator :year :period_of_coverage]
+                           :conditions [{:field :level_description :values #{"Pakistani" "Indian"
+                                                                             "Bangladeshi"
+                                                                             "Any other Asian background"}}]}
+              :denominators {:fields-to-extract [:denominator :year :period_of_coverage]
+                             :conditions [{:field :level_description :values #{"Pakistani" "Indian"
+                                                                               "Bangladeshi"
+                                                                               "Any other Asian background"}}]}
+              :indicator-values {:fields-to-extract [:indicator_value :year :period_of_coverage]
+                                 :conditions [{:field :level_description
+                                               :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}
+              :fields-to-rename {:year :date
+                                 :indicator_value :value}
+              :metadata {:sub_lens_resource_id ""
+                         :lens_value "England"}}
+
+             ;; Patient experience of primary care - GP Services
+             ;; White British compared to Black or Black British
+             {:indicator-id "214"
+              :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"
+              :fields-to-rename {:year :date
+                                 :indicator_value :value}
+              :numerators {:fields-to-extract [:numerator :year :period_of_coverage]
+                           :conditions [{:field :level_description
+                                         :values #{"Afican" "Caribbean"
+                                                   "Any other Black / African / Caribbean background"}}]}
+              :denominators {:fields-to-extract [:denominator :year :period_of_coverage]
+                             :conditions [{:field :level_description
+                                           :values #{"Afican" "Caribbean"
+                                                     "Any other Black / African / Caribbean background"}}]}
+              :indicator-values {:fields-to-extract [:indicator_value :year :period_of_coverage]
+                                 :conditions [{:field :level_description
+                                               :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}
+              :metadata {:sub_lens_resource_id ""
+                         :lens_value "England"}}
+
+             ;; Patient experience of primary care - GP Services
+             ;; White British compared to Other Ethnic Group
+             {:indicator-id "215"
+              :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"
+              :numerators {:fields-to-extract [:numerator :year :period_of_coverage]
+                           :conditions [{:field :level_description
+                                         :values #{"Chinese" "Arab" "Any other ethnic group"}}]}
+              :denominators {:fields-to-extract [:denominator :year :period_of_coverage]
+                             :conditions [{:field :level_description
+                                           :values #{"Chinese" "Arab" "Any other ethnic group"}}]}
+              :indicator-values {:fields-to-extract [:indicator_value :year :period_of_coverage]
+                                 :conditions [{:field :level_description
+                                               :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}
+              :fields-to-rename {:year :date
+                                 :indicator_value :value}
+              :metadata {:sub_lens_resource_id ""
+                         :lens_value "England"}}
+
+             ;; Patient experience of primary care - GP Services
+             ;; White British compared to Mixed
+             {:indicator-id "216"
+              :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"
+              :numerators {:fields-to-extract [:numerator :year :period_of_coverage]
+                           :conditions [{:field :level_description
+                                         :values #{"White and Black Caribbean" "White and Black African"
+                                                   "White and Asian" "Any other Mixed / multiple ethnic background"}}]}
+              :denominators {:fields-to-extract [:denominator :year :period_of_coverage]
+                             :conditions [{:field :level_description
+                                           :values #{"White and Black Caribbean" "White and Black African"
+                                                     "White and Asian" "Any other Mixed / multiple ethnic background"}}]}
+              :indicator-values {:fields-to-extract [:indicator_value :year :period_of_coverage]
+                                 :conditions [{:field :level_description
+                                               :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}
+              :metadata {:sub_lens_resource_id ""
+                         :lens_value "England"}
+              :fields-to-rename {:year :date
+                                 :indicator_value :value
+                                 :indicator_value_rate :value
+                                 :average_health_gain :value}}
+
+             ;; Patient experience of primary care - GP Services
+             ;; White British compared to Other White ethnicity
+             {:indicator-id "217"
+              :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"
+              :numerators {:fields-to-extract [:numerator :year :period_of_coverage]
+                           :conditions [{:field :level_description
+                                         :values #{"Irish" "Gypsy or Irish Traveller"
+                                                   "Any other White background"}}]}
+              :denominators {:fields-to-extract [:denominator :year :period_of_coverage]
+                             :conditions [{:field :level_description
+                                           :values #{"Irish" "Gypsy or Irish Traveller"
+                                                     "Any other White background"}}]}
+              :indicator-values {:fields-to-extract [:indicator_value :year :period_of_coverage]
+                                 :conditions [{:field :level_description
+                                               :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}
+              :fields-to-rename {:year :date
+                                 :indicator_value :value
+                                 :indicator_value_rate :value
+                                 :average_health_gain :value}
+              :metadata {:sub_lens_resource_id ""
+                         :lens_value "England"}}]
+
+ ;; Bereaved carers' views on the quality of care in the last 3 months of life
+ :end-of-life-care {:indicator-id "57"
+                    :resource-id "3f6786f6-f0c7-4287-86b0-bd8cf48b5cac"
+                    :fields-to-extract [:indicator_value :question_response :year
+                                        :period_of_coverage]
+                    :fields-to-rename {:sum :value :year :date}
+                    :conditions [{:field :question_response
+                                  :values #{"Outstanding"
+                                            "Excellent"
+                                            "Good"}}]
+                    :metadata {:sub_lens_resource_id ""
+                               :lens_value "England"}}
+
+  ;; Incidence of MRSA
+ :mrsa-incidence {:indicator-id "65"
+                  :fields-to-extract [:indicator_value :period_of_coverage :year]
+                  :fields-to-rename {:year :date
+                                     :indicator_value :value}
+                  :conditions [{:field :level :values #{"England"}}]
+                  :resource-id "5b1607c5-82d8-43b2-a5f6-6c7383627787"
+                  :metadata {:sub_lens_resource_id ""
+                             :lens_value "England"}}
+
+ ;; Incidence of C difficile
+ :c-difficile-incidence {:indicator-id "66"
+                         :fields-to-extract [:cdi_count :reporting_period]
+                         :fields-to-rename {:year :date
+                                            :sum :value}
+                         :conditions []
+                         :sum-field :cdi_count
+                         :resource-id "0a7ab959-fb42-4c13-baff-06646b9bdc75"
+                         :metadata {:sub_lens_resource_id ""
+                                    :lens_value "England"}}
+
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ;; Friends and Family
+
+ :friends-and-family [{:resource-id "d06bdecf-3663-4dc8-8be0-a04accd5b4cb"
+                       :indicator-id "49a"
+                       :headers "resources/headers/friends_and_family.edn"
+                       :worksheets ["IP Eng"]
+                       :scrub-details {:offset 9
+                                       :last-row 39}
+                       :field :friends-and-family-test-score
+                       :fields-to-extract [:friends-and-family-test-score :area-team
+                                           :year :period_of_coverage]
+                       :fields-to-rename {:year :date
+                                          :friends-and-family-test-score :value}
+                       :conditions [{:field :area-team
+                                     :values #{"England (including Independent Sector Providers)"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+                      {:resource-id "7c6e7801-b3a7-4e30-a2c1-21715dd8b699"
                        :indicator-id "49a"
                        :headers "resources/headers/friends_and_family.edn"
                        :worksheets ["IP Eng"]
@@ -209,11 +446,14 @@
                        :field :friends-and-family-test-score
                        :fields-to-extract [:friends-and-family-test-score :area-team
                                            :year :period_of_coverage :level :breakdown]
+                       :fields-to-rename {:year :date
+                                          :friends-and-family-test-score :value}
                        :conditions [{:field :area-team
                                      :values #{"England (including Independent Sector Providers)"}}]
-                       :metadata {:year "2013" :period_of_coverage "01/08/2013" :level "England"
-                                  :breakdown "Region"}}
-                      {:resource-id "3888a25c-baa1-46bb-8f51-19efb4613ccb"
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-12-2014" :period_of_coverage "2014 December"}}
+                      {:resource-id "ee515c00-46ce-4486-8d2f-10f2ba08fa37"
                        :indicator-id "49a"
                        :headers "resources/headers/friends_and_family.edn"
                        :worksheets ["IP Eng"]
@@ -222,11 +462,14 @@
                        :field :friends-and-family-test-score
                        :fields-to-extract [:friends-and-family-test-score :area-team
                                            :year :period_of_coverage :level :breakdown]
+                       :fields-to-rename {:year :date
+                                          :friends-and-family-test-score :value}
                        :conditions [{:field :area-team
                                      :values #{"England (including Independent Sector Providers)"}}]
-                       :metadata {:year "2014" :period_of_coverage "01/01/2014" :level "England"
-                                  :breakdown "Region"}}
-                      {:resource-id "c0ad59fc-6593-46b3-9d2c-3573fdcf8e89"
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-11-2014" :period_of_coverage "2014 December"}}
+                      {:resource-id "7cff105c-e5d3-4ffe-a6f0-a68f6f98d730"
                        :indicator-id "49a"
                        :headers "resources/headers/friends_and_family.edn"
                        :worksheets ["IP Eng"]
@@ -235,49 +478,49 @@
                        :field :friends-and-family-test-score
                        :fields-to-extract [:friends-and-family-test-score :area-team
                                            :year :period_of_coverage :level :breakdown]
+                       :fields-to-rename {:year :date
+                                          :friends-and-family-test-score :value}
                        :conditions [{:field :area-team
                                      :values #{"England (including Independent Sector Providers)"}}]
-                       :metadata {:year "2013" :period_of_coverage "01/12/2013" :level "England"
-                                  :breakdown "Region"}}
-                      {:resource-id "0ee7a7eb-66a5-44b3-a560-142dc8b647a5"
-                       :indicator-id "49a"
-                       :headers "resources/headers/friends_and_family.edn"
-                       :worksheets ["IP Eng"]
-                       :scrub-details {:offset 9
-                                       :last-row 39}
-                       :field :friends-and-family-test-score
-                       :fields-to-extract [:friends-and-family-test-score :area-team
-                                           :year :period_of_coverage :level :breakdown]
-                       :conditions [{:field :area-team
-                                     :values #{"England (including Independent Sector Providers)"}}]
-                       :metadata {:year "2013" :period_of_coverage "01/11/2013" :level "England"
-                                  :breakdown "Region"}}]
+                       :metadata {:sub_lens_resource_id ""
+                                  :lens_value "England"
+                                  :date "01-10-2014" :period_of_coverage "2014 October"}}]
+
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ;; GP Survey
+
+ ;; Access to GP services
  :access-to-gp-services [{:resource-id "0e10c436-ac0a-44f0-af86-483676b81981"
-                           :indicator-id "54"
-                           :headers "resources/headers/gp_survey.edn"
-                           :worksheets ["MAKING AN APPOINTMENT"]
-                           :scrub-details {:offset 10
-                                           :last-row 223}
-                           :fields-to-extract [:overall_experience_of_making_an_appointment_very_good_percentage
-                                               :overall_experience_of_making_an_appointment_fairly_good_percentage
-                                               :ccg_name]
-                           :conditions [{:field :ccg_name
-                                         :values #{"Results for England as a whole "}}]
-                           :metadata {:year "2014" :period_of_coverage "01/07/2014"
-                                      :level "England"}}
+                          :indicator-id "54"
+                          :headers "resources/headers/gp_survey.edn"
+                          :worksheets ["MAKING AN APPOINTMENT"]
+                          :scrub-details {:offset 10
+                                          :last-row 223}
+                          :fields-to-extract [:overall_experience_of_making_an_appointment_very_good_percentage
+                                              :overall_experience_of_making_an_appointment_fairly_good_percentage
+                                              :ccg_name]
+                          :conditions [{:field :ccg_name
+                                        :values #{"Results for England as a whole "}}]
+                          :metadata {:sub_lens_resource_id ""
+                                     :date "01-07-2014" :period_of_coverage "2014"
+                                     :lens_value "England"}}
+
                          {:resource-id "06e3a75f-71db-40b5-9d20-ea7fc770b440"
-                           :indicator-id "54"
-                           :headers "resources/headers/gp_survey.edn"
-                           :worksheets ["MAKING AN APPOINTMENT"]
-                           :scrub-details {:offset 10
-                                           :last-row 223}
-                           :fields-to-extract [:overall_experience_of_making_an_appointment_very_good_percentage
-                                               :overall_experience_of_making_an_appointment_fairly_good_percentage
-                                               :ccg_name]
-                           :conditions [{:field :ccg_name
-                                         :values #{"Results for England as a whole "}}]
-                           :metadata {:year "2015" :period_of_coverage "01/01/2015"
-                                      :level "England"}}]
+                          :indicator-id "54"
+                          :headers "resources/headers/gp_survey.edn"
+                          :worksheets ["MAKING AN APPOINTMENT"]
+                          :scrub-details {:offset 10
+                                          :last-row 223}
+                          :fields-to-extract [:overall_experience_of_making_an_appointment_very_good_percentage
+                                              :overall_experience_of_making_an_appointment_fairly_good_percentage
+                                              :ccg_name]
+                          :conditions [{:field :ccg_name
+                                        :values #{"Results for England as a whole "}}]
+                          :metadata {:sub_lens_resource_id ""
+                                     :date "01-01-2015" :period_of_coverage "2015"
+                                     :lens_value "England"}}]
+
+ ;; Access to NHS Dental services
  :access-to-nhs-dental-services [{:resource-id "0e10c436-ac0a-44f0-af86-483676b81981"
                                   :indicator-id "55"
                                   :headers "resources/headers/gp_survey.edn"
@@ -289,8 +532,10 @@
                                                       :ccg_name]
                                   :conditions [{:field :ccg_name
                                                 :values #{"Results for England as a whole"}}]
-                                  :metadata {:year "2014" :period_of_coverage "01/07/2014"
-                                             :level "England"}}
+                                  :metadata {:sub_lens_resource_id ""
+                                             :date "01-07-2014" :period_of_coverage "2014"
+                                             :lens_value "England"}}
+
                                  {:resource-id "06e3a75f-71db-40b5-9d20-ea7fc770b440"
                                   :indicator-id "55"
                                   :headers "resources/headers/gp_survey.edn"
@@ -302,5 +547,65 @@
                                                       :ccg_name]
                                   :conditions [{:field :ccg_name
                                                 :values #{"Results for England as a whole"}}]
-                                  :metadata {:year "2015" :period_of_coverage "01/01/2015"
-                                             :level "England"}}]}
+                                  :metadata {:sub_lens_resource_id ""
+                                             :date "01-01-2015" :period_of_coverage "2015"
+                                             :lens_value "England"}}]
+
+
+
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ;; NHS Constitution
+
+ :constitution [{:resource-id "215f73ee-41b3-40fa-8ea7-b6d13f1337ec"
+                 :indicator-id "132"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "2014-15 Q1"}
+                 :division-fields [:within_14_days :total]}
+
+                {:resource-id "afb3049d-78f6-4048-9a4e-6638d2688e0d"
+                 :indicator-id "133"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "2014-15 Q1"}
+                 :division-fields [:within_14_days :total]}
+
+                {:resource-id "0a873564-0a18-4edc-b7e8-5cadc40eecec"
+                 :indicator-id "134"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "2014-15 Q1"}
+                 :division-fields [:after_31_days :total]}
+
+                {:resource-id "0a873564-0a18-4edc-b7e8-5cadc40eecec"
+                 :indicator-id "135"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "2014-15 Q1"}
+                 :division-fields [:after_31_days :total]}
+
+                {:resource-id "e560de1c-8a06-49a6-969c-11535c3ef2e6"
+                 :indicator-id "136"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "2014-15 Q1"}
+                 :division-fields [:after_31_days :total]}
+
+                {:resource-id "dadfd925-f491-46f3-92c1-f84959325969"
+                 :indicator-id "137"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "2014-15 Q1"}
+                 :division-fields [:after_31_days :total]}
+
+                {:resource-id "e01fc8b5-6c9b-4a56-9063-4b170cc97dee"
+                 :indicator-id "138"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "2014-15 Q1"}
+                 :division-fields [:after_62_days :total_treated]}
+
+                {:resource-id "d07d271c-5933-4eb2-a70b-ef7551563269"
+                 :indicator-id "139"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "2014-15 Q1"}
+                 :division-fields [:after_62_days :total_treated]}
+
+                {:resource-id "212b6adb-3196-4854-af7d-1f146a2d3ec9"
+                 :indicator-id "140"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "2014-15 Q1"}
+                 :division-fields [:after_62_days :total_treated]}]}

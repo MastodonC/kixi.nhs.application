@@ -28,8 +28,6 @@
                      :within_62_days "8"
                      :area_team_code_1 "123"}]]
       (is (= {:value "0.2"
-              :breakdown "Area Team Code"
-              :level "123"
               :year "2014/2015"
               :period_of_coverage "01/04/2014 - 30/06/2014"}
              (c/percentage-seen-within-x-days fields
@@ -63,13 +61,9 @@
                      :within_62_days "8"
                      :area_team_code_1 "222"}]]
       (is (= [{:value "0.2",
-               :breakdown "Area Team Code",
-               :level "123",
                :year "2014/2015",
                :period_of_coverage "01/04/2014 - 30/06/2014"}
               {:value "0.2",
-               :breakdown "Area Team Code",
-               :level "222",
                :year "2014/2015",
                :period_of_coverage "01/04/2014 - 30/06/2014"}]
              (c/per-team-area fields metadata data))))))
