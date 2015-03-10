@@ -75,7 +75,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
-                    :resource-id "3e6f1dac-74f7-4051-8282-1d0c458d9e7c"}
+                    :resource-id "d0fc162e-b3e4-45b7-8e1d-caffda4e463a"}
 
                    ;; Women’s experience of maternity services
                    {:indicator-id "56"
@@ -99,7 +99,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
-                    :resource-id "c877fca5-5d8a-4f63-a592-57ac1cf576e1"}
+                    :resource-id "169d8ede-292d-48aa-8134-01078bf2b85a"}
 
                    ;; Health related quality of life for people with long-term conditions
                    {:indicator-id "22"
