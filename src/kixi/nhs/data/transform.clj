@@ -5,7 +5,8 @@
             [clojure.tools.logging :as log]
             [clj-time.core         :as t]
             [clj-time.format       :as tf]
-            [clojure.edn           :as edn]))
+            [clojure.edn           :as edn]
+            [kixi.nhs.data.date    :as d]))
 
 (defn not-nil? [x] (not (nil? x)))
 
@@ -95,7 +96,9 @@
         (cond-> (and (empty? (:period_of_coverage m))
                      (empty? (:period_of_coverage metadata)))
           (assoc :period_of_coverage (:year m)))
-        (clojure.set/rename-keys (:fields-to-rename recipe-map)))))
+        (clojure.set/rename-keys (:fields-to-rename recipe-map))
+        (d/uniform-date :date)
+        (d/uniform-date :period_of_coverage))))
 
 (defn enrich-dataset
   "Enrichs dataset with indicator-id."
