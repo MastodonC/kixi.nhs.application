@@ -14,6 +14,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :level_description :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "e8bbf627-6bb1-48f5-95e8-cf943ad16b37"}
 
@@ -26,6 +29,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :level_description :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"}
 
@@ -38,6 +44,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :level_description :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "5ca47971-5d9e-4b50-93f0-8a8ecc90c072"}
 
@@ -50,6 +59,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :level_description :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "bcdaf636-32d0-4122-9828-e01c14d95f0b"}
 
@@ -62,6 +74,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :level_description :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "9c81f9a3-6301-4faf-90f0-b9f50d2aae39"}
 
@@ -74,6 +89,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "d0fc162e-b3e4-45b7-8e1d-caffda4e463a"}
 
@@ -86,6 +104,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "18a8f547-be9b-4180-a8f6-4b5dccdfdc62"}
 
@@ -98,6 +119,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "169d8ede-292d-48aa-8134-01078bf2b85a"}
 
@@ -110,6 +134,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "620c1ebe-8f6c-48f6-8dfc-a9f2e68b2467"}
 
@@ -122,6 +149,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "bb15bca9-9716-4d00-bc5f-8b8be88d60bc"}
 
@@ -134,6 +164,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "738b4af1-2691-40ae-a548-6ab6a6fd3415"}
 
@@ -146,6 +179,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "c44d0bd9-4d85-4aed-8051-5136f8d359a3"}
 
@@ -159,6 +195,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "c05f9627-8932-4db8-b1d6-ccb29197158d"}
 
@@ -171,6 +210,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "52a33b3d-d8aa-4934-b769-62f73ec67e1e"}
 
@@ -183,6 +225,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "1fa9756c-ea6c-4bbf-9c7e-7c4928ed3772"}
 
@@ -195,6 +240,9 @@
                                        :average_health_gain :value}
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "01652770-ee37-4b47-b83b-f3a9627c3cd2"}
 
@@ -209,6 +257,9 @@
                     :conditions [{:field :procedure :values #{"Hip replacement"}}
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
 
@@ -223,6 +274,9 @@
                     :conditions [{:field :procedure :values #{"Knee replacement"}}
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
 
@@ -237,6 +291,9 @@
                     :conditions [{:field :procedure :values #{"Groin hernia"}}
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
 
@@ -251,6 +308,9 @@
                     :conditions [{:field :procedure :values #{"Varicose vein"}}
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}
                     :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}]
 
@@ -395,6 +455,9 @@
                                             "Excellent"
                                             "Good"}}]
                     :metadata {:sub_lens_resource_id ""
+                               :parent_lens_fk nil
+                               :lens_title "England"
+                               :lens_grouping "Nation"
                                :lens_value "England"}}
 
   ;; Incidence of MRSA
@@ -405,6 +468,9 @@
                   :conditions [{:field :level :values #{"England"}}]
                   :resource-id "5b1607c5-82d8-43b2-a5f6-6c7383627787"
                   :metadata {:sub_lens_resource_id ""
+                             :parent_lens_fk nil
+                             :lens_title "England"
+                             :lens_grouping "Nation"
                              :lens_value "England"}}
 
  ;; Incidence of C difficile
@@ -416,6 +482,9 @@
                          :sum-field :cdi_count
                          :resource-id "0a7ab959-fb42-4c13-baff-06646b9bdc75"
                          :metadata {:sub_lens_resource_id ""
+                                    :parent_lens_fk nil
+                                    :lens_title "England"
+                                    :lens_grouping "Nation"
                                     :lens_value "England"}}
 
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -435,6 +504,9 @@
                        :conditions [{:field :area-team
                                      :values #{"England (including Independent Sector Providers)"}}]
                        :metadata {:sub_lens_resource_id ""
+                                  :parent_lens_fk nil
+                                  :lens_title "England"
+                                  :lens_grouping "Nation"
                                   :lens_value "England"
                                   :date "01-08-2014" :period_of_coverage "2014 August"}}
                       {:resource-id "7c6e7801-b3a7-4e30-a2c1-21715dd8b699"
@@ -451,6 +523,9 @@
                        :conditions [{:field :area-team
                                      :values #{"England (including Independent Sector Providers)"}}]
                        :metadata {:sub_lens_resource_id ""
+                                  :parent_lens_fk nil
+                                  :lens_title "England"
+                                  :lens_grouping "Nation"
                                   :lens_value "England"
                                   :date "01-12-2014" :period_of_coverage "2014 December"}}
                       {:resource-id "7cff105c-e5d3-4ffe-a6f0-a68f6f98d730"
@@ -468,6 +543,9 @@
                                      :values #{"England (including Independent Sector Providers)"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
+                                  :parent_lens_fk nil
+                                  :lens_title "England"
+                                  :lens_grouping "Nation"
                                   :date "01-10-2014" :period_of_coverage "2014 October"}}]
 
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -486,6 +564,9 @@
                           :conditions [{:field :ccg_name
                                         :values #{"Results for England as a whole "}}]
                           :metadata {:sub_lens_resource_id ""
+                                     :parent_lens_fk nil
+                                     :lens_title "England"
+                                     :lens_grouping "Nation"
                                      :date "01-07-2014" :period_of_coverage "2014"
                                      :lens_value "England"}}
 
@@ -501,6 +582,9 @@
                           :conditions [{:field :ccg_name
                                         :values #{"Results for England as a whole "}}]
                           :metadata {:sub_lens_resource_id ""
+                                     :parent_lens_fk nil
+                                     :lens_title "England"
+                                     :lens_grouping "Nation"
                                      :date "01-01-2015" :period_of_coverage "2015"
                                      :lens_value "England"}}]
 
@@ -517,6 +601,9 @@
                                   :conditions [{:field :ccg_name
                                                 :values #{"Results for England as a whole"}}]
                                   :metadata {:sub_lens_resource_id ""
+                                             :parent_lens_fk nil
+                                             :lens_title "England"
+                                             :lens_grouping "Nation"
                                              :date "01-07-2014" :period_of_coverage "2014"
                                              :lens_value "England"}}
 
@@ -532,6 +619,9 @@
                                   :conditions [{:field :ccg_name
                                                 :values #{"Results for England as a whole"}}]
                                   :metadata {:sub_lens_resource_id ""
+                                             :parent_lens_fk nil
+                                             :lens_title "England"
+                                             :lens_grouping "Nation"
                                              :date "01-01-2015" :period_of_coverage "2015"
                                              :lens_value "England"}}]
 
@@ -543,53 +633,80 @@
  :constitution [{:resource-id "215f73ee-41b3-40fa-8ea7-b6d13f1337ec"
                  :indicator-id "132"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
-                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"
+                            :parent_lens_fk nil
+                            :lens_title "England"
+                            :lens_grouping "Nation"}
                  :division-fields [:within_14_days :total]}
 
                 {:resource-id "afb3049d-78f6-4048-9a4e-6638d2688e0d"
                  :indicator-id "133"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
-                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"
+                            :parent_lens_fk nil
+                            :lens_title "England"
+                            :lens_grouping "Nation"}
                  :division-fields [:within_14_days :total]}
 
                 {:resource-id "0a873564-0a18-4edc-b7e8-5cadc40eecec"
                  :indicator-id "134"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
-                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"
+                            :parent_lens_fk nil
+                            :lens_title "England"
+                            :lens_grouping "Nation"}
                  :division-fields [:after_31_days :total]}
 
                 {:resource-id "0a873564-0a18-4edc-b7e8-5cadc40eecec"
                  :indicator-id "135"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
-                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"
+                            :parent_lens_fk nil
+                            :lens_title "England"
+                            :lens_grouping "Nation"}
                  :division-fields [:after_31_days :total]}
 
                 {:resource-id "e560de1c-8a06-49a6-969c-11535c3ef2e6"
                  :indicator-id "136"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
-                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"
+                            :parent_lens_fk nil
+                            :lens_title "England"
+                            :lens_grouping "Nation"}
                  :division-fields [:after_31_days :total]}
 
                 {:resource-id "dadfd925-f491-46f3-92c1-f84959325969"
                  :indicator-id "137"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
-                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"
+                            :parent_lens_fk nil
+                            :lens_title "England"
+                            :lens_grouping "Nation"}
                  :division-fields [:after_31_days :total]}
 
                 {:resource-id "e01fc8b5-6c9b-4a56-9063-4b170cc97dee"
                  :indicator-id "138"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
-                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"
+                            :parent_lens_fk nil
+                            :lens_title "England"
+                            :lens_grouping "Nation"}
                  :division-fields [:after_62_days :total_treated]}
 
                 {:resource-id "d07d271c-5933-4eb2-a70b-ef7551563269"
                  :indicator-id "139"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
-                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"
+                            :parent_lens_fk nil
+                            :lens_title "England"
+                            :lens_grouping "Nation"}
                  :division-fields [:after_62_days :total_treated]}
 
                 {:resource-id "212b6adb-3196-4854-af7d-1f146a2d3ec9"
                  :indicator-id "140"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
-                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"
+                            :parent_lens_fk nil
+                            :lens_title "England"
+                            :lens_grouping "Nation"}
                  :division-fields [:after_62_days :total_treated]}]}
