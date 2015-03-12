@@ -128,7 +128,7 @@
   (let [config          (read-config config-url)
         new-resource    (json/encode {:package_id dataset-id
                                       :url "http://fix-me" ;; url is mandatory
-                                      :description "Data baked for the board report"})
+                                      :description "Data for the board report"})
         new-resource-id (storage/create-new-resource ckan-client dataset-id new-resource)
         records         (create-boardreport-dataset ckan-client config)
         data            (data/prepare-resource-for-insert dataset-id new-resource-id
