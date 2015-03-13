@@ -2,7 +2,8 @@
   (:require [kixi.nhs.data.storage   :as storage]
             [clj-excel.core          :as xls]
             [clojure.edn             :as edn]
-            [kixi.nhs.data.transform :as transform]))
+            [kixi.nhs.data.transform :as transform]
+            [clojure.tools.logging   :as log]))
 
 (defn retrieve-xls-url
   "Returns URL of the xls from the resource metadata."
@@ -15,7 +16,10 @@
   that represent worksheets."
   [url]
   (when url
-    (xls/lazy-workbook (xls/workbook-xssf url))))
+    (try
+      (xls/lazy-workbook (xls/workbook-xssf url))
+      (catch Throwable t
+        (log/warnf "Could not retrieve xls file: %s" t)))))
 
 (defn add-headers
   "Enriches each sequence (row) of data
