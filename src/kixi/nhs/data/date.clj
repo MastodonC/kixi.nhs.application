@@ -9,70 +9,77 @@
               #"\w* - \w* \d{4}"
               #"\d{4}-\d{2}"
               #"\d{4}\/\d{2}"
-              #"\d{1,2}/\d{1,2}/\d{4} to \d{1,2}/\d{1,2}/\d{4}"])
+              #"\d{1,2}/\d{1,2}/\d{4} to \d{1,2}/\d{1,2}/\d{4}"
+              #"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}"
+              #"\d{4} \w+"])
 
-(def months
-  ["January" "February" "March" "April" "May" "June" "July" "August"
-   "September" "October" "November" "December"])
+(defn- date->str [s]
+  (tf/unparse (tf/formatter "yyyy-MM-dd") s))
 
-(def short-months
-  ["Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug"
-   "Sep" "Oct" "Nov" "Dec"])
-
-(defn index-of [coll x]
-  (first (keep-indexed #(when (= %2 x) %1) coll)))
+(defn- str->date [s formatter]
+  (->> s str/trim (tf/parse formatter)))
 
 (defmulti s->uniform-date (fn [date-str pattern] pattern))
 
 ;; 2013
 (defmethod s->uniform-date "\\d{4}" [date-str pattern]
-  date-str)
+  {:start_date (str date-str "-01-01")
+   :end_date   (str date-str "-12-31")})
 
-;; 2013/14
+;; 2013/14 => fiscal year 2013-04-06 - 2014-04-05
 (defmethod s->uniform-date "\\d{4}\\/\\d{2}" [date-str pattern]
-  (str/replace date-str #"/" "-"))
+  (let [[start end] (str/split date-str #"/")]
+    {:start_date (str start "-04-06")
+     :end_date   (str (t/year (str->date end (tf/formatter "yy"))) "-04-05")}))
 
-;; 2013-14
+;; 2013-14 => fiscal year 2013-04-06 - 2014-04-05
 (defmethod s->uniform-date "\\d{4}-\\d{2}" [date-str pattern]
-  date-str)
+  (let [[start end] (str/split date-str #"-")]
+    {:start_date (str start "-04-06")
+     :end_date   (str (t/year (str->date end (tf/formatter "yy"))) "-04-05")}))
 
-;; 01/01/2014
-(defmethod s->uniform-date "\\d{4}-\\d{2}" [date-str pattern]
-  date-str)
-
-(defn- scrub [s]
-  (-> s
-      str/trim
-      (str/replace #"/" "-")))
-
-;; 1/4/2013 to 31/3/2014
+;; 1/4/2013 to 31/3/2014 => {:start_date "2013-04-01" :end-date "2014-03-31"}
 (defmethod s->uniform-date "\\d{1,2}/\\d{1,2}/\\d{4} to \\d{1,2}/\\d{1,2}/\\d{4}" [s pattern]
   (let [[start-str end-str] (str/split s #" to ")
-        start-date          (scrub (first (re-seq #"\d{1,2}/\d{1,2}/\d{4}" start-str)))
-        end-date            (scrub (first (re-seq #"\d{1,2}/\d{1,2}/\d{4}" end-str)))]
-    (str start-date " " end-date)))
+        formatter           (tf/formatter "dd/MM/yyyy")
+        start-date          (-> start-str (str->date formatter) date->str)
+        end-date            (-> end-str (str->date formatter) date->str)]
+    {:start_date start-date
+     :end_date   end-date}))
 
-;; January 2014 to February 2014
+;; January 2014 to February 2014 => {:start_date "2014-01-01" :end_date "2014-02-29"}
 (defmethod s->uniform-date "\\w* \\d{4} to \\w* \\d{4}" [s pattern]
   (let [[start-str end-str] (str/split s #" to ")
-        start-date          (str "1" "-"
-                                 (inc (index-of months (str/trim (first (re-seq #"\w*" start-str))))) "-"
-                                 (str/trim (first (re-seq #"\d{4}" start-str))))
-        end-date            (str "1" "-"
-                                 (inc (index-of months (str/trim (first (re-seq #"\w*" end-str))))) "-"
-                                 (str/trim (first (re-seq #"\d{4}" end-str))))]
-    (str start-date " " end-date)))
+        formatter           (tf/formatter "MMMM yyyy")
+        start-date          (-> start-str (str->date formatter) date->str)
+        end-date            (-> end-str (str->date formatter) t/last-day-of-the-month date->str)]
+    {:start_date start-date
+     :end_date end-date}))
 
-;; Oct - Dec 2013
+;; Oct - Dec 2013 => {:start_date "2013-10-01" :end_date "2013-12-31"}
 (defmethod s->uniform-date "\\w* - \\w* \\d{4}" [s pattern]
   (let [[start-str end-str] (str/split s #" - ")
-        start-date          (str "1" "-"
-                                 (inc (index-of short-months (str/trim start-str))) "-"
-                                 (str/trim (first (re-seq  #"\d{4}" end-str))))
-        end-date            (str "1" "-"
-                                 (inc (index-of short-months (str/trim (first (re-seq #"\w*" end-str))))) "-"
-                                 (str/trim (first (re-seq #"\d{4}" end-str))))]
-    (str start-date " " end-date)))
+        year                (first (re-seq #"\d{4}" end-str))
+        formatter           (tf/formatter "MMM yyyy")
+        start-date          (-> (str start-str " " year) (str->date formatter) date->str)
+        end-date            (-> end-str (str->date formatter) t/last-day-of-the-month date->str)]
+    {:start_date start-date
+     :end_date end-date}))
+
+;; 2015-12-13T00:00:00 => {:start_date "2015-12-13" :end_date "2015-12-13"}
+(defmethod s->uniform-date "\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}" [s pattern]
+  (let [formatter    (tf/formatter "yyyy-MM-dd'T'HH:mm:ss")
+        start-date   (-> s (str->date formatter) date->str)]
+    {:start_date start-date
+     :end_date start-date}))
+
+;; 2015 October
+(defmethod s->uniform-date "\\d{4} \\w+" [s pattern]
+  (let [formatter    (tf/formatter "yyyy MMMM")
+        start-date   (-> s (str->date formatter) date->str)
+        end-date     (-> s (str->date formatter) t/last-day-of-the-month date->str)]
+    {:start_date start-date
+     :end_date end-date}))
 
 (defn parse
   "Takes parser and a string, and tries to find a match for its
@@ -84,18 +91,17 @@
       (when (= s (first date-str)) ;; we're looking for exact match
         (s->uniform-date s (str parser))))))
 
-(defn uniform-date
-  "Takes a map and parses keys :date
-  and :period_of_coverage ito  a uniform
-  format.
-  Returns the same map, with dates parsed if
-  it parsing was successful, otherwise the dates
-  remain unchanged."
-  [m k]
-  (let [date (some (fn [p]
-                     (let [d (parse p (k m))]
-                       (when-not (nil? d)
-                         d))) parsers)]
-    (if date
-      (assoc-in m [k] date)
+(defn uniform-dates
+  "Takes a map and parses key :period_of_coverage
+  into {:start_date x :end_date x}
+  Returns the same map, with dates associated into it
+  if parsing was successful, otherwise the map
+  is returned unchanged."
+  [m]
+  (let [start-end-dates (some (fn [p]
+                                (let [d (parse p (:period_of_coverage m))]
+                                  (when-not (nil? d)
+                                    d))) parsers)]
+    (if (seq start-end-dates)
+      (merge m start-end-dates)
       m)))

@@ -23,6 +23,8 @@
             {"id" "value"                "type" "text"}
             {"id" "date"                 "type" "text"}
             {"id" "period_of_coverage"   "type" "text"}
+            {"id" "start_date"           "type" "text"}
+            {"id" "end_date"             "type" "text"}
             {"id" "uci"                  "type" "text"}
             {"id" "lci"                  "type" "text"}
             {"id" "lens_value"           "type" "text"}

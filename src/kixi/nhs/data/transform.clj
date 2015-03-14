@@ -97,8 +97,7 @@
                      (empty? (:period_of_coverage metadata)))
           (assoc :period_of_coverage (:year m)))
         (clojure.set/rename-keys (:fields-to-rename recipe-map))
-        (d/uniform-date :date)
-        (d/uniform-date :period_of_coverage))))
+        d/uniform-dates)))
 
 (defn enrich-dataset
   "Enrichs dataset with indicator-id."
