@@ -37,9 +37,6 @@
           :value (str (transform/divide (total k1 data)
                                         (total k2 data)))}))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Top level - Area Team
-
 (defn area-team-level
   "Splits data by area team code and calculates
   the percentage of patients seen within/after x days.
@@ -55,20 +52,13 @@
 (defn find-resource [ckan-client alias]
   (storage/get-resource-metadata ckan-client alias))
 
-(defn update-resource
-  "Generates data and updates existing
-  resource in CKAN."
-  [ckan-client recipe id data]
-  (let [dataset-id (:dataset-id recipe)
-        existing-resource-id (find-resource ckan-client (:alias recipe))]
-    (storage/update-existing-resource ckan-client existing-resource-id data)))
-
 (defn create-new-resource
   "Creates new resource in CKAN, generates data
   and stores it in DataStore. Uses alias as a unique identifier
   that is later used to query resources."
   [ckan-client recipe data]
   (let [dataset-id (:dataset-id recipe)]
+    (log/infof "Creating new resource for indicator %s and lens %s" (:indicator-id recipe) (:lens recipe))
     (let [new-resource (json/encode {:package_id dataset-id
                                      :aliases (:alias recipe)
                                      :url "http://fix-me"})]
@@ -78,14 +68,14 @@
 
 (defmethod produce-data :nation [ckan-client recipe data]
   (log/infof "Producing nation level data for indicator: %s" (:indicator-id recipe))
-  (percentage-seen-within-x-days (:division-fields recipe) (:metadata recipe) "Region" "England" "England" data))
+  (percentage-seen-within-x-days (:division-fields recipe) (:metadata recipe) "Region" "England" data))
 
 (defmethod produce-data :area-team [ckan-client recipe data]
   (log/infof "Producing area team level data for indicator: %s" (:indicator-id recipe))
-  (let [data              (area-team-level (:division-fields recipe) (:metadata recipe) data)
-        existing-resource (storage/get-resource-metadata ckan-client (:alias recipe))]
-    (if (seq existing-resource)
-      (update-resource ckan-client recipe (:id existing-resource) data)
+  (let [data                 (area-team-level (:division-fields recipe) (:metadata recipe) data)
+        existing-resource-id (:id (storage/get-resource-metadata ckan-client (:alias recipe)))]
+    (if (seq existing-resource-id)
+      (storage/update-existing-resource ckan-client existing-resource-id data)
       (create-new-resource ckan-client recipe data))))
 
 (defn resource
