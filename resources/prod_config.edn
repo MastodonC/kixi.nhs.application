@@ -631,12 +631,28 @@
  ;; NHS Constitution
 
  :constitution [{:resource-id "215f73ee-41b3-40fa-8ea7-b6d13f1337ec"
+                 :dataset-id "board_report"
+                 :description "Indicator 132: Maximum two-week wait for first outpatient appointment for patients referred urgently with suspected cancer by a GP"
                  :indicator-id "132"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"
                             :parent_lens_fk nil
                             :lens_title "England"
                             :lens_grouping "Nation"}
+                 :lens :nation
+                 :alias "132-nation"
+                 :division-fields [:within_14_days :total]}
+
+                ;; TODO move to separate config
+                {:resource-id "215f73ee-41b3-40fa-8ea7-b6d13f1337ec"
+                 :dataset-id "board_report"
+                 :description "Indicator 132: Maximum two-week wait for first outpatient appointment for patients referred urgently with suspected cancer by a GP"
+                 :indicator-id "132"
+                 :metadata {:date "01-04-2014" :period_of_coverage "April 2014 to June 2014"
+                            :parent_lens_fk nil
+                            :lens_grouping "Area Team"}
+                 :lens :area-team
+                 :alias "132-area-team"
                  :division-fields [:within_14_days :total]}
 
                 {:resource-id "afb3049d-78f6-4048-9a4e-6638d2688e0d"

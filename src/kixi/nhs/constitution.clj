@@ -1,6 +1,8 @@
 (ns kixi.nhs.constitution
   (:require [kixi.nhs.data.transform :as transform]
-            [kixi.nhs.data.storage   :as storage]))
+            [kixi.nhs.data.storage   :as storage]
+            [cheshire.core           :as json]
+            [clojure.tools.logging   :as log]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Helpers
@@ -28,9 +30,11 @@
   "Calculates percentage seen within/after x days.
   Returns a map with the result, breakdown, level,
   year and period of coverage."
-  [[k1 k2] metadata breakdown level level-description data]
+  [[k1 k2] metadata lens-value lens-title data]
   (merge metadata
-         {:value (str (transform/divide (total k1 data)
+         {:lens_title lens-title
+          :lens_value lens-value
+          :value (str (transform/divide (total k1 data)
                                         (total k2 data)))}))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -45,53 +49,58 @@
        (transform/split-by-key :area_team_code_1)
        (map #(percentage-seen-within-x-days fields
                                             metadata
-                                            "Area Team Code"
                                             (:area_team_code_1 (first %))
                                             (:area_team (first %)) %))))
+
+(defn find-resource [ckan-client alias]
+  (storage/get-resource-metadata ckan-client alias))
 
 (defn update-resource
   "Generates data and updates existing
   resource in CKAN."
-  [ckan-client recipe id data])
+  [ckan-client recipe id data]
+  (let [dataset-id (:dataset-id recipe)
+        existing-resource-id (find-resource ckan-client (:alias recipe))]
+    (storage/update-existing-resource ckan-client existing-resource-id data)))
 
 (defn create-new-resource
   "Creates new resource in CKAN, generates data
-  and stores it in DataStore."
-  [ckan-client recipe data])
+  and stores it in DataStore. Uses alias as a unique identifier
+  that is later used to query resources."
+  [ckan-client recipe data]
+  (let [dataset-id (:dataset-id recipe)]
+    (let [new-resource (json/encode {:package_id dataset-id
+                                     :aliases (:alias recipe)
+                                     :url "http://fix-me"})]
+      (storage/create-new-resource ckan-client dataset-id new-resource))))
 
-(defn per-area-team
-  "Generates data for area team level."
-  [ckan-client recipe]
-  (let [fields  (:division-fields recipe)
-        data    (scrub (storage/get-resource-data ckan-client (:raw-resource-id recipe)))]
-    (area-team-level fields (:metadata recipe) data)))
+(defmulti produce-data (fn [ckan-client recipe data] (:lens recipe)))
 
-(defn insert-per-area-team
-  "Generates data for Area Team level and either
-  creates a new resource or updates an existing one."
-  [ckan-client recipe]
-  (let [existing-resource (storage/get-resource-metadata ckan-client (:resource-name recipe))
-        data              (per-area-team ckan-client recipe)]
+(defmethod produce-data :nation [ckan-client recipe data]
+  (log/infof "Producing nation level data for indicator: %s" (:indicator-id recipe))
+  (percentage-seen-within-x-days (:division-fields recipe) (:metadata recipe) "Region" "England" "England" data))
+
+(defmethod produce-data :area-team [ckan-client recipe data]
+  (log/infof "Producing area team level data for indicator: %s" (:indicator-id recipe))
+  (let [data              (area-team-level (:division-fields recipe) (:metadata recipe) data)
+        existing-resource (storage/get-resource-metadata ckan-client (:alias recipe))]
     (if (seq existing-resource)
       (update-resource ckan-client recipe (:id existing-resource) data)
       (create-new-resource ckan-client recipe data))))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Top level - Nation
+(defn resource
+  "Retrieves raw data and generates a resource based on the
+  recipe.
 
-(defn per-region
-  "Returns total for region (England),
-  sums up data for all CCGs."
-  [fields metadata data]
-  (percentage-seen-within-x-days fields metadata "Region" "England" "England" data))
-
-(defn process-recipe [ckan-client recipe]
-  (let [data           (scrub (storage/get-resource-data ckan-client (:resource-id recipe)))
-        fields         (:division-fields recipe)]
+  Depending on the lens that is specified in the recipe, it will
+  either return a sequence of maps to be inserted as top-level
+  board report data, or it will create/update a lower-level resource."
+  [ckan-client recipe]
+  (let [data (scrub (storage/get-resource-data ckan-client (:resource-id recipe)))]
     (when (seq data)
-      (let [region-data    (per-region fields (:metadata recipe) data)]
-        (->> [region-data]
+      (let [data (produce-data ckan-client recipe data)]
+        (->> data
              (transform/enrich-dataset recipe))))))
 
 (defn analysis [ckan-client recipes]
-  (mapcat #(process-recipe ckan-client %) recipes))
+  (mapcat #(resource ckan-client %) recipes))

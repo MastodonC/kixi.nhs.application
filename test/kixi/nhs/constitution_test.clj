@@ -29,11 +29,13 @@
                      :area_team_code_1 "123"}]]
       (is (= {:value "0.2"
               :year "2014/2015"
+              :lens_value "Area Team"
+              :lens_title "123"
               :period_of_coverage "01/04/2014 - 30/06/2014"}
              (c/percentage-seen-within-x-days fields
                                               metadata
-                                              "Area Team Code"
-                                              "123" "Foo"
+                                              "Area Team"
+                                              "123"
                                               data))))))
 
 (deftest per-team-area-test
@@ -61,9 +63,13 @@
                      :within_62_days "8"
                      :area_team_code_1 "222"}]]
       (is (= [{:value "0.2",
-               :year "2014/2015",
+               :year "2014/2015"
+               :lens_value "123"
+               :lens_title "Foo"
                :period_of_coverage "01/04/2014 - 30/06/2014"}
-              {:value "0.2",
-               :year "2014/2015",
+              {:value "0.2"
+               :year "2014/2015"
+               :lens_value "222"
+               :lens_title "Bar"
                :period_of_coverage "01/04/2014 - 30/06/2014"}]
              (c/area-team-level fields metadata data))))))
