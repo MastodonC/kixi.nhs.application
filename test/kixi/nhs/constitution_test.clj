@@ -66,4 +66,4 @@
               {:value "0.2",
                :year "2014/2015",
                :period_of_coverage "01/04/2014 - 30/06/2014"}]
-             (c/per-team-area fields metadata data))))))
+             (c/area-team-level fields metadata data))))))

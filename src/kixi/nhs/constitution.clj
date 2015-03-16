@@ -57,8 +57,7 @@
 (defn create-new-resource
   "Creates new resource in CKAN, generates data
   and stores it in DataStore."
-  [ckan-client recipe data]
-  )
+  [ckan-client recipe data])
 
 (defn per-area-team
   "Generates data for area team level."
