@@ -1,6 +1,8 @@
 (ns kixi.nhs.constitution
   (:require [kixi.nhs.data.transform :as transform]
-            [kixi.nhs.data.storage   :as storage]))
+            [kixi.nhs.data.storage   :as storage]
+            [clojure.tools.logging   :as log]
+            [kixi.nhs.xls            :as xls]))
 
 (defn total
   "Filters specific field k from
@@ -49,16 +51,43 @@
   (->> data
        (remove #(empty? (:area_team_code_1 %)))))
 
-;; TODO lenses
-;;  team-area-data (per-team-area fields (:metadata recipe) data)
-
-(defn process-recipe [ckan-client recipe]
-  (let [data           (scrub (storage/get-resource-data ckan-client (:resource-id recipe)))
-        fields         (:division-fields recipe)]
+(defn divide-fields [recipe data]
+  (let [fields (:division-fields recipe)]
     (when (seq data)
-      (let [region-data    (per-region fields (:metadata recipe) data)]
+      (let [region-data (per-region fields (:metadata recipe) data)]
         (->> [region-data]
              (transform/enrich-dataset recipe))))))
+
+
+(defn sum-fields [recipe data]
+  (when (seq data)
+    (let [summed-up (transform/sum-sequence (:sum-field recipe) [(:sum-field recipe)] data)]
+      (->> [summed-up]
+           (map #(update-in % [:sum] str))
+           (transform/enrich-dataset recipe)))))
+
+(defmulti process-recipe (fn [ckan-client recipe] (:operation recipe)))
+
+(defmethod process-recipe :division [ckan-client recipe]
+  (log/infof "Processing recipe for indicator %s and operation %s" (:indicator-id recipe) (:operation recipe))
+  (let [data (scrub (storage/get-resource-data ckan-client (:resource-id recipe)))]
+    (divide-fields recipe data)))
+
+(defmethod process-recipe :sum [ckan-client recipe]
+  (log/infof "Processing recipe for indicator %s and operation %s" (:indicator-id recipe) (:operation recipe))
+  (let [data (->> (xls/process-xls ckan-client recipe)
+                  (transform/filter-dataset recipe))]
+    (sum-fields recipe data)))
+
+(defmethod process-recipe :none [ckan-client recipe]
+  (log/infof "Processing recipe for indicator %s and operation %s" (:indicator-id recipe) (:operation recipe))
+  (let [field (:field recipe)]
+    (->> (xls/process-xls ckan-client recipe)
+         (transform/filter-dataset recipe)
+         (map #(-> %
+                   (select-keys [field])
+                   (update-in [field] str)))
+         (transform/enrich-dataset recipe))))
 
 (defn analysis [ckan-client recipes]
   (mapcat #(process-recipe ckan-client %) recipes))

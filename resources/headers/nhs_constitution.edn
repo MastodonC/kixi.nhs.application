@@ -1,3 +1,25 @@
-{"TWO WEEK WAIT-ALL CANCER" [:ccg_ons_area_id_6 :area_team_ons_area_id_5 :area_team_code_1 :area_team
-                             :ccg_code_2 :clinical_commissioning_group :suspected_type_of_cancer_3 :total
-                             :within_14_days :after_14_days :within_14_days_percentage]}
+
+{"National" {:generic [:treatment_function_code :treatment_function
+                       :c :d :e :f :g :h :i :j :k :l :m :n :o :p :r :s :t :u :v :w :x :y :z :aa :ab :ac :ad :ae :af
+                       :ag :ah :ai :aj :ak :al :am :an :ao :ap :aq :ar :as :at :au :av :aw :ax :ay :az :ba :bb :bc
+                       :bd :patients_with_unknown_clock_start_date
+                       :total_number_of_completed_pathways_all
+                       :total_number_of_completed_pathways_with_a_known_clock_start
+                       :total_with_a_kwown_clock_start_within_18_weeks :within_18_weeks_percentile
+                       :average_waiting_time_in_weeks :waiting_time_95th_percentile]
+             "Dec" [:treatment_function_code :treatment_function
+                    :c :d :e :f :g :h :i :j :k :l :m :n :o :p :r :s :t :u :v :w :x :y :z :aa :ab :ac :ad :ae :af
+                    :ag :ah :ai :aj :ak :al :am :an :ao :ap :aq :ar :as :at :au :av :aw :ax :ay :az :ba :bb :bc
+                    :bd :total_number_of_incomplete_pathways :total_within_18_weeks :within_18_weeks_percentile
+                    :average_waiting_time_in_weeks :waiting_time_95th_percentile]}
+ "TWO WEEK WAIT-ALL CANCER" {:generic [:ccg_ons_area_id_6 :area_team_ons_area_id_5 :area_team_code_1 :area_team
+                                       :ccg_code_2 :clinical_commissioning_group :suspected_type_of_cancer_3 :total
+                                       :within_14_days :after_14_days :within_14_days_percentage]}
+ "Area Team" {:generic [:code :name :number_of_new_cases_of_psychosis_served_by_early_intervention_teams
+                        :number_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care
+                        :total_number_of_patients_on_cpa_discharged_from_psychiatric_inpatient_care
+                        :proportion_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care
+                        :number_of_admissions_to_acute_wards_that_were_gate_kept_by_the_crht_teams
+                        :total_number_of_admissions_to_acute_wards
+                        :proportion_of_admissions_to_acute_wards_that_were_gate_kept_by_the_crht_teams]}
+ }

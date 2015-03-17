@@ -1,6 +1,7 @@
 (ns kixi.nhs.friends-and-family
-  (:require [kixi.nhs.xls :as xls]
-            [kixi.nhs.data.transform :as transform]))
+  (:require [kixi.nhs.xls            :as xls]
+            [kixi.nhs.data.transform :as transform]
+            [clojure.tools.logging   :as log]))
 
 (defn process-friends-and-family
   "Retrieves Friends & Family Test value
@@ -8,7 +9,7 @@
   Sector Providers."
   [ckan-client recipe]
   (let [field (:field recipe)
-        data  (first (xls/process-xls-fft ckan-client recipe))]
+        data  (xls/process-xls ckan-client recipe)]
     (when (seq data)
       (->> data
            (transform/filter-dataset recipe)
@@ -30,11 +31,11 @@
 (defn process-friends-and-family-with-calculations
   "Retrieves Friends & Family Test value
   for England, including Independent
-  Sector Providers. With calculations for 
+  Sector Providers. With calculations for
   months April to July."
   [ckan-client recipe]
   (let [field (:field recipe)
-        data  (first (xls/process-xls-fft ckan-client recipe))]
+        data  (xls/process-xls ckan-client recipe)]
     (when (seq data)
       (->> data
            (transform/filter-dataset recipe)
@@ -49,7 +50,6 @@
   "Receives a sequence of F&F recipes.
   Returns a sequences of all results from those recipes combined."
   [ckan-client recipes]
-  (mapcat #(if (contains? (set ["Apr" "May" "Jun" "Jul"]) (:month %))
+  (mapcat #(if (:calculation %)
              (process-friends-and-family-with-calculations ckan-client %)
              (process-friends-and-family ckan-client %)) recipes))
-
