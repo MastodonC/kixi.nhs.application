@@ -1,0 +1,36 @@
+{"Dec" {"MAT_Qu1_Eng" [:emtpy-col
+                       :area-team-code :area-team :total-responses :percentage-recommended
+                       :percentage-not-recommended :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]}
+ "Nov" {"MAT_Qu1_Eng" [:emtpy-col
+                       :area-team-code :area-team :total-responses :percentage-recommended
+                       :percentage-not-recommended :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]}
+ "Oct" {"MAT_Qu1_Eng" [:emtpy-col
+                       :area-team-code :area-team :total-responses :percentage-recommended
+                       :percentage-not-recommended :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]}
+ "Sept" {"MAT_Qu1_Eng" [:emtpy-col
+                        :area-team-code :area-team :total-responses :percentage-recommended
+                        :percentage-not-recommended :empty :extremely-likely :likely
+                        :neither :unlikely :extremely-unlikely :dont-know]}
+ "Aug" {"MAT_Qu1_Eng" [:emtpy-col
+                       :area-team-code :area-team :total-responses :friends-and-family-test-score
+                       :percentage-recommended :percentage-not-recommended :empty :extremely-likely
+                       :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "Jul" {"MAT_Qu1_Eng" [:emtpy-col
+                       :area-team-code :area-team :total-responses 
+                       :friends-and-family-test-score :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]}
+ "Jun" {"MAT_Qu1_Eng" [:emtpy-col
+                       :area-team-code :area-team :total-responses :total-eligible
+                       :friends-and-family-test-score :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]}
+ "May" {"MAT_Qu1_Eng" [:emtpy-col
+                       :area-team-code :area-team :total-responses :total-eligible
+                       :friends-and-family-test-score :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]}
+ "Apr" {"MAT_Qu1_Eng" [:emtpy-col
+                       :area-team-code :area-team :total-responses :total-eligible
+                       :friends-and-family-test-score :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]}}
