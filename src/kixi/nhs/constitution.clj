@@ -2,7 +2,9 @@
   (:require [kixi.nhs.data.transform :as transform]
             [kixi.nhs.data.storage   :as storage]
             [cheshire.core           :as json]
-            [clojure.tools.logging   :as log]))
+            [clojure.tools.logging   :as log]
+            [kixi.nhs.data.schema    :as schema]
+            [kixi.ckan.data          :as data]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Helpers
@@ -57,22 +59,31 @@
   and stores it in DataStore. Uses alias as a unique identifier
   that is later used to query resources."
   [ckan-client recipe data]
-  (let [dataset-id (:dataset-id recipe)]
+  (let [dataset-id (:dataset-id recipe)
+        alias      (:alias recipe)]
     (log/infof "Creating new resource for indicator %s and lens %s" (:indicator-id recipe) (:lens recipe))
     (let [new-resource (json/encode {:package_id dataset-id
-                                     :aliases (:alias recipe)
-                                     :url "http://fix-me"})]
-      (storage/create-new-resource ckan-client dataset-id new-resource))))
+                                     :aliases alias
+                                     :description alias
+                                     :url "http://fix-me"})
+          id (storage/create-new-resource ckan-client dataset-id new-resource)]
+      (storage/insert-new-resource ckan-client dataset-id
+                                   (data/prepare-resource-for-insert dataset-id id
+                                                                     {"records"     data
+                                                                      "fields"      (:fields schema/board-report-schema)
+                                                                      "primary_key" (:primary-key schema/board-report-schema)})))))
 
 (defmulti produce-data (fn [ckan-client recipe data] (:lens recipe)))
 
 (defmethod produce-data :nation [ckan-client recipe data]
   (log/infof "Producing nation level data for indicator: %s" (:indicator-id recipe))
-  (percentage-seen-within-x-days (:division-fields recipe) (:metadata recipe) "Region" "England" data))
+  (->> (percentage-seen-within-x-days (:division-fields recipe) (:metadata recipe) "Region" "England" data)
+       (transform/enrich-dataset recipe)))
 
 (defmethod produce-data :area-team [ckan-client recipe data]
   (log/infof "Producing area team level data for indicator: %s" (:indicator-id recipe))
-  (let [data                 (area-team-level (:division-fields recipe) (:metadata recipe) data)
+  (let [data                 (->> (area-team-level (:division-fields recipe) (:metadata recipe) data)
+                                  (transform/enrich-dataset recipe))
         existing-resource-id (:id (storage/get-resource-metadata ckan-client (:alias recipe)))]
     (if (seq existing-resource-id)
       (storage/update-existing-resource ckan-client existing-resource-id data)
@@ -88,9 +99,10 @@
   [ckan-client recipe]
   (let [data (scrub (storage/get-resource-data ckan-client (:resource-id recipe)))]
     (when (seq data)
-      (let [data (produce-data ckan-client recipe data)]
-        (->> data
-             (transform/enrich-dataset recipe))))))
+      (produce-data ckan-client recipe data))))
 
 (defn analysis [ckan-client recipes]
   (mapcat #(resource ckan-client %) recipes))
+
+
+;; TODO board report should be refreshed when all lenses are generated - possibly should be the last job to run?

@@ -18,6 +18,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "e8bbf627-6bb1-48f5-95e8-cf943ad16b37"}
 
                    ;; Patient experience of primary care - GP Services
@@ -33,6 +34,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"}
 
                    ;; Patient experience of primary care - GP Out of Hours Services
@@ -48,6 +50,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "5ca47971-5d9e-4b50-93f0-8a8ecc90c072"}
 
                    ;; Patient experience of primary care - NHS Dental Services
@@ -63,6 +66,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "bcdaf636-32d0-4122-9828-e01c14d95f0b"}
 
                    ;; Patient experience of hospital care
@@ -78,6 +82,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "9c81f9a3-6301-4faf-90f0-b9f50d2aae39"}
 
                    ;; Responsiveness to in-patients’ personal needs
@@ -93,6 +98,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "d0fc162e-b3e4-45b7-8e1d-caffda4e463a"}
 
                    ;; Women’s experience of maternity services
@@ -108,6 +114,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "18a8f547-be9b-4180-a8f6-4b5dccdfdc62"}
 
                    ;; Patient experience of community mental health services
@@ -123,6 +130,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "169d8ede-292d-48aa-8134-01078bf2b85a"}
 
                    ;; Health related quality of life for people with long-term conditions
@@ -138,6 +146,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "620c1ebe-8f6c-48f6-8dfc-a9f2e68b2467"}
 
                    ;; Employment of people with long-term conditions
@@ -153,6 +162,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "bb15bca9-9716-4d00-bc5f-8b8be88d60bc"}
 
                    ;; Health-related quality of life for carers
@@ -168,6 +178,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "738b4af1-2691-40ae-a548-6ab6a6fd3415"}
 
                    ;; Employment of people with mental illness
@@ -183,6 +194,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "c44d0bd9-4d85-4aed-8051-5136f8d359a3"}
 
                    ;; Proportion of Older People (65 and over) who were still at home
@@ -199,6 +211,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "c05f9627-8932-4db8-b1d6-ccb29197158d"}
 
                    ;; Proportion offered rehabilitation following discharge from acute or community hospital
@@ -214,6 +227,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "52a33b3d-d8aa-4934-b769-62f73ec67e1e"}
 
                    ;; Patient safety incident reporting
@@ -229,6 +243,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "1fa9756c-ea6c-4bbf-9c7e-7c4928ed3772"}
 
                    ;; Safety incidents resulting in severe harm or death
@@ -244,6 +259,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "01652770-ee37-4b47-b83b-f3a9627c3cd2"}
 
                    ;; Total health gain as assessed by patients for elective
@@ -261,6 +277,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
 
                    ;; Total health gain as assessed by patients for elective
@@ -278,6 +295,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
 
                    ;; Total health gain as assessed by patients for elective
@@ -295,6 +313,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
 
                    ;; Total health gain as assessed by patients for elective
@@ -312,6 +331,7 @@
                                :lens_title "England"
                                :lens_grouping "Nation"
                                :lens_value "England"}
+                    :lens :nation
                     :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}]
 
  ;; Inequalities
@@ -327,7 +347,8 @@
            :conditions [{:field :breakdown
                          :values #{"Gender"}}]
            :metadata {:sub_lens_resource_id ""
-                      :lens_value "England"}}]
+                      :lens_value "England"}
+           :lens :nation}]
 
  :deprivation [;; Patient experience of primary care - GP Services
                ;; Deprivation analysis
@@ -340,7 +361,8 @@
                 :conditions [{:field :breakdown
                               :values #{"Deprivation decile"}}]
                 :metadata {:sub_lens_resource_id ""
-                           :lens_value "England"}}]
+                           :lens_value "England"}
+                :lens :nation}]
 
  :ethnicity [;; Patient experience of primary care - GP Services
              ;; White British compared to Asian or Asian British
@@ -360,7 +382,8 @@
               :fields-to-rename {:year :date
                                  :indicator_value :value}
               :metadata {:sub_lens_resource_id ""
-                         :lens_value "England"}}
+                         :lens_value "England"}
+              :lens :nation}
 
              ;; Patient experience of primary care - GP Services
              ;; White British compared to Black or Black British
@@ -380,7 +403,8 @@
                                  :conditions [{:field :level_description
                                                :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}
               :metadata {:sub_lens_resource_id ""
-                         :lens_value "England"}}
+                         :lens_value "England"}
+              :lens :nation}
 
              ;; Patient experience of primary care - GP Services
              ;; White British compared to Other Ethnic Group
@@ -398,7 +422,8 @@
               :fields-to-rename {:year :date
                                  :indicator_value :value}
               :metadata {:sub_lens_resource_id ""
-                         :lens_value "England"}}
+                         :lens_value "England"}
+              :lens :nation}
 
              ;; Patient experience of primary care - GP Services
              ;; White British compared to Mixed
@@ -417,6 +442,7 @@
                                                :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}
               :metadata {:sub_lens_resource_id ""
                          :lens_value "England"}
+              :lens :nation
               :fields-to-rename {:year :date
                                  :indicator_value :value
                                  :indicator_value_rate :value
@@ -441,6 +467,7 @@
                                  :indicator_value :value
                                  :indicator_value_rate :value
                                  :average_health_gain :value}
+              :lens :nation
               :metadata {:sub_lens_resource_id ""
                          :lens_value "England"}}]
 
@@ -458,7 +485,8 @@
                                :parent_lens_fk nil
                                :lens_title "England"
                                :lens_grouping "Nation"
-                               :lens_value "England"}}
+                               :lens_value "England"}
+                    :lens :nation}
 
   ;; Incidence of MRSA
  :mrsa-incidence {:indicator-id "65"
@@ -471,7 +499,8 @@
                              :parent_lens_fk nil
                              :lens_title "England"
                              :lens_grouping "Nation"
-                             :lens_value "England"}}
+                             :lens_value "England"}
+                  :lens :nation}
 
  ;; Incidence of C difficile
  :c-difficile-incidence {:indicator-id "66"
@@ -485,7 +514,8 @@
                                     :parent_lens_fk nil
                                     :lens_title "England"
                                     :lens_grouping "Nation"
-                                    :lens_value "England"}}
+                                    :lens_value "England"}
+                         :lens :nation}
 
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ;; Friends and Family
@@ -508,7 +538,8 @@
                                   :lens_title "England"
                                   :lens_grouping "Nation"
                                   :lens_value "England"
-                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+                                  :date "01-08-2014" :period_of_coverage "2014 August"}
+                       :lens :nation}
                       {:resource-id "7c6e7801-b3a7-4e30-a2c1-21715dd8b699"
                        :indicator-id "49a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -527,7 +558,8 @@
                                   :lens_title "England"
                                   :lens_grouping "Nation"
                                   :lens_value "England"
-                                  :date "01-12-2014" :period_of_coverage "2014 December"}}
+                                  :date "01-12-2014" :period_of_coverage "2014 December"}
+                       :lens :nation}
                       {:resource-id "7cff105c-e5d3-4ffe-a6f0-a68f6f98d730"
                        :indicator-id "49a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -546,7 +578,8 @@
                                   :parent_lens_fk nil
                                   :lens_title "England"
                                   :lens_grouping "Nation"
-                                  :date "01-10-2014" :period_of_coverage "2014 October"}}]
+                                  :date "01-10-2014" :period_of_coverage "2014 October"}
+                       :lens :nation}]
 
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ;; GP Survey
@@ -568,7 +601,8 @@
                                      :lens_title "England"
                                      :lens_grouping "Nation"
                                      :date "01-07-2014" :period_of_coverage "2014"
-                                     :lens_value "England"}}
+                                     :lens_value "England"}
+                          :lens :nation}
 
                          {:resource-id "06e3a75f-71db-40b5-9d20-ea7fc770b440"
                           :indicator-id "54"
@@ -586,7 +620,8 @@
                                      :lens_title "England"
                                      :lens_grouping "Nation"
                                      :date "01-01-2015" :period_of_coverage "2015"
-                                     :lens_value "England"}}]
+                                     :lens_value "England"}
+                          :lens :nation}]
 
  ;; Access to NHS Dental services
  :access-to-nhs-dental-services [{:resource-id "0e10c436-ac0a-44f0-af86-483676b81981"
@@ -605,7 +640,8 @@
                                              :lens_title "England"
                                              :lens_grouping "Nation"
                                              :date "01-07-2014" :period_of_coverage "2014"
-                                             :lens_value "England"}}
+                                             :lens_value "England"}
+                                  :lens :nation}
 
                                  {:resource-id "06e3a75f-71db-40b5-9d20-ea7fc770b440"
                                   :indicator-id "55"
@@ -623,7 +659,8 @@
                                              :lens_title "England"
                                              :lens_grouping "Nation"
                                              :date "01-01-2015" :period_of_coverage "2015"
-                                             :lens_value "England"}}]
+                                             :lens_value "England"}
+                                  :lens :nation}]
 
 
 
@@ -642,19 +679,6 @@
                  :lens :nation
                  :alias "132-nation"
                  :division-fields [:within_14_days :total]}
-
-                ;; TODO move to separate config
-                {:resource-id "215f73ee-41b3-40fa-8ea7-b6d13f1337ec"
-                 :dataset-id "board_report"
-                 :description "Indicator 132: Maximum two-week wait for first outpatient appointment for patients referred urgently with suspected cancer by a GP"
-                 :indicator-id "132"
-                 :metadata {:date "01-04-2014" :period_of_coverage "April 2014 to June 2014"
-                            :parent_lens_fk nil
-                            :lens_grouping "Area Team"}
-                 :lens :area-team
-                 :alias "132-area-team"
-                 :division-fields [:within_14_days :total]}
-
                 {:resource-id "afb3049d-78f6-4048-9a4e-6638d2688e0d"
                  :indicator-id "133"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"

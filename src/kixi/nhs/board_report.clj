@@ -15,24 +15,8 @@
             [kixi.nhs.friends-and-family                   :as ff]
             [kixi.nhs.gp-survey                            :as gp]
             [clojure.string                                :as str]
-            [kixi.nhs.incidence                            :as incidence]))
-
-
-(def board-report-schema
-  {:fields [{"id" "indicator_id"         "type" "text"}
-            {"id" "value"                "type" "text"}
-            {"id" "date"                 "type" "text"}
-            {"id" "period_of_coverage"   "type" "text"}
-            {"id" "start_date"           "type" "text"}
-            {"id" "end_date"             "type" "text"}
-            {"id" "uci"                  "type" "text"}
-            {"id" "lci"                  "type" "text"}
-            {"id" "parent_lens_fk"       "type" "text"}
-            {"id" "lens_title"           "type" "text"}
-            {"id" "lens_value"           "type" "text"}
-            {"id" "lens_grouping"        "type" "text"}
-            {"id" "sub_lens_resource_id" "type" "text"}]
-   :primary-key "indicator_id,date,lens_value,period_of_coverage"})
+            [kixi.nhs.incidence                            :as incidence]
+            [kixi.nhs.data.schema                           :as schema]))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -110,8 +94,8 @@
         records         (create-boardreport-dataset ckan-client config)
         data            (data/prepare-resource-for-insert new-dataset-id new-resource-id
                                                           {"records"     records
-                                                           "fields"      (:fields board-report-schema)
-                                                           "primary_key" (:primary-key board-report-schema)})]
+                                                           "fields"      (:fields schema/board-report-schema)
+                                                           "primary_key" (:primary-key schema/board-report-schema)})]
     (storage/insert-new-resource ckan-client new-dataset-id data)))
 
 (defn insert-board-report-resource
@@ -126,8 +110,8 @@
         records         (create-boardreport-dataset ckan-client config)
         data            (data/prepare-resource-for-insert dataset-id new-resource-id
                                                           {"records"     records
-                                                           "fields"      (:fields board-report-schema)
-                                                           "primary_key" (:primary-key board-report-schema)})]
+                                                           "fields"      (:fields schema/board-report-schema)
+                                                           "primary_key" (:primary-key schema/board-report-schema)})]
     (storage/insert-new-resource ckan-client dataset-id data)))
 
 
