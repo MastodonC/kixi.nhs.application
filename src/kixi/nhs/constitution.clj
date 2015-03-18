@@ -61,10 +61,11 @@
 
 (defn sum-fields [recipe data]
   (when (seq data)
-    (let [summed-up (transform/sum-sequence (:sum-field recipe) [(:sum-field recipe)] data)]
-      (->> [summed-up]
-           (map #(update-in % [:sum] str))
-           (transform/enrich-dataset recipe)))))
+    (->> data
+         (transform/sum-sequence (:sum-field recipe) [(:sum-field recipe)])
+         vector
+         (map #(update-in % [:sum] str))
+         (transform/enrich-dataset recipe))))
 
 (defmulti process-recipe (fn [ckan-client recipe] (:operation recipe)))
 
