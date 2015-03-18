@@ -114,32 +114,13 @@
   [ckan-client recipe]
   (let [{:keys [resource-id headers
                 scrub-details
-                worksheets]} recipe
-        headers              (edn/read-string (slurp headers))
-        spreadsheet          (-> (retrieve-xls-url ckan-client resource-id)
-                                 read-in-xls)]
+                worksheet]} recipe
+        headers             (edn/read-string (slurp headers))
+        spreadsheet         (-> (retrieve-xls-url ckan-client resource-id)
+                                read-in-xls)]
     (when (seq spreadsheet)
-      (map #(process-worksheet
-             recipe
-             (get headers %)
-             (:metadata recipe)
-             (get spreadsheet %)) worksheets))))
-
-(defn process-xls-fft 
-  "Retrieves spreadsheet and its headers,
-  scrubs the data and prepares a data structure
-  suitable for inserting to CKAN. 
-  Used For Friends and Family Test indicators."
-  [ckan-client recipe]
-  (let [{:keys [resource-id headers
-                scrub-details month
-                worksheets]} recipe
-        headers              (edn/read-string (slurp headers))
-        spreadsheet          (-> (retrieve-xls-url ckan-client resource-id)
-                                 read-in-xls)]
-    (when (seq spreadsheet)
-      (map #(process-worksheet
-             recipe
-             (get (get headers month) %)
-             (:metadata recipe)
-             (get spreadsheet %)) worksheets))))
+      (process-worksheet
+       recipe
+       (get-in headers (:headers worksheet))
+       (:metadata recipe)
+       (get spreadsheet (:tab worksheet))))))

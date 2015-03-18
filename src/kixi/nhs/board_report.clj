@@ -158,4 +158,4 @@
 ;; To insert new resource into existing dataset:
 ;; (insert-board-report-resource (:ckan-client system) "resources/prod_config.edn" "board_report")
 ;; To update existing board resource (preferable):
-;; (update-board-report-dataset (:ckan-client system) "1a771670-c761-49a7-b34c-1d61b21602dc" "resources/prod_config.edn")
+;; (update-board-report-dataset (:ckan-client system) "56879843-edf2-4b66-a8e1-f27a91befb7a" "resources/prod_config.edn")

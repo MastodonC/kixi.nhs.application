@@ -10,6 +10,10 @@
 
 (defn not-nil? [x] (not (nil? x)))
 
+(defn log-and-return [x]
+  (log/info x)
+  x)
+
 (defn parse-number
   "Reads a number from a string. Returns nil if not a number
   or when the value passed is nil."
@@ -132,7 +136,8 @@
   (-> data
       first
       (assoc :sum (->> (map k data)
-                       (remove #(not (seq %)))
+                       (keep #(when (or (number? %)
+                                        (seq %)) %))
                        add-when-not-empty))
       (remove-fields fields-to-dissoc)))
 

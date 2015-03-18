@@ -1,0 +1,227 @@
+{"IP Eng" {"Dec" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "Nov" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "Oct" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "Sept" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                   :percentage-recommended :percentage-not-recommended
+                   :empty
+                   :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "Aug" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "Jul" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "Jun" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "May" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "Apr" [:area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "AE Eng" {"Nov" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "Oct" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "Sept" [:emtpy-col
+                   :area-team-code :area-team :total-responses :total-eligible :response-rate
+                   :percentage-recommended :percentage-not-recommended
+                   :empty
+                   :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "Aug" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "Dec" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :percentage-recommended :percentage-not-recommended
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "Jul" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "Jun" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "May" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]
+           "Apr" [:emtpy-col
+                  :area-team-code :area-team :total-responses :total-eligible :response-rate
+                  :friends-and-family-test-score
+                  :empty
+                  :extremely-likely :likely :neither :unlikely :extremely-unlikely :dont-know]}
+ "MAT_Qu1_Eng" {"Dec" [:emtpy-col
+                       :area-team-code :area-team :total-responses :percentage-recommended
+                       :percentage-not-recommended :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "Nov" [:emtpy-col
+                       :area-team-code :area-team :total-responses :percentage-recommended
+                       :percentage-not-recommended :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "Oct" [:emtpy-col
+                       :area-team-code :area-team :total-responses :percentage-recommended
+                       :percentage-not-recommended :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "Sept" [:emtpy-col
+                        :area-team-code :area-team :total-responses :percentage-recommended
+                        :percentage-not-recommended :empty :extremely-likely :likely
+                        :neither :unlikely :extremely-unlikely :dont-know]
+                "Aug" [:emtpy-col
+                       :area-team-code :area-team :total-responses :friends-and-family-test-score
+                       :percentage-recommended :percentage-not-recommended :empty :extremely-likely
+                       :likely :neither :unlikely :extremely-unlikely :dont-know]
+                "Jul" [:emtpy-col
+                       :area-team-code :area-team :total-responses
+                       :friends-and-family-test-score :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "Jun" [:emtpy-col
+                       :area-team-code :area-team :total-responses :total-eligible
+                       :friends-and-family-test-score :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "May" [:emtpy-col
+                       :area-team-code :area-team :total-responses :total-eligible
+                       :friends-and-family-test-score :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "Apr" [:emtpy-col
+                       :area-team-code :area-team :total-responses :total-eligible
+                       :friends-and-family-test-score :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]}
+ "MAT_Qu2_Eng" {"Dec" [:empty-col
+                       :area-team-code :area-team :total-responses :total-eligible :response-rate
+                       :percentage-recommended :percentage-not-recommended :empty :extremely-likely
+                       :likely :neither :unlikely :extremely-unlikely :dont-know]
+                "Nov" [:empty-col
+                       :area-team-code :area-team :total-responses :total-eligible :response-rate
+                       :percentage-recommended :percentage-not-recommended :empty :extremely-likely
+                       :likely :neither :unlikely :extremely-unlikely :dont-know]
+                "Oct" [:empty-col
+                       :area-team-code :area-team :total-responses :total-eligible :response-rate
+                       :percentage-recommended :percentage-not-recommended :empty :extremely-likely
+                       :likely :neither :unlikely :extremely-unlikely :dont-know]
+                "Sept" [:empty-col
+                        :area-team-code :area-team :total-responses :total-eligible :response-rate
+                        :percentage-recommended :percentage-not-recommended :empty
+                        :extremely-likely :likely :neither :unlikely :extremely-unlikely
+                        :dont-know]
+                "Aug" [:empty-col
+                       :area-team-code :area-team :total-responses :total-eligible :response-rate
+                       :friends-and-family-test-score :percentage-recommended
+                       :percentage-not-recommended :empty :extremely-likely :likely :neither
+                       :unlikely :extremely-unlikely :dont-know]
+                "Jul" [:empty-col
+                       :area-team-code :area-team :total-responses :total-eligible :response-rate
+                       :friends-and-family-test-score :empty :extremely-likely :likely :neither
+                       :unlikely :extremely-unlikely :dont-know]
+                "Jun" [:empty-col
+                       :area-team-code :area-team :total-responses :total-eligible :response-rate
+                       :friends-and-family-test-score :empty :extremely-likely :likely :neither
+                       :unlikely :extremely-unlikely :dont-know]
+                "May" [:empty-col
+                       :area-team-code :area-team :total-responses :total-eligible :response-rate
+                       :friends-and-family-test-score :empty :extremely-likely :likely :neither
+                       :unlikely :extremely-unlikely :dont-know]
+                "Apr" [:empty-col
+                       :area-team-code :area-team :total-responses :total-eligible :response-rate
+                       :friends-and-family-test-score :empty :extremely-likely :likely :neither
+                       :unlikely :extremely-unlikely :dont-know]}
+ "MAT_Qu3_Eng" {"Dec" [:empty-col
+                       :area-team-code :area-team :total-responses :percentage-recommended
+                       :percentage-not-recommended :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "Nov" [:empty-col
+                       :area-team-code :area-team :total-responses :percentage-recommended
+                       :percentage-not-recommended :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "Oct" [:empty-col
+                       :area-team-code :area-team :total-responses :percentage-recommended
+                       :percentage-not-recommended :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "Sept" [:empty-col
+                        :area-team-code :area-team :total-responses :percentage-recommended
+                        :percentage-not-recommended :empty :extremely-likely :likely
+                        :neither :unlikely :extremely-unlikely :dont-know]
+                "Aug" [:empty-col
+                       :area-team-code :area-team :total-responses :friends-and-family-test-score
+                       :percentage-recommended :percentage-not-recommended :empty :extremely-likely
+                       :likely :neither :unlikely :extremely-unlikely :dont-know]
+                "Jul" [:empty-col
+                       :area-team-code :area-team :total-responses :friends-and-family-test-score
+                       :empty :extremely-likely :likely :neither :unlikely :extremely-unlikely
+                       :dont-know]
+                "Jun" [:empty-col
+                       :area-team-code :area-team :total-responses :total-eligible
+                       :friends-and-family-test-score :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "May" [:empty-col
+                       :area-team-code :area-team :total-responses :total-eligible
+                       :friends-and-family-test-score :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "Apr" [:empty-col
+                       :area-team-code :area-team :total-responses :total-eligible
+                       :friends-and-family-test-score :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]}
+ "MAT_Qu4_Eng" {"Dec" [:empty-col
+                       :area-team-code :area-team :total-responses :percentage-recommended
+                       :percentage-not-recommended :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "Nov" [:empty-col
+                       :area-team-code :area-team :total-responses :percentage-recommended
+                       :percentage-not-recommended :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "Oct" [:empty-col
+                       :area-team-code :area-team :total-responses :percentage-recommended
+                       :percentage-not-recommended :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "Sept" [:empty-col
+                        :area-team-code :area-team :total-responses :percentage-recommended
+                        :percentage-not-recommended :empty :extremely-likely :likely
+                        :neither :unlikely :extremely-unlikely :dont-know]
+                "Aug" [:empty-col
+                       :area-team-code :area-team :total-responses :friends-and-family-test-score
+                       :percentage-recommended :percentage-not-recommended :empty :extremely-likely
+                       :likely :neither :unlikely :extremely-unlikely :dont-know]
+                "Jul" [:empty-col
+                       :area-team-code :area-team :total-responses :friends-and-family-test-score
+                       :empty :extremely-likely :likely :neither :unlikely :extremely-unlikely
+                       :dont-know]
+                "Jun" [:empty-col
+                       :area-team-code :area-team :total-responses :total-eligible
+                       :friends-and-family-test-score :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "May" [:empty-col
+                       :area-team-code :area-team :total-responses :total-eligible
+                       :friends-and-family-test-score :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]
+                "Apr" [:empty-col
+                       :area-team-code :area-team :total-responses :total-eligible
+                       :friends-and-family-test-score :empty :extremely-likely :likely
+                       :neither :unlikely :extremely-unlikely :dont-know]}}
