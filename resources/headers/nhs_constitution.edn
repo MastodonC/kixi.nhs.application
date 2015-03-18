@@ -7,7 +7,7 @@
                        :total_number_of_completed_pathways_with_a_known_clock_start
                        :total_with_a_kwown_clock_start_within_18_weeks :within_18_weeks_percentile
                        :average_waiting_time_in_weeks :waiting_time_95th_percentile]
-             "Dec" [:treatment_function_code :treatment_function
+             "Aug" [:treatment_function_code :treatment_function
                     :c :d :e :f :g :h :i :j :k :l :m :n :o :p :r :s :t :u :v :w :x :y :z :aa :ab :ac :ad :ae :af
                     :ag :ah :ai :aj :ak :al :am :an :ao :ap :aq :ar :as :at :au :av :aw :ax :ay :az :ba :bb :bc
                     :bd :total_number_of_incomplete_pathways :total_within_18_weeks :within_18_weeks_percentile
@@ -22,4 +22,38 @@
                         :number_of_admissions_to_acute_wards_that_were_gate_kept_by_the_crht_teams
                         :total_number_of_admissions_to_acute_wards
                         :proportion_of_admissions_to_acute_wards_that_were_gate_kept_by_the_crht_teams]}
- }
+ "6+ Week Waits %" {:generic [:empty :diagnostic_id :diagnostic_test :jan_06 :feb_06 :mar_06 :apr_06 :may_06 :june_06 :july_06
+                              :aug_06 :sept_06 :oct_06 :nov_06 :dec_06 :jan_07 :feb_07 :mar_07 :apr_07 :may_07 :june_07
+                              :july_07 :aug_07 :sep_07 :oct_07 :nov_07 :dec_07 :jan_08 :feb_08 :mar_08 :apr_08 :may_08
+                              :june_08 :july_08 :aug_08 :sep_08 :oct_08 :nov_08 :dec_08 :jan_09 :feb_09 :mar_09 :apr_09
+                              :may_09 :jun_09 :july_09 :aug_09 :sept_09 :oct_09 :nov_09 :dec_09 :jan_10 :feb_10 :mar_10
+                              :apr_10 :may_10 :jun_10 :july_10 :aug_10 :sept_10 :oct_10 :nov_10 :dec_10 :jan_11 :feb_11
+                              :mar_11 :apr_11 :may_11 :jun_11 :jul_11 :aug_11 :sep_11 :oct_11 :nov_11 :dec_11 :jan_12
+                              :feb_12 :mar_12 :apr_12 :may_12 :jun_12 :jul_12 :aug_12 :sep_12 :oct_12 :nov_12 :dec_12
+                              :jan_13 :feb_13 :mar_13 :apr_13 :may_13 :jun_13 :jul_13 :aug_13 :sept_13 :oct_13 :nov_13
+                              :dec_13 :jan_14 :feb_14 :mar_14 :apr_14 :may_14 :jun_14 :jul_14 :aug_14 :sep_14 :oct_14
+                              :nov_14 :dec_14]}
+ "A&E Data" {:generic [:empty :area_team :code :name
+
+                       :ae_attendances_type_1_departments_major_ae
+                       :ae_attendances_type_2_departments_other_ae_minor_injury_unit
+                       :ae_attendances_type_3_departments_other_ae_minor_injury_unit
+                       :ae_attendances_total_attendances
+
+                       :greater_than_4h_type_1_departments_major_ae
+                       :greater_than_4h_type_2_departments_single_speciality
+                       :greater_than_4h_type_3_departments_other_ae_minor_injury_unit
+                       :greater_than_4h_percentage_in_4h_or_less_type_1
+                       :greater_than_4h_percentage_in_4h_or_less_all
+
+                       :emergency_admissions_emergency_admissions_via_type_1_ae
+                       :emergency_admissions_emergency_admissions_via_type_2_ae
+                       :emergency_admissions_emergency_admissions_via_type_3_and_4_ae
+                       :emergency_admissions_other_emergency_admissions
+                       :emergency_admissions_number_of_patiends_spending_more_than_4h
+                       :emergency_admissions_number_of_patiends_spending_more_than_12h]}
+ "MSA Time Series" {:generic [:year :period :msa_breaches :breach_rate]}
+ "Time Series of Cancelled Ops" {:generic [:year :quarter :last_minute_operations_cancelled
+                                           :patients_not_treated_within_28_days_of_cancellation
+                                           :elective_admissions :cancelled_ops_as_percentage_of_elective_admissions
+                                           :patients_not_treated_within_28_days_of_cancellation_as_percentage_of_cancellations]}}

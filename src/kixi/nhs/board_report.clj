@@ -100,7 +100,7 @@
                     (read-dataset ckan-client dataset-config
                                   (:resource-id dataset-config)))
                   (:simple-datasets config))
-          (constitution/analysis ckan-client (:constitution config))
+          (constitution/analysis ckan-client)
           (ff/analysis ckan-client (:friends-and-family config))
           (gp/access-to-gp-services-recipes ckan-client (:access-to-gp-services config))
           (gp/dental-services-recipes ckan-client (:access-to-nhs-dental-services config))))
