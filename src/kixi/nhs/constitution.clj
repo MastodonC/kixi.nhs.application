@@ -48,8 +48,11 @@
   or the rows that do not contain
   required information."
   [data]
-  (->> data
-       (remove #(empty? (:area_team_code_1 %)))))
+  (if (contains? (first data) :area_team_code_1)
+    (->> data
+         (remove #(empty? (:area_team_code_1 %))))
+    (->> data
+         (remove #(empty? (:area_team_code %))))))
 
 (defn divide-fields [recipe data]
   (let [fields (:division-fields recipe)]

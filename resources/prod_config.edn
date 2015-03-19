@@ -210,7 +210,7 @@
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
-                    :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
+                    :resource-id "bb927580-4a09-4089-b118-cb43f9b45eb2"}
 
                    ;; Total health gain as assessed by patients for elective
                    ;; procedures: Knee replacement
@@ -224,7 +224,7 @@
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
-                    :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
+                    :resource-id "bb927580-4a09-4089-b118-cb43f9b45eb2"}
 
                    ;; Total health gain as assessed by patients for elective
                    ;; procedures: Groin hernia
@@ -238,7 +238,7 @@
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
-                    :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}
+                    :resource-id "bb927580-4a09-4089-b118-cb43f9b45eb2"}
 
                    ;; Total health gain as assessed by patients for elective
                    ;; procedures: Varicose veins
@@ -252,7 +252,7 @@
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
-                    :resource-id "df681d82-19f0-4584-8cc2-47cecad664ad"}]
+                    :resource-id "bb927580-4a09-4089-b118-cb43f9b45eb2"}]
 
  ;; Inequalities
 
@@ -1419,7 +1419,8 @@
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ;; NHS Constitution
 
- :constitution [{:resource-id "b9fc43a5-e026-4519-8f84-d8087616ff94"
+ :constitution [
+                {:resource-id "b9fc43a5-e026-4519-8f84-d8087616ff94"
                  :indicator-id "125"
                  :headers "resources/headers/nhs_constitution.edn"
                  :worksheet {:tab "Area Team" :headers ["Area Team" :generic]}
@@ -1472,66 +1473,212 @@
                  :conditions [{:field :treatment_function :values #{"Total"}}]
                  :field :within_18_weeks_percentile
                  :operation :none}
-
+                ;; 132
+                {:resource-id "f075e75a-387e-4f36-8514-fc662507d3da"
+                 :indicator-id "132"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "d16afb5b-2575-4068-a4c5-be04c966f543"
+                 :indicator-id "132"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
                 {:resource-id "215f73ee-41b3-40fa-8ea7-b6d13f1337ec"
                  :indicator-id "132"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
                  :operation :division
                  :division-fields [:within_14_days :total]}
-
+                {:resource-id "c51f2ae6-7950-419b-bb4b-5d8fca5b0c84"
+                 :indicator-id "132"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "434ee817-f6f2-419c-be5f-2d4629e05a69"
+                 :indicator-id "132"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2013" :period_of_coverage "October 2013 to December 2013"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "04a2e903-8114-4037-bac1-480c6cdeb32e"
+                 :indicator-id "132"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2013" :period_of_coverage "July 2013 to September 2013"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "27031f95-dc3b-4874-b25a-e2c2e7402cc4"
+                 :indicator-id "132"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2013 to June 2013"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                ;; 133
+                {:resource-id "a70defff-b6d2-4d36-9486-d4d0eba99a10"
+                 :indicator-id "133"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "a07a2b4f-277f-46fe-9e5a-b13991b03faa"
+                 :indicator-id "133"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
                 {:resource-id "afb3049d-78f6-4048-9a4e-6638d2688e0d"
                  :indicator-id "133"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
                  :operation :division
                  :division-fields [:within_14_days :total]}
-
+                {:resource-id "bbed9698-57a7-4c10-a2d1-aacc176727ad"
+                 :indicator-id "133"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "5aa31d25-4161-43f4-b091-7f1a56cc690b"
+                 :indicator-id "133"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2013" :period_of_coverage "October 2013 to December 2013"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "67fbde94-a46a-4843-b60e-d66fa63e41eb"
+                 :indicator-id "133"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2013" :period_of_coverage "July 2013 to September 2013"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "b3c83e2b-3e86-4179-a960-f6b6e726f19f"
+                 :indicator-id "133"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2013 to June 2013"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                ;; 134
+                {:resource-id "f3142c2e-ffa3-42d3-a733-97d88228e4a1"
+                 :indicator-id "134"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "32a57fe6-c29a-4000-bb7b-7026df930a98"
+                 :indicator-id "134"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
                 {:resource-id "0a873564-0a18-4edc-b7e8-5cadc40eecec"
                  :indicator-id "134"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
                  :operation :division
                  :division-fields [:after_31_days :total]}
-
-                {:resource-id "0a873564-0a18-4edc-b7e8-5cadc40eecec"
+                {:resource-id "a5594295-26a5-4d79-a00a-41f38e867b1e"
+                 :indicator-id "134"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "44e582af-d838-4fc4-a39a-231bcc2770d9"
+                 :indicator-id "134"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2013" :period_of_coverage "October 2013 to December 2013"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "90035b42-d2b3-405f-9d63-3e0455cf2e05"
+                 :indicator-id "134"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2013" :period_of_coverage "July 2013 to September 2013"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "1eaaf9d4-fca2-4c7c-9c00-e2c223430a64"
+                 :indicator-id "134"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2013 to June 2013"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                ;; 135
+                {:resource-id "e6d5b531-2572-48b6-9689-e17461240bce"
+                 :indicator-id "135"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "013ae123-f05f-4a73-9806-b16f3e925c32"
+                 :indicator-id "135"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "5d9308b6-4a8c-4d80-88a0-c85ec2392a8d"
                  :indicator-id "135"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
                  :operation :division
                  :division-fields [:after_31_days :total]}
-
+                {:resource-id "982c5943-e3f3-48f8-bd85-84e0c6c608f0"
+                 :indicator-id "135"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "ba2fcfae-4d97-4b95-a8d2-81be857add66"
+                 :indicator-id "135"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2013" :period_of_coverage "October 2013 to December 2013"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "5a621b1a-4e49-4a5a-8cbd-2fad43ef139d"
+                 :indicator-id "135"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2013" :period_of_coverage "July 2013 to September 2013"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "6ec9b5f0-c6e6-4bdb-afef-8956468ecf85"
+                 :indicator-id "135"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2013 to June 2013"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                ;; 136
                 {:resource-id "e560de1c-8a06-49a6-969c-11535c3ef2e6"
                  :indicator-id "136"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
                  :operation :division
                  :division-fields [:after_31_days :total]}
-
+                ;; 137
                 {:resource-id "dadfd925-f491-46f3-92c1-f84959325969"
                  :indicator-id "137"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
                  :operation :division
                  :division-fields [:after_31_days :total]}
-
+                ;; 138
                 {:resource-id "e01fc8b5-6c9b-4a56-9063-4b170cc97dee"
                  :indicator-id "138"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
                  :operation :division
                  :division-fields [:after_62_days :total_treated]}
-
+                ;; 139
                 {:resource-id "d07d271c-5933-4eb2-a70b-ef7551563269"
                  :indicator-id "139"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
                  :operation :division
                  :division-fields [:after_62_days :total_treated]}
-
+                ;; 140
                 {:resource-id "212b6adb-3196-4854-af7d-1f146a2d3ec9"
                  :indicator-id "140"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
                  :operation :division
-                 :division-fields [:after_62_days :total_treated]}]}
+                 :division-fields [:after_62_days :total_treated]}
+                ]}
+
