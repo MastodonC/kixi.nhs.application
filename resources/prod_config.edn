@@ -67,6 +67,7 @@
                     :conditions [{:field :level_description :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :none}
                     :resource-id "9c81f9a3-6301-4faf-90f0-b9f50d2aae39"}
 
                    ;; Responsiveness to in-patients’ personal needs
@@ -342,7 +343,8 @@
                                  :conditions [{:field :level_description
                                                :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}
               :metadata {:sub_lens_resource_id ""
-                         :lens_value "England"}}
+                         :lens_value "England"}
+              :format {:percentage :divide}}
 
              ;; Patient experience of primary care - GP Services
              ;; White British compared to Other Ethnic Group
@@ -539,7 +541,8 @@
                                      :values #{"England (including Independent Sector Providers)"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+                                  :date "01-08-2014" :period_of_coverage "2014 August"}
+                       :format {:percentage :none}}
                       {:resource-id "f9672278-f75f-43c8-ba4f-e1aa0f88a788"
                        :indicator-id "49a"
                        :headers "resources/headers/friends_and_family.edn"
