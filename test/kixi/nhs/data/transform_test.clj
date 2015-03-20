@@ -97,35 +97,67 @@
   (testing "Testing enriching dataset."
     ;; Checks the :indicator_value keyword is renamed to :value,
     ;; the "Indicator id" is added, and the result is a vector:
-    (is (= [{:indicator_id "22" :value "85.7" :date "2013/14" :period_of_coverage "July 2013 to March 2014"
+    (is (= [{:indicator_id "22" :value "85.7" :date "2013/14"
+             :period_of_coverage "July 2013 to March 2014"
              :start_date "2013-07-01" :end_date "2014-03-31"}
-            {:indicator_id "22" :value "86.7" :date "2012/13" :period_of_coverage "July 2012 to March 2013"
+            {:indicator_id "22" :value "86.7" :date "2012/13"
+             :period_of_coverage "July 2012 to March 2013"
              :start_date "2012-07-01" :end_date "2013-03-31"}
-            {:indicator_id "22" :value "88.3" :date "2011/12" :period_of_coverage "July 2011 to March 2012"
+            {:indicator_id "22" :value "88.3" :date "2011/12"
+             :period_of_coverage "July 2011 to March 2012"
              :start_date "2011-07-01" :end_date "2012-03-31"}]
            (transform/enrich-dataset
             {:indicator-id "22"
              :fields-to-rename {:year :date :indicator_value :value}
              :conditions [{:field :level :values #{"Scotland"}}]
+             :format {:percentage :none}
              :resource-id "2b10e7b4-c799-44f9-81d6-3a42f4260893"}
-            [{:year "2013/14" :indicator_value "85.7" :period_of_coverage "July 2013 to March 2014"}
-             {:year "2012/13" :indicator_value "86.7" :period_of_coverage "July 2012 to March 2013"}
-             {:year "2011/12" :indicator_value "88.3" :period_of_coverage "July 2011 to March 2012"}])))
-    (is (= [{:indicator_id "22" :value "85.7" :date "2013/14" :period_of_coverage "July 2013 to March 2014"
+            [{:year "2013/14" :indicator_value "85.7" 
+              :period_of_coverage "July 2013 to March 2014"}
+             {:year "2012/13" :indicator_value "86.7"
+              :period_of_coverage "July 2012 to March 2013"}
+             {:year "2011/12" :indicator_value "88.3" 
+              :period_of_coverage "July 2011 to March 2012"}])))
+    (is (= [{:indicator_id "22" :value "85.7" :date "2013/14"
+             :period_of_coverage "July 2013 to March 2014"
              :start_date "2013-07-01" :end_date "2014-03-31"}
-            {:indicator_id "22" :value "86.7" :date "2012/13" :period_of_coverage "July 2012 to March 2013"
+            {:indicator_id "22" :value "86.7" :date "2012/13"
+             :period_of_coverage "July 2012 to March 2013"
              :start_date "2012-07-01" :end_date "2013-03-31"}
-            {:indicator_id "22" :value "88.3" :date "2011/12" :period_of_coverage "July 2011 to March 2012"
+            {:indicator_id "22" :value "88.3" :date "2011/12"
+             :period_of_coverage "July 2011 to March 2012"
              :start_date "2011-07-01" :end_date "2012-03-31"}]
            (transform/enrich-dataset
             {:indicator-id "22"
              :fields-to-extract [:indicator_value :year :period_of_coverage]
              :fields-to-rename {:indicator_value :value :year :date}
              :conditions [{:field :level :values #{"England"}}]
+             :format {:percentage :none}
              :resource-id "2b10e7b4-c799-44f9-81d6-3a42f4260893"}
-            [{:year "2013/14" :indicator_value "85.7" :period_of_coverage "July 2013 to March 2014"}
-             {:year "2012/13" :indicator_value "86.7" :period_of_coverage "July 2012 to March 2013"}
-             {:year "2011/12" :indicator_value "88.3" :period_of_coverage "July 2011 to March 2012"}])))))
+            [{:year "2013/14" :indicator_value "85.7"
+              :period_of_coverage "July 2013 to March 2014"}
+             {:year "2012/13" :indicator_value "86.7"
+              :period_of_coverage "July 2012 to March 2013"}
+             {:year "2011/12" :indicator_value "88.3"
+              :period_of_coverage "July 2011 to March 2012"}])))
+    (is (= [{:end_date "2014-03-31", :start_date "2013-07-01", :value "0.8569999694824219",
+             :date "2013/14", :indicator_id "22", :period_of_coverage "July 2013 to March 2014"}
+            {:end_date "2013-03-31", :start_date "2012-07-01", :value "0.8669999694824219",
+             :date "2012/13", :indicator_id "22", :period_of_coverage "July 2012 to March 2013"}
+            {:end_date "2012-03-31", :start_date "2011-07-01", :value "0.8830000305175781",
+             :date "2011/12", :indicator_id "22", :period_of_coverage "July 2011 to March 2012"}]
+           (transform/enrich-dataset
+            {:indicator-id "22"
+             :fields-to-rename {:year :date :indicator_value :value}
+             :conditions [{:field :level :values #{"Scotland"}}]
+             :format {:percentage :divide}
+             :resource-id "2b10e7b4-c799-44f9-81d6-3a42f4260893"}
+            [{:year "2013/14" :indicator_value "85.7" 
+              :period_of_coverage "July 2013 to March 2014"}
+             {:year "2012/13" :indicator_value "86.7"
+              :period_of_coverage "July 2012 to March 2013"}
+             {:year "2011/12" :indicator_value "88.3" 
+              :period_of_coverage "July 2011 to March 2012"}])))))
 
 (deftest all-fields-exist?-test
   (testing "Testing function to check whether all fields a"

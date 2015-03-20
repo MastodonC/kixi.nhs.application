@@ -51,6 +51,7 @@
              :start_date "2012-07-01"
              :period_of_coverage  "July 2012 to March 2013"}]
            (ethnicity/final-dataset {:fields-to-rename {:year :date}
+                                     :format {:percentage :none}
                                      :indicator-id "213"
                                      :date-field :period_of_coverage}
                                     [{:year "2013/14" :period_of_coverage "July 2013 to March 2014" :sum 37801.2}
@@ -72,6 +73,7 @@
              :start_date "2012-07-01"
              :end_date "2013-03-31"}]
            (ethnicity/final-dataset {:fields-to-rename {:year :date}
+                                     :format {:percentage :none}
                                      :date-field :period_of_coverage
                                      :indicator-id "213"}
                                     [{:year "2013/14" :period_of_coverage "July 2013 to March 2014" :sum 37801.2
