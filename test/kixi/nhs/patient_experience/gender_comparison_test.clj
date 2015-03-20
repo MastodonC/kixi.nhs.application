@@ -76,6 +76,7 @@
                                       :fields-to-extract [:indicator_value :year
                                                           :period_of_coverage :level]
                                       :fields-to-rename {:year :date}
+                                      :format {:percentage :none}
                                       :conditions [{:field :breakdown
                                                     :values #{"Gender"}}]}
                                      data)))
@@ -85,6 +86,7 @@
                                       :resource-id "7cb803a1-5c88-46e0-9e61-cf4c47ffadcb"
                                       :fields-to-extract [:indicator_value :year
                                                           :period_of_coverage :level]
+                                      :format {:percentage :none}
                                       :conditions [{:field :breakdown
                                                     :values #{"Gender"}}]}
                                      [{:breakdown "Gender" :level "Male" :year "2011" :period_of_coverage "2011"

@@ -77,6 +77,31 @@
   (let [headers (into #{} (keys row))]
     (every? #(contains? headers %) fields)))
 
+;; Format percentage values:
+(defn process-percentages
+  "Takes a str indicator value and outputs
+  a percentage in a str format."
+  [value]
+  (let [v (if (re-find #"%" value)
+            (clojure.string/replace value #"%" "") value)]
+    (-> v
+        (Float/parseFloat)
+        (/ 100)
+        (str))))
+
+(defmulti format-percentages (fn [data recipe]
+                               (-> recipe :format :percentage)))
+
+(defmethod format-percentages :none
+  ;; Returns the value as passed in.
+  [data recipe]
+  data)
+
+(defmethod format-percentages :divide
+  ;; Divides it by 100.
+  [data recipe]
+  (update-in data [:value] process-percentages))
+
 (defn filter-dataset
   "Filters dataset according to the given recipe."
   [recipe-map data]
@@ -101,6 +126,7 @@
                      (empty? (:period_of_coverage metadata)))
           (assoc :period_of_coverage (:year m)))
         (clojure.set/rename-keys (:fields-to-rename recipe-map))
+        (format-percentages recipe-map)
         d/uniform-dates)))
 
 (defn enrich-dataset

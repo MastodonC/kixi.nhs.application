@@ -15,6 +15,7 @@
                     :conditions [{:field :level_description :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :divide}
                     :resource-id "e8bbf627-6bb1-48f5-95e8-cf943ad16b37"}
 
                    ;; Patient experience of primary care - GP Services
@@ -27,6 +28,7 @@
                     :conditions [{:field :level_description :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :divide}
                     :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"}
 
                    ;; Patient experience of primary care - GP Out of Hours Services
@@ -39,6 +41,7 @@
                     :conditions [{:field :level_description :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :divide}
                     :resource-id "5ca47971-5d9e-4b50-93f0-8a8ecc90c072"}
 
                    ;; Patient experience of primary care - NHS Dental Services
@@ -51,6 +54,7 @@
                     :conditions [{:field :level_description :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :divide}
                     :resource-id "bcdaf636-32d0-4122-9828-e01c14d95f0b"}
 
                    ;; Patient experience of hospital care
@@ -63,6 +67,7 @@
                     :conditions [{:field :level_description :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :none}
                     :resource-id "9c81f9a3-6301-4faf-90f0-b9f50d2aae39"}
 
                    ;; Responsiveness to in-patients’ personal needs
@@ -75,6 +80,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :none}
                     :resource-id "d0fc162e-b3e4-45b7-8e1d-caffda4e463a"}
 
                    ;; Women’s experience of maternity services
@@ -87,6 +93,7 @@
                     :conditions [{:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :none}
                     :resource-id "18a8f547-be9b-4180-a8f6-4b5dccdfdc62"}
 
                    ;; Patient experience of community mental health services
@@ -99,6 +106,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :none}
                     :resource-id "169d8ede-292d-48aa-8134-01078bf2b85a"}
 
                    ;; Health related quality of life for people with long-term conditions
@@ -111,6 +119,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :none}
                     :resource-id "620c1ebe-8f6c-48f6-8dfc-a9f2e68b2467"}
 
                    ;; Employment of people with long-term conditions
@@ -123,6 +132,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :none}
                     :resource-id "bb15bca9-9716-4d00-bc5f-8b8be88d60bc"}
 
                    ;; Health-related quality of life for carers
@@ -135,6 +145,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :none}
                     :resource-id "738b4af1-2691-40ae-a548-6ab6a6fd3415"}
 
                    ;; Employment of people with mental illness
@@ -147,6 +158,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :none}
                     :resource-id "c44d0bd9-4d85-4aed-8051-5136f8d359a3"}
 
                    ;; Proportion of Older People (65 and over) who were still at home
@@ -160,6 +172,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :divide}
                     :resource-id "c05f9627-8932-4db8-b1d6-ccb29197158d"}
 
                    ;; Proportion offered rehabilitation following discharge from acute or community hospital
@@ -172,6 +185,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :divide}
                     :resource-id "52a33b3d-d8aa-4934-b769-62f73ec67e1e"}
 
                    ;; Patient safety incident reporting
@@ -184,6 +198,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :none}
                     :resource-id "1fa9756c-ea6c-4bbf-9c7e-7c4928ed3772"}
 
                    ;; Safety incidents resulting in severe harm or death
@@ -196,6 +211,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :none}
                     :resource-id "01652770-ee37-4b47-b83b-f3a9627c3cd2"}
 
                    ;; Total health gain as assessed by patients for elective
@@ -210,6 +226,7 @@
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :none}
                     :resource-id "bb927580-4a09-4089-b118-cb43f9b45eb2"}
 
                    ;; Total health gain as assessed by patients for elective
@@ -224,6 +241,7 @@
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :none}
                     :resource-id "bb927580-4a09-4089-b118-cb43f9b45eb2"}
 
                    ;; Total health gain as assessed by patients for elective
@@ -238,6 +256,7 @@
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :none}
                     :resource-id "bb927580-4a09-4089-b118-cb43f9b45eb2"}
 
                    ;; Total health gain as assessed by patients for elective
@@ -252,6 +271,7 @@
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :format {:percentage :none}
                     :resource-id "bb927580-4a09-4089-b118-cb43f9b45eb2"}]
 
  ;; Inequalities
@@ -267,7 +287,8 @@
            :conditions [{:field :breakdown
                          :values #{"Gender"}}]
            :metadata {:sub_lens_resource_id ""
-                      :lens_value "England"}}]
+                      :lens_value "England"}
+           :format {:percentage :none}}]
 
  :deprivation [;; Patient experience of primary care - GP Services
                ;; Deprivation analysis
@@ -280,7 +301,8 @@
                 :conditions [{:field :breakdown
                               :values #{"Deprivation decile"}}]
                 :metadata {:sub_lens_resource_id ""
-                           :lens_value "England"}}]
+                           :lens_value "England"}
+                :format {:percentage :none}}]
 
  :ethnicity [;; Patient experience of primary care - GP Services
              ;; White British compared to Asian or Asian British
@@ -300,7 +322,8 @@
               :fields-to-rename {:year :date
                                  :indicator_value :value}
               :metadata {:sub_lens_resource_id ""
-                         :lens_value "England"}}
+                         :lens_value "England"}
+              :format {:percentage :none}}
 
              ;; Patient experience of primary care - GP Services
              ;; White British compared to Black or Black British
@@ -320,7 +343,8 @@
                                  :conditions [{:field :level_description
                                                :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}
               :metadata {:sub_lens_resource_id ""
-                         :lens_value "England"}}
+                         :lens_value "England"}
+              :format {:percentage :divide}}
 
              ;; Patient experience of primary care - GP Services
              ;; White British compared to Other Ethnic Group
@@ -338,7 +362,8 @@
               :fields-to-rename {:year :date
                                  :indicator_value :value}
               :metadata {:sub_lens_resource_id ""
-                         :lens_value "England"}}
+                         :lens_value "England"}
+              :format {:percentage :none}}
 
              ;; Patient experience of primary care - GP Services
              ;; White British compared to Mixed
@@ -360,7 +385,8 @@
               :fields-to-rename {:year :date
                                  :indicator_value :value
                                  :indicator_value_rate :value
-                                 :average_health_gain :value}}
+                                 :average_health_gain :value}
+              :format {:percentage :none}}
 
              ;; Patient experience of primary care - GP Services
              ;; White British compared to Other White ethnicity
@@ -382,7 +408,8 @@
                                  :indicator_value_rate :value
                                  :average_health_gain :value}
               :metadata {:sub_lens_resource_id ""
-                         :lens_value "England"}}]
+                         :lens_value "England"}
+              :format {:percentage :none}}]
 
  ;; Bereaved carers' views on the quality of care in the last 3 months of life
  :end-of-life-care {:indicator-id "57"
@@ -395,7 +422,8 @@
                                             "Excellent"
                                             "Good"}}]
                     :metadata {:sub_lens_resource_id ""
-                               :lens_value "England"}}
+                               :lens_value "England"}
+                    :format {:percentage :none}}
 
   ;; Incidence of MRSA
  :mrsa-incidence {:indicator-id "65"
@@ -405,7 +433,8 @@
                   :conditions [{:field :level :values #{"England"}}]
                   :resource-id "5b1607c5-82d8-43b2-a5f6-6c7383627787"
                   :metadata {:sub_lens_resource_id ""
-                             :lens_value "England"}}
+                             :lens_value "England"}
+                  :format {:percentage :none}}
 
  ;; Incidence of C difficile
  :c-difficile-incidence {:indicator-id "66"
@@ -416,7 +445,8 @@
                          :sum-field :cdi_count
                          :resource-id "0a7ab959-fb42-4c13-baff-06646b9bdc75"
                          :metadata {:sub_lens_resource_id ""
-                                    :lens_value "England"}}
+                                    :lens_value "England"}
+                         :format {:percentage :none}}
 
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ;; Friends and Family
@@ -439,7 +469,8 @@
                                      :values #{"England (including Independent Sector Providers)"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-12-2014" :period_of_coverage "2014 December"}}
+                                  :date "01-12-2014" :period_of_coverage "2014 December"}
+                       :format {:percentage :none}}
                       {:resource-id "ee515c00-46ce-4486-8d2f-10f2ba08fa37"
                        :indicator-id "49a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -456,7 +487,8 @@
                                      :values #{"England (including Independent Sector Providers)"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-11-2014" :period_of_coverage "2014 November"}}
+                                  :date "01-11-2014" :period_of_coverage "2014 November"}
+                       :format {:percentage :none}}
                       {:resource-id "7cff105c-e5d3-4ffe-a6f0-a68f6f98d730"
                        :indicator-id "49a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -473,7 +505,8 @@
                                      :values #{"England (including Independent Sector Providers)"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-10-2014" :period_of_coverage "2014 October"}}
+                                  :date "01-10-2014" :period_of_coverage "2014 October"}
+                       :format {:percentage :none}}
                       {:resource-id "0ef6ce02-6bf7-41ad-a6bd-4e81dafeb46f"
                        :indicator-id "49a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -489,7 +522,8 @@
                                      :values #{"England (including Independent Sector Providers)"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-09-2014" :period_of_coverage "2014 September"}}
+                                  :date "01-09-2014" :period_of_coverage "2014 September"}
+                       :format {:percentage :none}}
                       {:resource-id "d06bdecf-3663-4dc8-8be0-a04accd5b4cb"
                        :indicator-id "49a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -507,7 +541,8 @@
                                      :values #{"England (including Independent Sector Providers)"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+                                  :date "01-08-2014" :period_of_coverage "2014 August"}
+                       :format {:percentage :none}}
                       {:resource-id "f9672278-f75f-43c8-ba4f-e1aa0f88a788"
                        :indicator-id "49a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -524,7 +559,8 @@
                                      :values #{"England (including Independent Sector Providers)"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-07-2014" :period_of_coverage "2014 July"}}
+                                  :date "01-07-2014" :period_of_coverage "2014 July"}
+                       :format {:percentage :none}}
                       {:resource-id "962e4977-5cf9-411f-a8c6-08ac6fa140a0"
                        :indicator-id "49a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -541,7 +577,8 @@
                                      :values #{"England (including Independent Sector Providers)"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-06-2014" :period_of_coverage "2014 June"}}
+                                  :date "01-06-2014" :period_of_coverage "2014 June"}
+                       :format {:percentage :none}}
                       {:resource-id "ceb0066f-9b08-4328-9ee8-c9013119e72c"
                        :indicator-id "49a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -558,7 +595,8 @@
                                      :values #{"England (including Independent Sector Providers)"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-05-2014" :period_of_coverage "2014 May"}}
+                                  :date "01-05-2014" :period_of_coverage "2014 May"}
+                       :format {:percentage :none}}
                       {:resource-id "221aef97-2516-4438-a2cf-df6df2e9afb6"
                        :indicator-id "49a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -575,7 +613,8 @@
                                      :values #{"England (including Independent Sector Providers)"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-04-2014" :period_of_coverage "2014 April"}}
+                                  :date "01-04-2014" :period_of_coverage "2014 April"}
+                       :format {:percentage :none}}
                       ;; 49b
                       {:resource-id "b39552dd-b247-4a69-ba4e-b0140925fa7e"
                        :indicator-id "49b"
@@ -593,7 +632,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-12-2014" :period_of_coverage "2014 December"}}
+                                  :date "01-12-2014" :period_of_coverage "2014 December"}
+                       :format {:percentage :none}}
                       {:resource-id "409e3c16-d3af-4ea8-af6b-f5e3aa6d81aa"
                        :indicator-id "49b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -610,7 +650,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-11-2014" :period_of_coverage "2014 November"}}
+                                  :date "01-11-2014" :period_of_coverage "2014 November"}
+                       :format {:percentage :none}}
                       {:resource-id "414b501c-6120-4c5e-af1d-cef313af05bd"
                        :indicator-id "49b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -627,7 +668,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-10-2014" :period_of_coverage "2014 October"}}
+                                  :date "01-10-2014" :period_of_coverage "2014 October"}
+                       :format {:percentage :none}}
                       {:resource-id "a3d06bfe-a989-463f-804b-765d5ccd4b6e"
                        :indicator-id "49b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -644,7 +686,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-09-2014" :period_of_coverage "2014 September"}}
+                                  :date "01-09-2014" :period_of_coverage "2014 September"}
+                       :format {:percentage :none}}
                       {:resource-id "cab91f89-b7de-495d-9404-8f7c5583fa4c"
                        :indicator-id "49b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -662,7 +705,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+                                  :date "01-08-2014" :period_of_coverage "2014 August"}
+                       :format {:percentage :none}}
                       {:resource-id "1efbf51d-f6b6-45de-be93-7fcdf1da3e6c"
                        :indicator-id "49b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -679,7 +723,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-07-2014" :period_of_coverage "2014 July"}}
+                                  :date "01-07-2014" :period_of_coverage "2014 July"}
+                       :format {:percentage :none}}
                       {:resource-id "40c22907-b0f5-4a74-9890-8e325f331a47"
                        :indicator-id "49b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -696,7 +741,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-06-2014" :period_of_coverage "2014 June"}}
+                                  :date "01-06-2014" :period_of_coverage "2014 June"}
+                       :format {:percentage :none}}
                       {:resource-id "65f463f2-357c-477e-8ebc-ee25f6992a2e"
                        :indicator-id "49b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -713,7 +759,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-05-2014" :period_of_coverage "2014 May"}}
+                                  :date "01-05-2014" :period_of_coverage "2014 May"}
+                       :format {:percentage :none}}
                       {:resource-id "79446e86-bb78-4da2-933a-d09d31594921"
                        :indicator-id "49b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -730,7 +777,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-04-2014" :period_of_coverage "2014 April"}}
+                                  :date "01-04-2014" :period_of_coverage "2014 April"}
+                       :format {:percentage :none}}
                       ;; 50a
                       {:resource-id "d47e1e79-597b-4462-b8e0-fcb5c305e8d1"
                        :indicator-id "50a"
@@ -748,7 +796,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-12-2014" :period_of_coverage "2014 December"}}
+                                  :date "01-12-2014" :period_of_coverage "2014 December"}
+                       :format {:percentage :none}}
                       {:resource-id "7e994e37-b08c-41ef-ad66-dd0316edfaae"
                        :indicator-id "50a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -765,7 +814,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-11-2014" :period_of_coverage "2014 November"}}
+                                  :date "01-11-2014" :period_of_coverage "2014 November"}
+                       :format {:percentage :none}}
                       {:resource-id "1506f149-0e31-428c-ae65-2dbe55b57b1a"
                        :indicator-id "50a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -782,7 +832,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-10-2014" :period_of_coverage "2014 October"}}
+                                  :date "01-10-2014" :period_of_coverage "2014 October"}
+                       :format {:percentage :none}}
                       {:resource-id "bbb1a014-ab45-4e06-9a8f-1ded3d3d29d4"
                        :indicator-id "50a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -798,7 +849,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-09-2014" :period_of_coverage "2014 September"}}
+                                  :date "01-09-2014" :period_of_coverage "2014 September"}
+                       :format {:percentage :none}}
                       {:resource-id "eae7a64d-eee8-47d7-8456-a45520fd3eff"
                        :indicator-id "50a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -816,7 +868,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+                                  :date "01-08-2014" :period_of_coverage "2014 August"}
+                       :format {:percentage :none}}
                       {:resource-id "f9b4fd7d-d29e-4509-a044-515c4280e7c6"
                        :indicator-id "50a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -833,7 +886,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-07-2014" :period_of_coverage "2014 July"}}
+                                  :date "01-07-2014" :period_of_coverage "2014 July"}
+                       :format {:percentage :none}}
                       {:resource-id "45c2fea1-5d18-425c-8df6-eccc1a555be3"
                        :indicator-id "50a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -850,7 +904,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-06-2014" :period_of_coverage "2014 June"}}
+                                  :date "01-06-2014" :period_of_coverage "2014 June"}
+                       :format {:percentage :none}}
                       {:resource-id "4c867a1e-918e-4ce8-a6f6-29d2005b2837"
                        :indicator-id "50a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -867,7 +922,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-05-2014" :period_of_coverage "2014 May"}}
+                                  :date "01-05-2014" :period_of_coverage "2014 May"}
+                       :format {:percentage :none}}
                       {:resource-id "62f117a9-324d-4dc1-b2fe-e3c064d01d86"
                        :indicator-id "50a"
                        :headers "resources/headers/friends_and_family.edn"
@@ -884,7 +940,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-04-2014" :period_of_coverage "2014 April"}}
+                                  :date "01-04-2014" :period_of_coverage "2014 April"}
+                       :format {:percentage :none}}
                       ;; 50b
                       {:resource-id "d47e1e79-597b-4462-b8e0-fcb5c305e8d1"
                        :indicator-id "50b"
@@ -902,7 +959,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-12-2014" :period_of_coverage "2014 December"}}
+                                  :date "01-12-2014" :period_of_coverage "2014 December"}
+                       :format {:percentage :none}}
                       {:resource-id "7e994e37-b08c-41ef-ad66-dd0316edfaae"
                        :indicator-id "50b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -918,7 +976,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-11-2014" :period_of_coverage "2014 November"}}
+                                  :date "01-11-2014" :period_of_coverage "2014 November"}
+                       :format {:percentage :none}}
                       {:resource-id "1506f149-0e31-428c-ae65-2dbe55b57b1a"
                        :indicator-id "50b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -935,7 +994,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-10-2014" :period_of_coverage "2014 October"}}
+                                  :date "01-10-2014" :period_of_coverage "2014 October"}
+                       :format {:percentage :none}}
                       {:resource-id "bbb1a014-ab45-4e06-9a8f-1ded3d3d29d4"
                        :indicator-id "50b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -952,7 +1012,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-09-2014" :period_of_coverage "2014 September"}}
+                                  :date "01-09-2014" :period_of_coverage "2014 September"}
+                       :format {:percentage :none}}
                       {:resource-id "eae7a64d-eee8-47d7-8456-a45520fd3eff"
                        :indicator-id "50b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -970,7 +1031,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+                                  :date "01-08-2014" :period_of_coverage "2014 August"}
+                       :format {:percentage :none}}
                       {:resource-id "f9b4fd7d-d29e-4509-a044-515c4280e7c6"
                        :indicator-id "50b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -987,7 +1049,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-07-2014" :period_of_coverage "2014 July"}}
+                                  :date "01-07-2014" :period_of_coverage "2014 July"}
+                       :format {:percentage :none}}
                       {:resource-id "45c2fea1-5d18-425c-8df6-eccc1a555be3"
                        :indicator-id "50b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1004,7 +1067,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-06-2014" :period_of_coverage "2014 June"}}
+                                  :date "01-06-2014" :period_of_coverage "2014 June"}
+                       :format {:percentage :none}}
                       {:resource-id "4c867a1e-918e-4ce8-a6f6-29d2005b2837"
                        :indicator-id "50b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1021,7 +1085,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-05-2014" :period_of_coverage "2014 May"}}
+                                  :date "01-05-2014" :period_of_coverage "2014 May"}
+                       :format {:percentage :none}}
                       {:resource-id "62f117a9-324d-4dc1-b2fe-e3c064d01d86"
                        :indicator-id "50b"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1038,7 +1103,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-04-2014" :period_of_coverage "2014 April"}}
+                                  :date "01-04-2014" :period_of_coverage "2014 April"}
+                       :format {:percentage :none}}
                       ;; 50c
                       {:resource-id "d47e1e79-597b-4462-b8e0-fcb5c305e8d1"
                        :indicator-id "50c"
@@ -1056,7 +1122,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-12-2014" :period_of_coverage "2014 December"}}
+                                  :date "01-12-2014" :period_of_coverage "2014 December"}
+                       :format {:percentage :none}}
                       {:resource-id "7e994e37-b08c-41ef-ad66-dd0316edfaae"
                        :indicator-id "50c"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1073,7 +1140,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-11-2014" :period_of_coverage "2014 November"}}
+                                  :date "01-11-2014" :period_of_coverage "2014 November"}
+                       :format {:percentage :none}}
                       {:resource-id "1506f149-0e31-428c-ae65-2dbe55b57b1a"
                        :indicator-id "50c"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1090,7 +1158,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-10-2014" :period_of_coverage "2014 October"}}
+                                  :date "01-10-2014" :period_of_coverage "2014 October"}
+                       :format {:percentage :none}}
                       {:resource-id "bbb1a014-ab45-4e06-9a8f-1ded3d3d29d4"
                        :indicator-id "50c"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1107,7 +1176,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-09-2014" :period_of_coverage "2014 September"}}
+                                  :date "01-09-2014" :period_of_coverage "2014 September"}
+                       :format {:percentage :none}}
                       {:resource-id "eae7a64d-eee8-47d7-8456-a45520fd3eff"
                        :indicator-id "50c"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1124,7 +1194,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+                                  :date "01-08-2014" :period_of_coverage "2014 August"}
+                       :format {:percentage :none}}
                       {:resource-id "f9b4fd7d-d29e-4509-a044-515c4280e7c6"
                        :indicator-id "50c"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1141,7 +1212,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-07-2014" :period_of_coverage "2014 July"}}
+                                  :date "01-07-2014" :period_of_coverage "2014 July"}
+                       :format {:percentage :none}}
                       {:resource-id "45c2fea1-5d18-425c-8df6-eccc1a555be3"
                        :indicator-id "50c"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1158,7 +1230,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-06-2014" :period_of_coverage "2014 June"}}
+                                  :date "01-06-2014" :period_of_coverage "2014 June"}
+                       :format {:percentage :none}}
                       {:resource-id "4c867a1e-918e-4ce8-a6f6-29d2005b2837"
                        :indicator-id "50c"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1175,7 +1248,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-05-2014" :period_of_coverage "2014 May"}}
+                                  :date "01-05-2014" :period_of_coverage "2014 May"}
+                       :format {:percentage :none}}
                       {:resource-id "62f117a9-324d-4dc1-b2fe-e3c064d01d86"
                        :indicator-id "50c"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1192,7 +1266,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-04-2014" :period_of_coverage "2014 April"}}
+                                  :date "01-04-2014" :period_of_coverage "2014 April"}
+                       :format {:percentage :none}}
                       ;; 50d
                       {:resource-id "d47e1e79-597b-4462-b8e0-fcb5c305e8d1"
                        :indicator-id "50d"
@@ -1210,7 +1285,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-12-2014" :period_of_coverage "2014 December"}}
+                                  :date "01-12-2014" :period_of_coverage "2014 December"}
+                       :format {:percentage :none}}
                       {:resource-id "7e994e37-b08c-41ef-ad66-dd0316edfaae"
                        :indicator-id "50d"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1227,7 +1303,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-11-2014" :period_of_coverage "2014 November"}}
+                                  :date "01-11-2014" :period_of_coverage "2014 November"}
+                       :format {:percentage :none}}
                       {:resource-id "1506f149-0e31-428c-ae65-2dbe55b57b1a"
                        :indicator-id "50d"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1244,7 +1321,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-10-2014" :period_of_coverage "2014 October"}}
+                                  :date "01-10-2014" :period_of_coverage "2014 October"}
+                       :format {:percentage :none}}
                       {:resource-id "bbb1a014-ab45-4e06-9a8f-1ded3d3d29d4"
                        :indicator-id "50d"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1261,7 +1339,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-09-2014" :period_of_coverage "2014 September"}}
+                                  :date "01-09-2014" :period_of_coverage "2014 September"}
+                       :format {:percentage :none}}
                       {:resource-id "eae7a64d-eee8-47d7-8456-a45520fd3eff"
                        :indicator-id "50d"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1279,7 +1358,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-08-2014" :period_of_coverage "2014 August"}}
+                                  :date "01-08-2014" :period_of_coverage "2014 August"}
+                       :format {:percentage :none}}
                       {:resource-id "f9b4fd7d-d29e-4509-a044-515c4280e7c6"
                        :indicator-id "50d"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1296,7 +1376,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-07-2014" :period_of_coverage "2014 July"}}
+                                  :date "01-07-2014" :period_of_coverage "2014 July"}
+                       :format {:percentage :none}}
                       {:resource-id "45c2fea1-5d18-425c-8df6-eccc1a555be3"
                        :indicator-id "50d"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1313,7 +1394,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-06-2014" :period_of_coverage "2014 June"}}
+                                  :date "01-06-2014" :period_of_coverage "2014 June"}
+                       :format {:percentage :none}}
                       {:resource-id "4c867a1e-918e-4ce8-a6f6-29d2005b2837"
                        :indicator-id "50d"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1330,7 +1412,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-05-2014" :period_of_coverage "2014 May"}}
+                                  :date "01-05-2014" :period_of_coverage "2014 May"}
+                       :format {:percentage :none}}
                       {:resource-id "62f117a9-324d-4dc1-b2fe-e3c064d01d86"
                        :indicator-id "50d"
                        :headers "resources/headers/friends_and_family.edn"
@@ -1347,7 +1430,8 @@
                                      :values #{"England"}}]
                        :metadata {:sub_lens_resource_id ""
                                   :lens_value "England"
-                                  :date "01-04-2014" :period_of_coverage "2014 April"}}]
+                                  :date "01-04-2014" :period_of_coverage "2014 April"}
+                       :format {:percentage :none}}]
 
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ;; GP Survey
@@ -1366,7 +1450,8 @@
                                         :values #{"Results for England as a whole "}}]
                           :metadata {:sub_lens_resource_id ""
                                      :date "01-07-2014" :period_of_coverage "2014"
-                                     :lens_value "England"}}
+                                     :lens_value "England"}
+                          :format {:percentage :none}}
 
                          {:resource-id "06e3a75f-71db-40b5-9d20-ea7fc770b440"
                           :indicator-id "54"
@@ -1381,7 +1466,8 @@
                                         :values #{"Results for England as a whole "}}]
                           :metadata {:sub_lens_resource_id ""
                                      :date "01-01-2015" :period_of_coverage "2015"
-                                     :lens_value "England"}}]
+                                     :lens_value "England"}
+                          :format {:percentage :none}}]
 
  ;; Access to NHS Dental services
  :access-to-nhs-dental-services [{:resource-id "0e10c436-ac0a-44f0-af86-483676b81981"
@@ -1397,7 +1483,8 @@
                                                 :values #{"Results for England as a whole"}}]
                                   :metadata {:sub_lens_resource_id ""
                                              :date "01-07-2014" :period_of_coverage "2014"
-                                             :lens_value "England"}}
+                                             :lens_value "England"}
+                                  :format {:percentage :divide}}
 
                                  {:resource-id "06e3a75f-71db-40b5-9d20-ea7fc770b440"
                                   :indicator-id "55"
@@ -1412,7 +1499,8 @@
                                                 :values #{"Results for England as a whole"}}]
                                   :metadata {:sub_lens_resource_id ""
                                              :date "01-01-2015" :period_of_coverage "2015"
-                                             :lens_value "England"}}]
+                                             :lens_value "England"}
+                                  :format {:percentage :none}}]
 
 
 
@@ -1428,6 +1516,7 @@
                                  :last-row 41}
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :format {:percentage :divide}
                  :fields-to-extract [:proportion_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care]
                  :fields-to-rename {:sum :value}
                  :operation :sum
@@ -1440,6 +1529,7 @@
                                  :last-row 34}
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-12-2014" :period_of_coverage "2014 December"}
+                 :format {:percentage :none}
                  :fields-to-extract [:treatment_function :within_18_weeks_percentile]
                  :fields-to-rename {:within_18_weeks_percentile :value}
                  :conditions [{:field :treatment_function :values #{"Total"}}]
@@ -1454,6 +1544,7 @@
                                  :last-row 34}
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-08-2014" :period_of_coverage "2014 August"}
+                 :format {:percentage :none}
                  :fields-to-extract [:treatment_function :within_18_weeks_percentile]
                  :fields-to-rename {:within_18_weeks_percentile :value}
                  :conditions [{:field :treatment_function :values #{"Total"}}]
@@ -1468,6 +1559,7 @@
                                  :last-row 34}
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-12-2014" :period_of_coverage "2014 December"}
+                 :format {:percentage :none}
                  :fields-to-extract [:treatment_function :within_18_weeks_percentile]
                  :fields-to-rename {:within_18_weeks_percentile :value}
                  :conditions [{:field :treatment_function :values #{"Total"}}]
@@ -1478,42 +1570,49 @@
                  :indicator-id "132"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:within_14_days :total]}
                 {:resource-id "d16afb5b-2575-4068-a4c5-be04c966f543"
                  :indicator-id "132"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:within_14_days :total]}
                 {:resource-id "215f73ee-41b3-40fa-8ea7-b6d13f1337ec"
                  :indicator-id "132"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:within_14_days :total]}
                 {:resource-id "c51f2ae6-7950-419b-bb4b-5d8fca5b0c84"
                  :indicator-id "132"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:within_14_days :total]}
                 {:resource-id "434ee817-f6f2-419c-be5f-2d4629e05a69"
                  :indicator-id "132"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-10-2013" :period_of_coverage "October 2013 to December 2013"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:within_14_days :total]}
                 {:resource-id "04a2e903-8114-4037-bac1-480c6cdeb32e"
                  :indicator-id "132"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-07-2013" :period_of_coverage "July 2013 to September 2013"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:within_14_days :total]}
                 {:resource-id "27031f95-dc3b-4874-b25a-e2c2e7402cc4"
                  :indicator-id "132"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2013 to June 2013"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:within_14_days :total]}
                 ;; 133
@@ -1521,42 +1620,49 @@
                  :indicator-id "133"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:within_14_days :total]}
                 {:resource-id "a07a2b4f-277f-46fe-9e5a-b13991b03faa"
                  :indicator-id "133"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:within_14_days :total]}
                 {:resource-id "afb3049d-78f6-4048-9a4e-6638d2688e0d"
                  :indicator-id "133"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:within_14_days :total]}
                 {:resource-id "bbed9698-57a7-4c10-a2d1-aacc176727ad"
                  :indicator-id "133"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:within_14_days :total]}
                 {:resource-id "5aa31d25-4161-43f4-b091-7f1a56cc690b"
                  :indicator-id "133"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-10-2013" :period_of_coverage "October 2013 to December 2013"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:within_14_days :total]}
                 {:resource-id "67fbde94-a46a-4843-b60e-d66fa63e41eb"
                  :indicator-id "133"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-07-2013" :period_of_coverage "July 2013 to September 2013"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:within_14_days :total]}
                 {:resource-id "b3c83e2b-3e86-4179-a960-f6b6e726f19f"
                  :indicator-id "133"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2013 to June 2013"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:within_14_days :total]}
                 ;; 134
@@ -1564,42 +1670,49 @@
                  :indicator-id "134"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 {:resource-id "32a57fe6-c29a-4000-bb7b-7026df930a98"
                  :indicator-id "134"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 {:resource-id "0a873564-0a18-4edc-b7e8-5cadc40eecec"
                  :indicator-id "134"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 {:resource-id "a5594295-26a5-4d79-a00a-41f38e867b1e"
                  :indicator-id "134"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 {:resource-id "44e582af-d838-4fc4-a39a-231bcc2770d9"
                  :indicator-id "134"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-10-2013" :period_of_coverage "October 2013 to December 2013"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 {:resource-id "90035b42-d2b3-405f-9d63-3e0455cf2e05"
                  :indicator-id "134"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-07-2013" :period_of_coverage "July 2013 to September 2013"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 {:resource-id "1eaaf9d4-fca2-4c7c-9c00-e2c223430a64"
                  :indicator-id "134"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2013 to June 2013"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 ;; 135
@@ -1607,42 +1720,49 @@
                  :indicator-id "135"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 {:resource-id "013ae123-f05f-4a73-9806-b16f3e925c32"
                  :indicator-id "135"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 {:resource-id "5d9308b6-4a8c-4d80-88a0-c85ec2392a8d"
                  :indicator-id "135"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 {:resource-id "982c5943-e3f3-48f8-bd85-84e0c6c608f0"
                  :indicator-id "135"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 {:resource-id "ba2fcfae-4d97-4b95-a8d2-81be857add66"
                  :indicator-id "135"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-10-2013" :period_of_coverage "October 2013 to December 2013"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 {:resource-id "5a621b1a-4e49-4a5a-8cbd-2fad43ef139d"
                  :indicator-id "135"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-07-2013" :period_of_coverage "July 2013 to September 2013"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 {:resource-id "6ec9b5f0-c6e6-4bdb-afef-8956468ecf85"
                  :indicator-id "135"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2013 to June 2013"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 ;; 136
@@ -1650,6 +1770,7 @@
                  :indicator-id "136"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 ;; 137
@@ -1657,6 +1778,7 @@
                  :indicator-id "137"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_31_days :total]}
                 ;; 138
@@ -1664,6 +1786,7 @@
                  :indicator-id "138"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_62_days :total_treated]}
                 ;; 139
@@ -1671,6 +1794,7 @@
                  :indicator-id "139"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_62_days :total_treated]}
                 ;; 140
@@ -1678,6 +1802,7 @@
                  :indicator-id "140"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :format {:percentage :none}
                  :operation :division
                  :division-fields [:after_62_days :total_treated]}
                 ]}
