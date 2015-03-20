@@ -90,7 +90,7 @@
         (str))))
 
 (defmulti format-percentages (fn [data recipe]
-                     (-> recipe :format :percentage)))
+                               (-> recipe :format :percentage)))
 
 (defmethod format-percentages :none
   ;; Returns the value as passed in.
