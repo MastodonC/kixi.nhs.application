@@ -190,7 +190,7 @@
 
                    ;; Patient safety incident reporting
                    {:indicator-id "61"
-                    :fields-to-extract [:indicator_value :year :period_of_coverage]
+                    :fields-to-extract [:indicator_value_rate :year :period_of_coverage]
                     :fields-to-rename {:year :date
                                        :indicator_value :value
                                        :indicator_value_rate :value
