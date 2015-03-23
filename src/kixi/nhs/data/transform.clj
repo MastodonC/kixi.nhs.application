@@ -107,6 +107,25 @@
   [data recipe]
   (update-in data [:value] process-percentages))
 
+;; Calculate confidence intervals:
+;; when several time periods in
+;; the same data resource in ckan
+(defn calculate-lci-uci
+  [condition data]
+  (if condition
+    (let [sorted-data (reverse (sort-by :end_date data))
+          current     (parse-number (:value (first sorted-data)))
+          previous    (parse-number (:value (second sorted-data)))]
+      (if (and current previous)
+        (let  [difference (- current previous)
+               ci         {:lci (when-not (nil? difference)
+                                  (str (- current difference)))
+                           :uci (when-not (nil? difference)
+                                  (str (+ current difference)))}]
+          (into [] (concat [(merge (first sorted-data) ci)]
+                           (into [] (next sorted-data)))))
+        data)) data))
+
 (defn filter-dataset
   "Filters dataset according to the given recipe."
   [recipe-map data]
@@ -123,7 +142,7 @@
   and makes sure period_coverage is not nil
   as it's a PK in CKAN."
   [recipe-map m]
-  (let [{:keys [indicator-id metadata]} recipe-map]
+  (let [{:keys [indicator-id metadata calculate-ci]} recipe-map]
     (-> m
         (merge metadata)
         (cond-> (empty? (:indicator_id m)) (assoc :indicator_id indicator-id))
@@ -175,7 +194,7 @@
 
 (defn divide
   "Divides two numbers. Guards against
-  vivision by zero and nil values.
+  division by zero and nil values.
   Returns a numeric value."
   [n m]
   (when (and (not (nil? n))

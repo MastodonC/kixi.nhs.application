@@ -39,7 +39,10 @@
   Returns a sequence of maps, where each map is
   a indicator value from a single monthly recipe."
   [ckan-client recipes]
-  (mapcat #(access-to-gp-services ckan-client %) recipes))
+  (if (some true? (map #(:calculate-ci %) recipes))
+    (->> (mapcat #(access-to-gp-services ckan-client %) recipes)
+         (transform/calculate-lci-uci true))
+    (mapcat #(access-to-gp-services ckan-client %) recipes)))
 
 (defn access-to-nhs-dental-services
   "Retrieves GP Survey results and
@@ -60,4 +63,7 @@
   Returns a sequence of maps, where each map is
   a indicator value from a single monthly recipe."
   [ckan-client recipes]
-  (mapcat #(access-to-nhs-dental-services ckan-client %) recipes))
+  (if (some true? (map #(:calculate-ci %) recipes))
+    (->> (mapcat #(access-to-nhs-dental-services ckan-client %) recipes)
+         (transform/calculate-lci-uci true))
+    (mapcat #(access-to-nhs-dental-services ckan-client %) recipes)))
