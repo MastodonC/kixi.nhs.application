@@ -11,7 +11,7 @@
 (defn not-nil? [x] (not (nil? x)))
 
 (defn log-and-return [x]
-  (log/info (first x))
+  (log/info x)
   x)
 
 (defn parse-number
