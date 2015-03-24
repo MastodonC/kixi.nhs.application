@@ -3,6 +3,24 @@
 ;; NHS Constitution
 
 {:constitution [
+                ;;;;; 125
+
+                ;; Quarter 2 2014
+                {:resource-id "296b4781-220d-49f5-b7e2-2a0f67dd6616"
+                 :indicator-id "125"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "Area Team" :headers ["Area Team" :generic]}
+                 :scrub-details {:offset 15
+                                 :last-row 41}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "July 2014 to October 2014"}
+                 :fields-to-extract [:proportion_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care]
+                 :fields-to-rename {:sum :value}
+                 :format {:percentage :divide}
+                 :operation :sum
+                 :sum-field :proportion_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care}
+
+                ;; Quarter 3 2014
                 {:resource-id "b9fc43a5-e026-4519-8f84-d8087616ff94"
                  :indicator-id "125"
                  :headers "resources/headers/nhs_constitution.edn"
@@ -16,6 +34,201 @@
                  :format {:percentage :divide}
                  :operation :sum
                  :sum-field :proportion_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care}
+                ;;;;; 126
+
+                ;; December 2013
+                {:resource-id "a35e0ca9-6221-4ff6-80fc-1212f0f17e55"
+                 :indicator-id "126"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-12-2013" :period_of_coverage "2013 December"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; January 2014
+                {:resource-id "0030d098-bb55-412e-93b1-5ef12e9e88dc"
+                 :indicator-id "126"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "2014 January"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; February 2014
+                {:resource-id "5be78264-23be-4e8f-8ba1-4c4b80aea12b"
+                 :indicator-id "126"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-02-2014" :period_of_coverage "2014 February"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; March 2014
+                {:resource-id "92f29bb3-3601-4d09-891a-02d26c271c45"
+                 :indicator-id "126"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-03-2014" :period_of_coverage "2014 March"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; April 2014
+                {:resource-id "9c58559f-4fd6-4533-9119-5fe24438d35a"
+                 :indicator-id "126"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "2014 April"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; May 2014
+                {:resource-id "de34d882-2a15-4895-93f9-ae1e256c8bac"
+                 :indicator-id "126"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-05-2014" :period_of_coverage "2014 May"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; June 2014
+                {:resource-id "1abaafa4-8913-4ce4-a3d0-d846a48b473c"
+                 :indicator-id "126"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-06-2014" :period_of_coverage "2014 June"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; July 2014
+                {:resource-id "39e96a5d-246c-4c6a-88d1-238e9a52c9e5"
+                 :indicator-id "126"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "2014 July"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; August 2014
+                {:resource-id "1e1d0921-6967-4a43-b7f8-14b052a91929"
+                 :indicator-id "126"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-08-2014" :period_of_coverage "2014 August"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; September 2014
+                {:resource-id "ff84123d-2d95-481b-944d-2ca7486bc62d"
+                 :indicator-id "126"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-09-2014" :period_of_coverage "2014 September"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; October 2014
+                {:resource-id "fced3c3c-7514-4959-a178-2ada2ba3b41e"
+                 :indicator-id "126"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "2014 October"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; November 2014
+                {:resource-id "ea7022b0-58bc-43e0-969b-cfe058819ba9"
+                 :indicator-id "126"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-11-2014" :period_of_coverage "2014 November"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; December 2014
                 {:resource-id "1e1d0921-6967-4a43-b7f8-14b052a91929"
                  :indicator-id "126"
                  :headers "resources/headers/nhs_constitution.edn"
@@ -31,6 +244,137 @@
                  :field :within_18_weeks_percentile
                  :operation :none}
 
+                ;;;; 127 ;;;;
+
+                ;; December 2013
+                {:resource-id "f2e43cd8-fb5b-4a5e-9dac-47fc4bd35788"
+                 :indicator-id "127"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-12-2013" :period_of_coverage "2013 December"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; January 2014
+                {:resource-id "2b3d8858-7b4f-4aea-b67e-e1ae934c1d11"
+                 :indicator-id "127"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "2014 January"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; February 2014
+                {:resource-id "57914321-2867-44d6-9144-8ad11017a02f"
+                 :indicator-id "127"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-02-2014" :period_of_coverage "2014 February"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; March 2014
+                {:resource-id "4921dcb9-05f8-4d62-a0eb-f9978c08ee43"
+                 :indicator-id "127"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-03-2014" :period_of_coverage "2014 March"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; April 2014
+                {:resource-id "886b412e-a56a-44ec-8ac6-9e58eb7bc1f6"
+                 :indicator-id "127"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "2014 April"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; May 2014
+                {:resource-id "1b09ca47-96c8-4c73-898d-1adbc2b0d84b"
+                 :indicator-id "127"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-05-2014" :period_of_coverage "2014 May"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; June 2014
+                {:resource-id "362afb45-ad45-4720-9952-be38e0c88288"
+                 :indicator-id "127"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-06-2014" :period_of_coverage "2014 June"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; July 2014
+                {:resource-id "01733bee-5443-4443-b146-642d8fb605d3"
+                 :indicator-id "127"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "2014 July"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; August 2014
                 {:resource-id "d64493bb-450d-44d3-81c3-1e389afb527a"
                  :indicator-id "127"
                  :headers "resources/headers/nhs_constitution.edn"
@@ -46,6 +390,201 @@
                  :field :within_18_weeks_percentile
                  :operation :none}
 
+                ;; September 2014
+                {:resource-id "d66efd53-1efe-454c-9696-439855d2a1a0"
+                 :indicator-id "127"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-09-2014" :period_of_coverage "2014 September"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; October 2014
+                {:resource-id "1615ebbf-c895-4c2b-ba5b-b73108cf36d5"
+                 :indicator-id "127"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "2014 October"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; November 2014
+                {:resource-id "b49a8d0f-6931-4f9d-9c4b-42c8dbfd2995"
+                 :indicator-id "127"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-11-2014" :period_of_coverage "2014 November"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; December 2014
+                {:resource-id "5f843857-b389-4c2f-b83d-ef66f38bd1c0"
+                 :indicator-id "127"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-12-2014" :period_of_coverage "2014 December"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;;;; 128 ;;;;
+
+                ;; December 2013
+                {:resource-id "bcb79571-d99d-4c4a-953b-898d39e02d7b"
+                 :indicator-id "128"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-12-2013" :period_of_coverage "2013 December"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :format {:percentage :none}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; January 2014
+                {:resource-id "efcc5e89-3f00-4c7f-83ed-0869b115c145"
+                 :indicator-id "128"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "2014 January"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :format {:percentage :none}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; February 2014
+                {:resource-id "ce9ae49b-af76-4061-954f-38728816b8a4"
+                 :indicator-id "128"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-02-2014" :period_of_coverage "2014 February"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :format {:percentage :none}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; March 2014
+                {:resource-id "34b18216-cc9e-4710-be69-f481d9426604"
+                 :indicator-id "128"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-03-2014" :period_of_coverage "2014 March"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :format {:percentage :none}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; April 2014
+                {:resource-id "fd134ad6-6da6-4f37-b41e-b624852ad9ca"
+                 :indicator-id "128"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "2014 April"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :format {:percentage :none}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; May 2014
+                {:resource-id "aa2e5b10-3dfb-40cf-b377-e724a3b3dade"
+                 :indicator-id "128"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-05-2014" :period_of_coverage "2014 May"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :format {:percentage :none}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; June 2014
+                {:resource-id "53f61784-25b0-46af-a03e-f171f2d7e40f"
+                 :indicator-id "128"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-06-2014" :period_of_coverage "2014 June"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :format {:percentage :none}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; July 2014
+                {:resource-id "f00a941e-2afb-4745-a202-5cf28dfafa07"
+                 :indicator-id "128"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "2014 July"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :format {:percentage :none}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; August 2014
                 {:resource-id "cd671235-67e6-4662-a708-dccbbfcc139f"
                  :indicator-id "128"
                  :headers "resources/headers/nhs_constitution.edn"
@@ -61,6 +600,193 @@
                  :field :within_18_weeks_percentile
                  :operation :none}
 
+                ;; September 2014
+                {:resource-id "2009b583-7fbc-4cea-be2d-acbc6096eb3b"
+                 :indicator-id "128"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-09-2014" :period_of_coverage "2014 September"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :format {:percentage :none}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; October 2014
+                {:resource-id "3c0a5ccb-d998-4fde-9831-0077a4b9ad75"
+                 :indicator-id "128"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "2014 October"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :format {:percentage :none}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; November 2014
+                {:resource-id "b559d18b-4689-4ed3-b4b8-b57a701a1c96"
+                 :indicator-id "128"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-11-2014" :period_of_coverage "2014 November"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :format {:percentage :none}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;; December 2014
+                {:resource-id "0f1d57f5-2bf8-4bd6-982b-74fc7162a106"
+                 :indicator-id "128"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-12-2014" :period_of_coverage "2014 December"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :format {:percentage :none}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                ;;;; 129 ;;;;
+
+                ;; December 2013
+                {:resource-id "bcb79571-d99d-4c4a-953b-898d39e02d7b"
+                 :indicator-id "129"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-12-2013" :period_of_coverage "2013 December"}
+                 :fields-to-extract [:treatment_function :bd]
+                 :fields-to-rename {:bd :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :bd
+                 :operation :none}
+
+                ;; January 2014
+                {:resource-id "efcc5e89-3f00-4c7f-83ed-0869b115c145"
+                 :indicator-id "129"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "2014 January"}
+                 :fields-to-extract [:treatment_function :bd]
+                 :fields-to-rename {:bd :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :bd
+                 :operation :none}
+
+                ;; February 2014
+                {:resource-id "ce9ae49b-af76-4061-954f-38728816b8a4"
+                 :indicator-id "129"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-02-2014" :period_of_coverage "2014 February"}
+                 :fields-to-extract [:treatment_function :bd]
+                 :fields-to-rename {:bd :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :bd
+                 :operation :none}
+
+                ;; March 2014
+                {:resource-id "34b18216-cc9e-4710-be69-f481d9426604"
+                 :indicator-id "129"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-03-2014" :period_of_coverage "2014 March"}
+                 :fields-to-extract [:treatment_function :bd]
+                 :fields-to-rename {:bd :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :bd
+                 :operation :none}
+
+                ;; April 2014
+                {:resource-id "fd134ad6-6da6-4f37-b41e-b624852ad9ca"
+                 :indicator-id "129"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "2014 April"}
+                 :fields-to-extract [:treatment_function :bd]
+                 :fields-to-rename {:bd :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :bd
+                 :operation :none}
+
+                ;; May 2014
+                {:resource-id "aa2e5b10-3dfb-40cf-b377-e724a3b3dade"
+                 :indicator-id "129"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-05-2014" :period_of_coverage "2014 May"}
+                 :fields-to-extract [:treatment_function :bd]
+                 :fields-to-rename {:bd :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :bd
+                 :operation :none}
+
+                ;; June 2014
+                {:resource-id "53f61784-25b0-46af-a03e-f171f2d7e40f"
+                 :indicator-id "129"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-06-2014" :period_of_coverage "2014 June"}
+                 :fields-to-extract [:treatment_function :bd]
+                 :fields-to-rename {:bd :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :bd
+                 :operation :none}
+
+                ;; July 2014
+                {:resource-id "f00a941e-2afb-4745-a202-5cf28dfafa07"
+                 :indicator-id "129"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "2014 July"}
+                 :fields-to-extract [:treatment_function :bd]
+                 :fields-to-rename {:bd :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :bd
+                 :operation :none}
+
+                ;; August 2014
                 {:resource-id "cd671235-67e6-4662-a708-dccbbfcc139f"
                  :indicator-id "129"
                  :headers "resources/headers/nhs_constitution.edn"
@@ -74,6 +800,68 @@
                  :conditions [{:field :treatment_function :values #{"Total"}}]
                  :field :bd
                  :operation :none}
+
+                ;; September 2014
+                {:resource-id "2009b583-7fbc-4cea-be2d-acbc6096eb3b"
+                 :indicator-id "129"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-09-2014" :period_of_coverage "2014 September"}
+                 :fields-to-extract [:treatment_function :bd]
+                 :fields-to-rename {:bd :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :bd
+                 :operation :none}
+
+                ;; October 2014
+                {:resource-id "3c0a5ccb-d998-4fde-9831-0077a4b9ad75"
+                 :indicator-id "129"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "2014 October"}
+                 :fields-to-extract [:treatment_function :bd]
+                 :fields-to-rename {:bd :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :bd
+                 :operation :none}
+
+                ;; November 2014
+                {:resource-id "b559d18b-4689-4ed3-b4b8-b57a701a1c96"
+                 :indicator-id "129"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-11-2014" :period_of_coverage "2014 November"}
+                 :fields-to-extract [:treatment_function :bd]
+                 :fields-to-rename {:bd :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :bd
+                 :operation :none}
+
+                ;; December 2014
+                {:resource-id "0f1d57f5-2bf8-4bd6-982b-74fc7162a106"
+                 :indicator-id "129"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-12-2014" :period_of_coverage "2014 December"}
+                 :fields-to-extract [:treatment_function :bd]
+                 :fields-to-rename {:bd :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :bd
+                 :operation :none}
+
+                ;;;; 130 ;;;;
 
                 {:resource-id "806e2455-0db6-4926-b112-47305fc66b6a"
                  :indicator-id "130"
@@ -114,19 +902,6 @@
                                  :last-row 18}
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "23-03-2014" :period_of_coverage "16/03/2014 to 23/03/2014"}
-                 :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
-                 :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
-                 :conditions [{:field :name :values #{"England"}}]
-                 :field :greater_than_4h_percentage_in_4h_or_less_all
-                 :operation :none}
-                {:resource-id "6479f150-f5d6-48c7-a6c9-df430fac07cd"
-                 :indicator-id "131"
-                 :headers "resources/headers/nhs_constitution.edn"
-                 :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
-                 :scrub-details {:offset 16
-                                 :last-row 18}
-                 :metadata {:sub_lens_resource_id "" :lens_value "England"
-                            :date "16-03-2014" :period_of_coverage "09/03/2014 to 16/03/2014"}
                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
                  :conditions [{:field :name :values #{"England"}}]
@@ -1043,39 +1818,174 @@
                             :date "01-04-2014" :period_of_coverage "April 2013 to June 2013"}
                  :operation :division
                  :division-fields [:after_31_days :total]}
-                ;; 136
+
+                ;;;; 136 ;;;;
+
+                ;; Q4 2013/2014
+                {:resource-id "334e87c4-3060-4bb0-9517-8eedf47e3523"
+                 :indicator-id "136"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-12-2013" :period_of_coverage "December 2013 to April 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+
+                ;; Q1 2014/2015
                 {:resource-id "e560de1c-8a06-49a6-969c-11535c3ef2e6"
                  :indicator-id "136"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
                  :operation :division
                  :division-fields [:after_31_days :total]}
-                ;; 137
+
+                ;; Q2 2014/2015
+                {:resource-id "1e653985-8598-42b7-aefa-8db9122dbae4"
+                 :indicator-id "136"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+
+                ;; Q3 2014/2015
+                {:resource-id "4a7905f9-9461-4a38-9b32-e3f2eeaae756"
+                 :indicator-id "136"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+
+                ;;;; 137 ;;;;
+
+                ;; Q4 2013/2014
+                {:resource-id "cee5f646-0fa5-40fb-8484-3ebcb5effd53"
+                 :indicator-id "137"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+
+                ;; Q1 2014/2015
                 {:resource-id "dadfd925-f491-46f3-92c1-f84959325969"
                  :indicator-id "137"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
                  :operation :division
                  :division-fields [:after_31_days :total]}
-                ;; 138
+
+                 ;; Q2 2014/2015
+                {:resource-id "ad7d4ce2-a8b1-4fc5-8b5e-ce5394423986"
+                 :indicator-id "137"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+
+                 ;; Q3 2014/2015
+                {:resource-id "ad7d4ce2-a8b1-4fc5-8b5e-ce5394423986"
+                 :indicator-id "137"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+
+                ;;;; 138 ;;;;
+
+                 ;; Q4 2013/2014
+                {:resource-id "4aa9d478-5e08-4086-bd56-5781df2f200f"
+                 :indicator-id "138"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :operation :division
+                 :division-fields [:after_62_days :total_treated]}
+
+                ;; Q1 2014/2015
                 {:resource-id "e01fc8b5-6c9b-4a56-9063-4b170cc97dee"
                  :indicator-id "138"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
                  :operation :division
                  :division-fields [:after_62_days :total_treated]}
-                ;; 139
+
+                ;; Q2 2014/2015
+                {:resource-id "8f5cd034-9219-45ad-bfdd-49aa6541ccc5"
+                 :indicator-id "138"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :operation :division
+                 :division-fields [:after_62_days :total_treated]}
+
+                 ;; Q3 2014/2015
+                {:resource-id "b44fd4e7-fdc7-4a70-8a66-c2e5a078c44d"
+                 :indicator-id "138"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :operation :division
+                 :division-fields [:after_62_days :total_treated]}
+
+                ;;;; 139 ;;;;
+
+                 ;; Q4 2013/2014
+                {:resource-id "2c6daf45-eb12-47c6-ab83-100bbdfbb413"
+                 :indicator-id "139"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :operation :division
+                 :division-fields [:after_62_days :total_treated]}
+
+                ;; Q1 2014/2015
                 {:resource-id "d07d271c-5933-4eb2-a70b-ef7551563269"
                  :indicator-id "139"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
                  :operation :division
                  :division-fields [:after_62_days :total_treated]}
-                ;; 140
+
+                ;; Q2 2014/2015
+                {:resource-id "29674e39-589b-4d89-aca3-fb12f120f895"
+                 :indicator-id "139"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :operation :division
+                 :division-fields [:after_62_days :total_treated]}
+
+                 ;; Q3 2014/2015
+                {:resource-id "f0b07d1e-910f-42da-a875-91478ff5c415"
+                 :indicator-id "139"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :operation :division
+                 :division-fields [:after_62_days :total_treated]}
+
+                ;;;; 140 ;;;;
+
+                 ;; Q4 2013/2014
+                {:resource-id "5eecd83b-26c1-46c8-9d42-59c9b78018c8"
+                 :indicator-id "140"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :operation :division
+                 :division-fields [:after_62_days :total_treated]}
+
+                ;; Q1 2014/2015
                 {:resource-id "212b6adb-3196-4854-af7d-1f146a2d3ec9"
                  :indicator-id "140"
                  :metadata {:sub_lens_resource_id "" :lens_value "England"
                             :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :operation :division
+                 :division-fields [:after_62_days :total_treated]}
+
+                ;; Q2 2014/2015
+                {:resource-id "a645dbdb-39e9-4b2f-b95b-8d50a2e3e058"
+                 :indicator-id "140"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :operation :division
+                 :division-fields [:after_62_days :total_treated]}
+
+                ;; Q3 2014/2015
+                {:resource-id "0fd05e6a-f5ab-4cb5-81ba-e194c5f979dc"
+                 :indicator-id "140"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
                  :operation :division
                  :division-fields [:after_62_days :total_treated]}
 

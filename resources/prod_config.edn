@@ -454,7 +454,8 @@
  :c-difficile-incidence {:indicator-id "66"
                          :fields-to-extract [:cdi_count :reporting_period]
                          :fields-to-rename {:year :date
-                                            :sum :value}
+                                            :sum :value
+                                            :reporting_period :period_of_coverage}
                          :conditions []
                          :sum-field :cdi_count
                          :resource-id "0a7ab959-fb42-4c13-baff-06646b9bdc75"

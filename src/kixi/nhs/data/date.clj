@@ -13,7 +13,8 @@
               #"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}"
               #"\d{4} \w+"
               #"\d{4}-\d{2}-\d{2}"
-              #"\d{4}-\d{2}-\d{2} to \d{4}-\d{2}-\d{2}"])
+              #"\d{4}-\d{2}-\d{2} to \d{4}-\d{2}-\d{2}"
+              #"\w+-\d{2}"])
 
 (defn date->str [s]
   (tf/unparse (tf/formatter "yyyy-MM-dd") s))
@@ -27,6 +28,14 @@
 (defmethod s->uniform-date "\\d{4}" [date-str pattern]
   {:start_date (str date-str "-01-01")
    :end_date   (str date-str "-12-31")})
+
+;; Jun-14
+(defmethod s->uniform-date "\\w+-\\d{2}" [date-str pattern]
+  (let [formatter (tf/formatter "MMM-yy")
+        start     (-> date-str (str->date formatter))
+        end       (-> start t/last-day-of-the-month date->str)]
+    {:start_date (date->str start)
+     :end_date   end}))
 
 ;; 2013/14 => fiscal year 2013-04-06 - 2014-04-05
 (defmethod s->uniform-date "\\d{4}\\/\\d{2}" [date-str pattern]
