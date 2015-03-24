@@ -224,4 +224,36 @@
                 "Apr" [:empty-col
                        :area-team-code :area-team :total-responses :total-eligible
                        :friends-and-family-test-score :empty :extremely-likely :likely
-                       :neither :unlikely :extremely-unlikely :dont-know]}}
+                       :neither :unlikely :extremely-unlikely :dont-know]}
+ "keyfindings_sheet10_mean" {"2013" [:code :area-team :response_rate_percentage :response_rate_base
+                                     :key_finding_1_percentage :key_finding_1_base
+                                     :key_finding_2_percentage :key_finding_2_base
+                                     :key_finding_3_percentage :key_finding_3_base
+                                     :key_finding_4_percentage :key_finding_4_base
+                                     :key_finding_5_percentage :key_finding_5_base
+                                     :key_finding_6_percentage :key_finding_6_base
+                                     :key_finding_7_percentage :key_finding_7_base
+                                     :key_finding_8_percentage :key_finding_8_base
+                                     :key_finding_9_percentage :key_finding_9_base
+                                     :key_finding_10_percentage :key_finding_10_base
+                                     :key_finding_11_percentage :key_finding_11_base
+                                     :key_finding_12_percentage :key_finding_12_base
+                                     :key_finding_13_percentage :key_finding_13_base
+                                     :key_finding_14_percentage :key_finding_14_base
+                                     :key_finding_15_percentage :key_finding_15_base
+                                     :key_finding_16_percentage :key_finding_16_base
+                                     :key_finding_17_percentage :key_finding_17_base
+                                     :key_finding_18_percentage :key_finding_18_base
+                                     :key_finding_19_percentage :key_finding_19_base
+                                     :key_finding_20_percentage :key_finding_20_base
+                                     :key_finding_21_percentage :key_finding_21_base
+                                     :key_finding_22_percentage :key_finding_22_base
+                                     :key_finding_23_percentage :key_finding_23_base
+                                     :key_finding_24_percentage :key_finding_24_base
+                                     :key_finding_25_percentage :key_finding_25_base
+                                     :key_finding_26_percentage :key_finding_26_base
+                                     :key_finding_27_percentage :key_finding_27_base
+                                     :key_finding_28_percentage :key_finding_28_base
+                                     :overall_engagement_score_score
+                                     :overall_engagement_score_base
+                                     ]}}

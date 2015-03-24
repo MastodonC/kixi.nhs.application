@@ -28,7 +28,6 @@
   [ckan-client recipe]
   (let [field (:field recipe)]
     (->> (xls/process-xls ckan-client recipe)
-         first ;; we just work on a single worksheet
          (transform/filter-dataset recipe)
          sum-good-access
          val->seq
@@ -48,7 +47,6 @@
   [ckan-client recipe]
   (let [field (:field recipe)]
     (->> (xls/process-xls ckan-client recipe)
-         first ;; we just work on a single worksheet
          (transform/filter-dataset recipe)
          (map #(-> %
                    (clojure.set/rename-keys {field :value})

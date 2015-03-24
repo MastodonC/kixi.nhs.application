@@ -1,0 +1,1137 @@
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; NHS Constitution
+
+{:constitution [
+                {:resource-id "b9fc43a5-e026-4519-8f84-d8087616ff94"
+                 :indicator-id "125"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "Area Team" :headers ["Area Team" :generic]}
+                 :scrub-details {:offset 15
+                                 :last-row 41}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :fields-to-extract [:proportion_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care]
+                 :fields-to-rename {:sum :value}
+                 :format {:percentage :divide}
+                 :operation :sum
+                 :sum-field :proportion_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care}
+                {:resource-id "1e1d0921-6967-4a43-b7f8-14b052a91929"
+                 :indicator-id "126"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-12-2014" :period_of_coverage "2014 December"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                {:resource-id "d64493bb-450d-44d3-81c3-1e389afb527a"
+                 :indicator-id "127"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-08-2014" :period_of_coverage "2014 August"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :format {:percentage :none}
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                {:resource-id "cd671235-67e6-4662-a708-dccbbfcc139f"
+                 :indicator-id "128"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-08-2014" :period_of_coverage "2014 August"}
+                 :fields-to-extract [:treatment_function :within_18_weeks_percentile]
+                 :fields-to-rename {:within_18_weeks_percentile :value}
+                 :format {:percentage :none}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :within_18_weeks_percentile
+                 :operation :none}
+
+                {:resource-id "cd671235-67e6-4662-a708-dccbbfcc139f"
+                 :indicator-id "129"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "National" :headers ["National" "Aug"]}
+                 :scrub-details {:offset 14
+                                 :last-row 34}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-08-2014" :period_of_coverage "2014 August"}
+                 :fields-to-extract [:treatment_function :bd]
+                 :fields-to-rename {:bd :value}
+                 :conditions [{:field :treatment_function :values #{"Total"}}]
+                 :field :bd
+                 :operation :none}
+
+                {:resource-id "806e2455-0db6-4926-b112-47305fc66b6a"
+                 :indicator-id "130"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "6+ Week Waits %" :headers ["6+ Week Waits %" :generic]}
+                 :scrub-details {:offset 16
+                                 :last-row 33}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"}
+                 :fields-to-extract [:diagnostic_test :nov_13 :dec_13 :jan_14 :feb_14 :mar_14 :apr_14 :may_14 :jun_14 :jul_14
+                                     :aug_14 :sep_14 :oct_14 :nov_14 :dec_14]
+                 :conditions [{:field :diagnostic_test :values #{"Total"}}]
+                 :fields [:nov_13 :dec_13 :jan_14 :feb_14 :mar_14 :apr_14 :may_14 :jun_14 :jul_14
+                          :aug_14 :sep_14 :oct_14 :nov_14 :dec_14]
+                 :operation :all-totals}
+
+                ;;; 131 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+                ;; March 2014
+
+                {:resource-id "2451c79a-2b0b-447c-893c-07dd9919e5fe"
+                 :indicator-id "131"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                 :scrub-details {:offset 16
+                                 :last-row 18}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "30-03-2014" :period_of_coverage "23/03/2014 to 30/03/2014"}
+                 :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                 :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                 :conditions [{:field :name :values #{"England"}}]
+                 :field :greater_than_4h_percentage_in_4h_or_less_all
+                 :operation :none}
+                {:resource-id "91a05593-9d0e-4222-aac2-e1a1d44f676e"
+                 :indicator-id "131"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                 :scrub-details {:offset 16
+                                 :last-row 18}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "23-03-2014" :period_of_coverage "16/03/2014 to 23/03/2014"}
+                 :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                 :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                 :conditions [{:field :name :values #{"England"}}]
+                 :field :greater_than_4h_percentage_in_4h_or_less_all
+                 :operation :none}
+                {:resource-id "6479f150-f5d6-48c7-a6c9-df430fac07cd"
+                 :indicator-id "131"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                 :scrub-details {:offset 16
+                                 :last-row 18}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "16-03-2014" :period_of_coverage "09/03/2014 to 16/03/2014"}
+                 :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                 :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                 :conditions [{:field :name :values #{"England"}}]
+                 :field :greater_than_4h_percentage_in_4h_or_less_all
+                 :operation :none}
+                {:resource-id "6479f150-f5d6-48c7-a6c9-df430fac07cd"
+                 :indicator-id "131"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                 :scrub-details {:offset 16
+                                 :last-row 18}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "16-03-2014" :period_of_coverage "09/03/2014 to 16/03/2014"}
+                 :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                 :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                 :conditions [{:field :name :values #{"England"}}]
+                 :field :greater_than_4h_percentage_in_4h_or_less_all
+                 :operation :none}
+                {:resource-id "4a3a5442-ab29-4d16-9d2e-00b1fbf7814f"
+                 :indicator-id "131"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                 :scrub-details {:offset 16
+                                 :last-row 18}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "09-03-2014" :period_of_coverage "02/03/2014 to 09/03/2014"}
+                 :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                 :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                 :conditions [{:field :name :values #{"England"}}]
+                 :field :greater_than_4h_percentage_in_4h_or_less_all
+                 :operation :none}
+
+                ;; February 2014
+
+                {:resource-id "ab674b96-5763-4c3f-8d97-2a1e318f8ae2"
+                 :indicator-id "131"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                 :scrub-details {:offset 16
+                                 :last-row 18}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "02-03-2014" :period_of_coverage "23/02/2014 to 02/03/2014"}
+                 :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                 :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                 :conditions [{:field :name :values #{"England"}}]
+                 :field :greater_than_4h_percentage_in_4h_or_less_all
+                 :operation :none}
+                {:resource-id "228c926b-f7ca-453c-95f0-4a5b0a06c9dd"
+                 :indicator-id "131"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                 :scrub-details {:offset 16
+                                 :last-row 18}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "23-02-2014" :period_of_coverage "16/02/2014 to 23/02/2014"}
+                 :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                 :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                 :conditions [{:field :name :values #{"England"}}]
+                 :field :greater_than_4h_percentage_in_4h_or_less_all
+                 :operation :none}
+                {:resource-id "7bb32812-918f-485e-a218-be73066c088b"
+                 :indicator-id "131"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                 :scrub-details {:offset 16
+                                 :last-row 18}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "16-02-2014" :period_of_coverage "09/02/2014 to 16/02/2014"}
+                 :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                 :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                 :conditions [{:field :name :values #{"England"}}]
+                 :field :greater_than_4h_percentage_in_4h_or_less_all
+                 :operation :none}
+                {:resource-id "9a1cbb97-03eb-4043-bc55-acea9f613de7"
+                 :indicator-id "131"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                 :scrub-details {:offset 16
+                                 :last-row 18}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "09-02-2014" :period_of_coverage "02/02/2014 to 09/02/2014"}
+                 :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                 :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                 :conditions [{:field :name :values #{"England"}}]
+                 :field :greater_than_4h_percentage_in_4h_or_less_all
+                 :operation :none}
+
+                ;; January 2014
+
+                 {:resource-id "41a1aba0-bc5d-49b3-bf09-d5f59ff2864a"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "02-02-2014" :period_of_coverage "26/01/2014 to 02/02/2014"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "864f9dfe-34a6-45c7-8f4f-b0b664f5faaa"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "26-01-2014" :period_of_coverage "19/01/2014 to 26/01/2014"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "c14f3aae-7054-455d-b092-dc2383d26b8d"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "19-01-2014" :period_of_coverage "12/01/2014 to 19/01/2014"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "6775a4ff-748b-4281-b80c-9e982cefe166"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "12-01-2014" :period_of_coverage "05/01/2014 to 12/01/2014"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "e037f3e8-5bae-4847-906e-cdd0a5ecb76f"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "05-01-2014" :period_of_coverage "29/12/2013 to 05/01/2014"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+
+                 ;; December 2013
+
+                 {:resource-id "01412d5d-0a72-424d-aabb-1078570529e6"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "29-12-2013" :period_of_coverage "22/12/2013 to 29/12/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "a0043cac-021c-44b8-811b-469a669dca2d"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "22-12-2013" :period_of_coverage "15/12/2013 to 22/12/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "cae9dedb-2798-4161-8fce-a682c7478d70"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "15-12-2013" :period_of_coverage "08/12/2013 to 15/12/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "e544e4fa-db4d-4394-9b17-de96ae27c9a0"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "08-12-2013" :period_of_coverage "01/12/2013 to 08/12/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+
+                 ;; November 2013
+                 {:resource-id "c888ad53-8ddc-477f-b635-31bbf60bda2e"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "01-12-2013" :period_of_coverage "24/11/2013 to 01/12/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "934c5f17-cbe4-40eb-8710-86439b1c1224"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "24-11-2013" :period_of_coverage "17/11/2013 to 24/11/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "781a4cef-e107-4719-9927-0e4a3e552871"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "17-11-2013" :period_of_coverage "10/11/2013 to 17/11/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "27dfe9af-231f-49f9-bd7e-a63c4faf2e8d"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "10-11-2013" :period_of_coverage "03/11/2013 to 10/11/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+
+                 ;; October 2013
+
+                 {:resource-id "0593ad35-22f7-4ccc-9e57-d40e595763d7"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "03-11-2013" :period_of_coverage "27/10/2013 to 03/11/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "2e3a0e9d-31fc-4fac-adfa-24a0cf39d8ae"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "27-10-2013" :period_of_coverage "20/10/2013 to 27/10/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "deb75bad-ae55-41df-94f6-f50441843cc5"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "20-10-2013" :period_of_coverage "13/10/2013 to 20/10/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "45eb5ed6-304b-45f6-862a-64385af9c032"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "13-10-2013" :period_of_coverage "06/10/2013 to 13/10/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "773b5437-8149-417a-9fde-fec34a91ed7b"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "06-10-2013" :period_of_coverage "29/09/2013 to 06/10/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+
+                 ;; September 2013
+
+                 {:resource-id "18a79c43-e0d3-4f29-bc78-306f61f6abfc"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "29-09-2013" :period_of_coverage "22/09/2013 to 29/09/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "89f0b971-ad06-4e8c-913e-4834dfa48974"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "22-09-2013" :period_of_coverage "15/09/2013 to 22/09/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "2cfbf8c7-94de-4c10-b4bd-a7bf9117d344"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "15-09-2013" :period_of_coverage "08/09/2013 to 15/09/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "e98c53c9-e59f-4821-879d-390888850bac"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "08-09-2013" :period_of_coverage "01/09/2013 to 08/09/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+
+                 ;; August 2013
+
+                 {:resource-id "9c3e783a-0c0f-4e7c-8514-54140fde07d4"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "01-09-2013" :period_of_coverage "25/08/2013 to 01/09/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "766c7c92-9eb9-4992-8c34-4ab4dbec1254"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "25-08-2013" :period_of_coverage "18/08/2013 to 25/08/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "baba9136-b656-4d4e-a8fe-660bcdc2a328"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "18-08-2013" :period_of_coverage "11/08/2013 to 18/08/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "ba6b4de3-f7dd-4e62-9cfa-e072245d9b47"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "11-08-2013" :period_of_coverage "04/08/2013 to 11/08/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "a6b15971-20fa-4f24-913d-5d07ede7d66c"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "04-08-2013" :period_of_coverage "28/07/2013 to 04/08/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+
+                 ;; July 2013
+
+                 {:resource-id "bac973b2-27b9-4a23-860c-d426ee2b24eb"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "28-07-2013" :period_of_coverage "21/07/2013 to 28/07/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "6888f333-f2a2-44e7-a65a-2ff59f8e4d88"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "21-07-2013" :period_of_coverage "14/07/2013 to 21/07/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "1932ebe1-7324-409a-a4bb-637ce7da809a"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "14-07-2013" :period_of_coverage "07/07/2013 to 14/07/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "65f4da04-6693-40cb-8f7e-d714a54d466d"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "07-07-2013" :period_of_coverage "30/06/2013 to 07/07/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+
+                 ;; June 2013
+
+                 {:resource-id "d4cf8c9c-cd14-4bc8-99c0-3a672fba667d"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "30-06-2013" :period_of_coverage "23/06/2013 to 30/06/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "aad70c0a-9feb-4d36-a8c1-0444bf758785"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "23-06-2013" :period_of_coverage "16/06/2013 to 23/06/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "f9e8e99e-656d-436d-9df1-b25ae44b8745"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "16-06-2013" :period_of_coverage "09/06/2013 to 16/06/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "0cb3ffc4-aa7f-4fab-816b-7d6008d6f7f3"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "09-06-2013" :period_of_coverage "02/06/2013 to 09/06/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+
+                 ;; May 2013
+
+                 {:resource-id "b13dc4ad-4de0-4593-9f0e-5733e85a579d"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "02-06-2013" :period_of_coverage "26/05/2013 to 02/06/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "49a016ba-cf3b-466a-86cc-6ed4b1002b95"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "26-05-2013" :period_of_coverage "19/05/2013 to 26/05/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "73986c25-888f-452b-b5a7-8429eda3427c"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "19-05-2013" :period_of_coverage "12/05/2013 to 19/05/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "bc00a7c5-430c-4251-8ca0-0a156de8b043"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "12-05-2013" :period_of_coverage "05/05/2013 to 12/05/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "4f3b880d-157d-438d-9d9e-c1a8de7ba511"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "15-05-2013" :period_of_coverage "28/04/2013 to 05/05/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+
+                 ;; April 2013
+
+                 {:resource-id "7a06125c-b008-455a-8e08-323cf02f598d"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "28-04-2013" :period_of_coverage "21/04/2013 to 28/04/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "7a2b061f-672e-436c-9d7e-d4128419fff2"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "21-04-2013" :period_of_coverage "14/04/2013 to 21/04/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "7a2b061f-672e-436c-9d7e-d4128419fff2"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "14-04-2013" :period_of_coverage "07/04/2013 to 14/04/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "9b54265b-0472-4612-9240-282d25bca22d"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "07-04-2013" :period_of_coverage "31/03/2013 to 07/04/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+
+                 ;; March 2013
+
+                 {:resource-id "23af8614-cc48-490f-b0a4-9beb9f5a57bb"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "31-03-2013" :period_of_coverage "24/03/2013 to 31/03/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "a2a0f44b-18e0-457c-b01d-3acaa44e758d"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "24-03-2013" :period_of_coverage "17/03/2013 to 24/03/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "d350fde4-259e-4345-b08b-ba9d2aef2241"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "17-03-2013" :period_of_coverage "10/03/2013 to 17/03/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+                 {:resource-id "a8d53915-96bb-4cf6-ac1f-58a028fa084a"
+                  :indicator-id "131"
+                  :headers "resources/headers/nhs_constitution.edn"
+                  :worksheet {:tab "A&E Data" :headers ["A&E Data" :generic]}
+                  :scrub-details {:offset 16
+                                  :last-row 18}
+                  :metadata {:sub_lens_resource_id "" :lens_value "England"
+                             :date "10-03-2013" :period_of_coverage "03/03/2013 to 10/03/2013"}
+                  :fields-to-extract [:name :greater_than_4h_percentage_in_4h_or_less_all]
+                  :fields-to-rename {:greater_than_4h_percentage_in_4h_or_less_all :value}
+                  :conditions [{:field :name :values #{"England"}}]
+                  :field :greater_than_4h_percentage_in_4h_or_less_all
+                  :operation :none}
+
+                ;;;; 132 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+                {:resource-id "f075e75a-387e-4f36-8514-fc662507d3da"
+                 :indicator-id "132"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "d16afb5b-2575-4068-a4c5-be04c966f543"
+                 :indicator-id "132"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "215f73ee-41b3-40fa-8ea7-b6d13f1337ec"
+                 :indicator-id "132"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "c51f2ae6-7950-419b-bb4b-5d8fca5b0c84"
+                 :indicator-id "132"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "434ee817-f6f2-419c-be5f-2d4629e05a69"
+                 :indicator-id "132"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2013" :period_of_coverage "October 2013 to December 2013"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "04a2e903-8114-4037-bac1-480c6cdeb32e"
+                 :indicator-id "132"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2013" :period_of_coverage "July 2013 to September 2013"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "27031f95-dc3b-4874-b25a-e2c2e7402cc4"
+                 :indicator-id "132"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2013 to June 2013"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                ;; 133
+                {:resource-id "a70defff-b6d2-4d36-9486-d4d0eba99a10"
+                 :indicator-id "133"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "a07a2b4f-277f-46fe-9e5a-b13991b03faa"
+                 :indicator-id "133"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "afb3049d-78f6-4048-9a4e-6638d2688e0d"
+                 :indicator-id "133"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "bbed9698-57a7-4c10-a2d1-aacc176727ad"
+                 :indicator-id "133"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "5aa31d25-4161-43f4-b091-7f1a56cc690b"
+                 :indicator-id "133"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2013" :period_of_coverage "October 2013 to December 2013"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "67fbde94-a46a-4843-b60e-d66fa63e41eb"
+                 :indicator-id "133"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2013" :period_of_coverage "July 2013 to September 2013"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                {:resource-id "b3c83e2b-3e86-4179-a960-f6b6e726f19f"
+                 :indicator-id "133"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2013 to June 2013"}
+                 :operation :division
+                 :division-fields [:within_14_days :total]}
+                ;; 134
+                {:resource-id "f3142c2e-ffa3-42d3-a733-97d88228e4a1"
+                 :indicator-id "134"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "32a57fe6-c29a-4000-bb7b-7026df930a98"
+                 :indicator-id "134"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "0a873564-0a18-4edc-b7e8-5cadc40eecec"
+                 :indicator-id "134"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "a5594295-26a5-4d79-a00a-41f38e867b1e"
+                 :indicator-id "134"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "44e582af-d838-4fc4-a39a-231bcc2770d9"
+                 :indicator-id "134"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2013" :period_of_coverage "October 2013 to December 2013"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "90035b42-d2b3-405f-9d63-3e0455cf2e05"
+                 :indicator-id "134"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2013" :period_of_coverage "July 2013 to September 2013"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "1eaaf9d4-fca2-4c7c-9c00-e2c223430a64"
+                 :indicator-id "134"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2013 to June 2013"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                ;; 135
+                {:resource-id "e6d5b531-2572-48b6-9689-e17461240bce"
+                 :indicator-id "135"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "013ae123-f05f-4a73-9806-b16f3e925c32"
+                 :indicator-id "135"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2014" :period_of_coverage "July 2014 to September 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "5d9308b6-4a8c-4d80-88a0-c85ec2392a8d"
+                 :indicator-id "135"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "982c5943-e3f3-48f8-bd85-84e0c6c608f0"
+                 :indicator-id "135"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-01-2014" :period_of_coverage "January 2014 to March 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "ba2fcfae-4d97-4b95-a8d2-81be857add66"
+                 :indicator-id "135"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-10-2013" :period_of_coverage "October 2013 to December 2013"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "5a621b1a-4e49-4a5a-8cbd-2fad43ef139d"
+                 :indicator-id "135"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-07-2013" :period_of_coverage "July 2013 to September 2013"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                {:resource-id "6ec9b5f0-c6e6-4bdb-afef-8956468ecf85"
+                 :indicator-id "135"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2013 to June 2013"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                ;; 136
+                {:resource-id "e560de1c-8a06-49a6-969c-11535c3ef2e6"
+                 :indicator-id "136"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                ;; 137
+                {:resource-id "dadfd925-f491-46f3-92c1-f84959325969"
+                 :indicator-id "137"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :operation :division
+                 :division-fields [:after_31_days :total]}
+                ;; 138
+                {:resource-id "e01fc8b5-6c9b-4a56-9063-4b170cc97dee"
+                 :indicator-id "138"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :operation :division
+                 :division-fields [:after_62_days :total_treated]}
+                ;; 139
+                {:resource-id "d07d271c-5933-4eb2-a70b-ef7551563269"
+                 :indicator-id "139"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :operation :division
+                 :division-fields [:after_62_days :total_treated]}
+                ;; 140
+                {:resource-id "212b6adb-3196-4854-af7d-1f146a2d3ec9"
+                 :indicator-id "140"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"
+                            :date "01-04-2014" :period_of_coverage "April 2014 to June 2014"}
+                 :operation :division
+                 :division-fields [:after_62_days :total_treated]}
+
+                ;; 141
+                {:resource-id "c36b3b07-2845-4fac-87b6-bf6819457459"
+                 :indicator-id "141"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"}
+                 :fields-to-rename {:year :date}
+                 :operation :sum-and-divide
+                 :division-fields [:hqu03_1_1_3_sum :hqu03_1_1_4_sum]}
+
+                ;; 142
+                {:resource-id "c36b3b07-2845-4fac-87b6-bf6819457459"
+                 :indicator-id "142"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"}
+                 :fields-to-rename {:year :date}
+                 :operation :sum-and-divide
+                 :division-fields [:hqu03_1_1_6_sum :hqu03_1_1_7_sum]}
+
+                ;; 143
+                {:resource-id "c36b3b07-2845-4fac-87b6-bf6819457459"
+                 :indicator-id "143"
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"}
+                 :fields-to-rename {:year :date}
+                 :operation :sum-and-divide
+                 :division-fields [:hqu03_1_2_1_sum :hqu03_1_2_2_sum]}
+
+                ;;;;;; 144
+
+                ;; December 2010 to January 2015
+                {:resource-id "2c3d6061-975a-43c4-b0be-d9499a20ae08"
+                 :indicator-id "144"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "MSA Time Series" :headers ["MSA Time Series" :generic]}
+                 :scrub-details {:offset 14
+                                 :last-row 64}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"}
+                 :fields-to-extract [:year :period :msa_breaches]
+                 :fields-to-rename {:msa_breaches :value :period :period_of_coverage
+                                    :year :date}
+                 :field :msa_breaches
+                 :operation :all-periods}
+
+                ;;;;;; 145
+
+                {:resource-id "74544666-a0bb-4f12-9ef2-ce8bf7b56ef3"
+                 :indicator-id "145"
+                 :headers "resources/headers/nhs_constitution.edn"
+                 :worksheet {:tab "Time Series of Cancelled Ops" :headers ["Time Series of Cancelled Ops" :generic]}
+                 :scrub-details {:offset 65
+                                 :last-row 99}
+                 :metadata {:sub_lens_resource_id "" :lens_value "England"}
+                 :fields-to-extract [:year :quarter
+                                     :patients_not_treated_within_28_days_of_cancellation_as_percentage_of_cancellations]
+                 :fields-to-rename {:patients_not_treated_within_28_days_of_cancellation_as_percentage_of_cancellations :value
+                                    :year :date
+                                    :quarter :period_of_coverage}
+                 :field :patients_not_treated_within_28_days_of_cancellation_as_percentage_of_cancellations
+                 :operation :all-quarters}]}

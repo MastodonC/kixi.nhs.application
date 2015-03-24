@@ -11,12 +11,14 @@
               #"\d{4}\/\d{2}"
               #"\d{1,2}/\d{1,2}/\d{4} to \d{1,2}/\d{1,2}/\d{4}"
               #"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}"
-              #"\d{4} \w+"])
+              #"\d{4} \w+"
+              #"\d{4}-\d{2}-\d{2}"
+              #"\d{4}-\d{2}-\d{2} to \d{4}-\d{2}-\d{2}"])
 
-(defn- date->str [s]
+(defn date->str [s]
   (tf/unparse (tf/formatter "yyyy-MM-dd") s))
 
-(defn- str->date [s formatter]
+(defn str->date [s formatter]
   (->> s str/trim (tf/parse formatter)))
 
 (defmulti s->uniform-date (fn [date-str pattern] pattern))
@@ -78,6 +80,20 @@
   (let [formatter    (tf/formatter "yyyy MMMM")
         start-date   (-> s (str->date formatter) date->str)
         end-date     (-> s (str->date formatter) t/last-day-of-the-month date->str)]
+    {:start_date start-date
+     :end_date end-date}))
+
+;; 2014-07-01
+(defmethod s->uniform-date "\\d{4}-\\d{2}-\\d{2}" [s pattern]
+  (let [formatter    (tf/formatter "yyyy-MM-dd")
+        start-date   (-> s (str->date formatter) date->str)
+        end-date     (-> s (str->date formatter) t/last-day-of-the-month date->str)]
+    {:start_date start-date
+     :end_date end-date}))
+
+;; 2015-04-06 to 2015-07-06
+(defmethod s->uniform-date "\\d{4}-\\d{2}-\\d{2} to \\d{4}-\\d{2}-\\d{2}" [s pattern]
+  (let [[start-date end-date] (str/split s #" to ")]
     {:start_date start-date
      :end_date end-date}))
 

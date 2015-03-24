@@ -97,6 +97,11 @@
   [data recipe]
   data)
 
+(defmethod format-percentages nil
+  ;; Returns the value as passed in.
+  [data recipe]
+  data)
+
 (defmethod format-percentages :divide
   ;; Divides it by 100.
   [data recipe]
@@ -161,7 +166,8 @@
   [k fields-to-dissoc data]
   (-> data
       first
-      (assoc :sum (->> (map k data)
+      (assoc :sum (->> data
+                       (map k data)
                        (keep #(when (or (number? %)
                                         (seq %)) %))
                        add-when-not-empty))
