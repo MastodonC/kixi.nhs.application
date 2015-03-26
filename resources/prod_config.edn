@@ -161,7 +161,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
-                    :format {:percentage :none}
+                    :format {:percentage :divide}
                     :resource-id "c44d0bd9-4d85-4aed-8051-5136f8d359a3"}
 
                    ;; Proportion of Older People (65 and over) who were still at home
@@ -299,7 +299,7 @@
                          :values #{"Gender"}}]
            :metadata {:sub_lens_resource_id ""
                       :lens_value "England"}
-           :format {:percentage :none}}]
+           :format {:percentage :divide}}]
 
  :deprivation [;; Patient experience of primary care - GP Services
                ;; Deprivation analysis
@@ -355,7 +355,7 @@
                                                :values #{"English / Welsh / Scottish / Northern Irish / British"}}]}
               :metadata {:sub_lens_resource_id ""
                          :lens_value "England"}
-              :format {:percentage :divide}}
+              :format {:percentage :none}}
 
              ;; Patient experience of primary care - GP Services
              ;; White British compared to Other Ethnic Group
@@ -434,10 +434,12 @@
                     :conditions [{:field :question_response
                                   :values #{"Outstanding"
                                             "Excellent"
-                                            "Good"}}]
+                                            "Good"}}
+                                 {:field :question
+                                  :values #{"Q51. Overall, and taking all services into account, how would you rate his/her care in the last three months of life? (Tick one only)"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
-                    :format {:percentage :none}}
+                    :format {:percentage :divide}}
 
  ;; Incidence of MRSA
  :mrsa-incidence {:indicator-id "65"
