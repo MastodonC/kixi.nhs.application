@@ -1,7 +1,8 @@
 (ns kixi.nhs.patient-experience.gender-comparison
   "Patient experience of primary care - GP Services - Gender comparison."
   (:require [kixi.nhs.data.transform :as transform]
-            [kixi.nhs.data.storage   :as storage]))
+            [kixi.nhs.data.storage   :as storage]
+            [clojure.tools.logging   :as log]))
 
 (defn subtract-males-from-females
   "Takes away the indicator value for males
@@ -32,6 +33,7 @@
   Returns a sequence that can be combined with the
   rest of board report resource."
   [ckan-client recipe]
+  (log/infof "Processing recipe for indicator %s." (:indicator-id recipe))
   (let  [resource_id (:resource-id recipe)
          data        (storage/get-resource-data ckan-client resource_id)]
     (gender-analysis recipe data)))

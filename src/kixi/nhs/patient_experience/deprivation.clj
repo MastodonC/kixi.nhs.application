@@ -2,7 +2,8 @@
   "Patient experience of primary care - GP Services - Deprivation analysis."
   (:require [incanter.stats          :as stats]
             [kixi.nhs.data.transform :as transform]
-            [kixi.nhs.data.storage   :as storage]))
+            [kixi.nhs.data.storage   :as storage]
+            [clojure.tools.logging   :as log]))
 
 (defn slope [y]
   (let [{:keys [year period_of_coverage]} (first y)
@@ -93,6 +94,7 @@
   in the recipe, performs deprivation analysis. Returns a sequence of two
   indicators with values for 5 and 1 years from the latest entry."
   [ckan-client recipe-map]
+  (log/infof "Processing recipe for indicator %s." (:indicator-id recipe-map))
   (let [resource_id (:resource-id recipe-map)
         data        (storage/get-resource-data ckan-client resource_id)
         level       (-> data first :level)

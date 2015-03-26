@@ -34,6 +34,7 @@
   Sector Providers. With calculations for
   months April to July."
   [ckan-client recipe]
+  (log/infof "Processing recipe for indicator %s." (:indicator-id recipe))
   (let [field (:field recipe)
         data  (xls/process-xls ckan-client recipe)]
     (when (seq data)

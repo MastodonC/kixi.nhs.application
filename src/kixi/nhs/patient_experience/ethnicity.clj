@@ -6,7 +6,8 @@
   216: Mixed
   217: Other White ethnicity."
   (:require [kixi.nhs.data.transform :as transform]
-            [kixi.nhs.data.storage   :as storage]))
+            [kixi.nhs.data.storage   :as storage]
+            [clojure.tools.logging   :as log]))
 
 (defn divide-maps
   "Gets two maps, divides their entries for key :sum
@@ -66,6 +67,7 @@
     (final-dataset recipe numerator-sums denominator-sums indicator-values)))
 
 (defn process-ethnicity-analysis [ckan-client recipe]
+  (log/infof "Processing recipe for indicator %s." (:indicator-id recipe))
   (let  [resource_id (:resource-id recipe)
          data        (storage/get-resource-data ckan-client resource_id)]
     (ethnicity-analysis recipe data)))

@@ -56,6 +56,7 @@
   (that are already filtered) and returns a sequence of
   results for each period."
   [ckan-client recipe-map]
+  (log/infof "Processing recipe for indicator %s." (:indicator-id recipe-map))
   (->> (storage/get-resource-data ckan-client (:resource-id recipe-map))
        (transform/filter-dataset recipe-map)
        (transform/split-by-key :period_of_coverage)
@@ -73,6 +74,7 @@
   maps where each map is enriched with indicator-id
   and metadata from the recipe."
   [ckan-client recipe-map resource_id]
+  (log/infof "Processing recipe for indicator %s." (:indicator-id recipe-map))
   (->> (storage/get-resource-data ckan-client resource_id)
        (transform/filter-dataset recipe-map)
        (transform/enrich-dataset recipe-map)
