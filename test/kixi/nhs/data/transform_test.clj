@@ -211,3 +211,67 @@
          (transform/divide nil nil)))
     (is (nil?
          (transform/divide 1 nil)))))
+
+(deftest calculate-lci-uci-test
+  (testing "Testing the calculation of CIs."
+    (is (= [{:lens_value "England", :date "2011-12-09T00:00:00",
+             :uci "0.42766399999999993", :lci "0.405", :indicator_id "33",
+             :value "0.416332", :end_date "2012-03-31", :start_date "2011-04-01",
+             :sub_lens_resource_id "", :period_of_coverage "1/4/2011 to 31/3/2012"}
+            {:lens_value "England", :date "2010-11-09T00:00:00", :indicator_id "33",
+             :value "0.405", :end_date "2011-03-31", :start_date "2010-04-01",
+             :sub_lens_resource_id "", :period_of_coverage "1/4/2010 to 31/3/2011"}
+            {:lens_value "England", :date "2009-10-09T00:00:00", :indicator_id "33",
+             :value "0.411", :end_date "2010-03-31", :start_date "2009-04-01",
+             :sub_lens_resource_id "", :period_of_coverage "1/4/2009 to 31/3/2010"}]
+           (transform/calculate-lci-uci
+            true
+            [{:end_date "2012-03-31", :start_date "2011-04-01", :value "0.416332",
+              :date "2011-12-09T00:00:00", :indicator_id "33", :sub_lens_resource_id "",
+              :lens_value "England", :period_of_coverage "1/4/2011 to 31/3/2012"}
+             {:end_date "2011-03-31", :start_date "2010-04-01", :value "0.405",
+              :date "2010-11-09T00:00:00", :indicator_id "33", :sub_lens_resource_id "",
+              :lens_value "England", :period_of_coverage "1/4/2010 to 31/3/2011"}
+             {:end_date "2010-03-31", :start_date "2009-04-01", :value "0.411",
+              :date "2009-10-09T00:00:00", :indicator_id "33", :sub_lens_resource_id "",
+              :lens_value "England", :period_of_coverage "1/4/2009 to 31/3/2010"}])))
+    (is (= [{:end_date "2012-03-31", :start_date "2011-04-01", :value "0.416332",
+             :date "2011-12-09T00:00:00", :indicator_id "33", :sub_lens_resource_id "",
+             :lens_value "England", :period_of_coverage "1/4/2011 to 31/3/2012"}
+            {:end_date "2011-03-31", :start_date "2010-04-01", :value "0.405",
+             :date "2010-11-09T00:00:00", :indicator_id "33", :sub_lens_resource_id "",
+             :lens_value "England", :period_of_coverage "1/4/2010 to 31/3/2011"}
+            {:end_date "2010-03-31", :start_date "2009-04-01", :value "0.411",
+             :date "2009-10-09T00:00:00", :indicator_id "33", :sub_lens_resource_id "",
+             :lens_value "England", :period_of_coverage "1/4/2009 to 31/3/2010"}]
+           (transform/calculate-lci-uci
+            false
+            [{:end_date "2012-03-31", :start_date "2011-04-01", :value "0.416332",
+              :date "2011-12-09T00:00:00", :indicator_id "33", :sub_lens_resource_id "",
+              :lens_value "England", :period_of_coverage "1/4/2011 to 31/3/2012"}
+             {:end_date "2011-03-31", :start_date "2010-04-01", :value "0.405",
+              :date "2010-11-09T00:00:00", :indicator_id "33", :sub_lens_resource_id "",
+              :lens_value "England", :period_of_coverage "1/4/2010 to 31/3/2011"}
+             {:end_date "2010-03-31", :start_date "2009-04-01", :value "0.411",
+              :date "2009-10-09T00:00:00", :indicator_id "33", :sub_lens_resource_id "",
+              :lens_value "England", :period_of_coverage "1/4/2009 to 31/3/2010"}])))
+    (is (= [{:end_date "2012-03-31", :start_date "2011-04-01", :value "0.416332",
+             :date "2011-12-09T00:00:00", :indicator_id "33", :sub_lens_resource_id "",
+             :lens_value "England", :period_of_coverage "1/4/2011 to 31/3/2012"}
+            {:end_date "2011-03-31", :start_date "2010-04-01", :value "0.405",
+             :date "2010-11-09T00:00:00", :indicator_id "33", :sub_lens_resource_id "",
+             :lens_value "England", :period_of_coverage "1/4/2010 to 31/3/2011"}
+            {:end_date "2010-03-31", :start_date "2009-04-01", :value "0.411",
+             :date "2009-10-09T00:00:00", :indicator_id "33", :sub_lens_resource_id "",
+             :lens_value "England", :period_of_coverage "1/4/2009 to 31/3/2010"}]
+           (transform/calculate-lci-uci
+            nil
+            [{:end_date "2012-03-31", :start_date "2011-04-01", :value "0.416332",
+              :date "2011-12-09T00:00:00", :indicator_id "33", :sub_lens_resource_id "",
+              :lens_value "England", :period_of_coverage "1/4/2011 to 31/3/2012"}
+             {:end_date "2011-03-31", :start_date "2010-04-01", :value "0.405",
+              :date "2010-11-09T00:00:00", :indicator_id "33", :sub_lens_resource_id "",
+              :lens_value "England", :period_of_coverage "1/4/2010 to 31/3/2011"}
+             {:end_date "2010-03-31", :start_date "2009-04-01", :value "0.411",
+              :date "2009-10-09T00:00:00", :indicator_id "33", :sub_lens_resource_id "",
+              :lens_value "England", :period_of_coverage "1/4/2009 to 31/3/2010"}])))))

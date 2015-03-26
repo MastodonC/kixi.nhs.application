@@ -28,6 +28,7 @@
                     :conditions [{:field :level_description :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :calculate-ci true
                     :format {:percentage :divide}
                     :resource-id "800d0b08-95f7-4a0f-abd5-8bcb2528d8b4"}
 
@@ -41,6 +42,7 @@
                     :conditions [{:field :level_description :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :calculate-ci true
                     :format {:percentage :divide}
                     :resource-id "5ca47971-5d9e-4b50-93f0-8a8ecc90c072"}
 
@@ -54,6 +56,7 @@
                     :conditions [{:field :level_description :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :calculate-ci true
                     :format {:percentage :divide}
                     :resource-id "bcdaf636-32d0-4122-9828-e01c14d95f0b"}
 
@@ -172,6 +175,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :calculate-ci true
                     :format {:percentage :divide}
                     :resource-id "c05f9627-8932-4db8-b1d6-ccb29197158d"}
 
@@ -185,6 +189,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :calculate-ci true
                     :format {:percentage :divide}
                     :resource-id "52a33b3d-d8aa-4934-b769-62f73ec67e1e"}
 
@@ -198,6 +203,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :calculate-ci true
                     :format {:percentage :none}
                     :resource-id "1fa9756c-ea6c-4bbf-9c7e-7c4928ed3772"}
 
@@ -211,6 +217,7 @@
                     :conditions [{:field :level :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :calculate-ci true
                     :format {:percentage :none}
                     :resource-id "01652770-ee37-4b47-b83b-f3a9627c3cd2"}
 
@@ -226,7 +233,8 @@
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
-                    :format {:percentage :none}
+                    :calculate-ci true
+		    :format {:percentage :none}
                     :resource-id "7e4d2547-e723-4269-97f6-b607a0d5875f"}
 
                    ;; Total health gain as assessed by patients for elective
@@ -241,6 +249,7 @@
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :calculate-ci true
                     :format {:percentage :none}
                     :resource-id "7e4d2547-e723-4269-97f6-b607a0d5875f"}
 
@@ -256,6 +265,7 @@
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :calculate-ci true
                     :format {:percentage :none}
                     :resource-id "7e4d2547-e723-4269-97f6-b607a0d5875f"}
 
@@ -271,6 +281,7 @@
                                  {:field :breakdown :values #{"England"}}]
                     :metadata {:sub_lens_resource_id ""
                                :lens_value "England"}
+                    :calculate-ci true
                     :format {:percentage :none}
                     :resource-id "7e4d2547-e723-4269-97f6-b607a0d5875f"}]
 
@@ -414,9 +425,12 @@
  ;; Bereaved carers' views on the quality of care in the last 3 months of life
  :end-of-life-care {:indicator-id "57"
                     :resource-id "3f6786f6-f0c7-4287-86b0-bd8cf48b5cac"
-                    :fields-to-extract [:indicator_value :question_response :year
+                    :fields-to-extract [:lower_ci :upper_ci :indicator_value
+                                        :question_response :year
                                         :period_of_coverage]
-                    :fields-to-rename {:sum :value :year :date}
+                    :fields-to-rename {:sum :value :year :date
+                                       :lower_ci :lci
+                                       :upper_ci :uci}
                     :conditions [{:field :question_response
                                   :values #{"Outstanding"
                                             "Excellent"
@@ -1484,6 +1498,7 @@
                           :metadata {:sub_lens_resource_id ""
                                      :date "01-01-2015" :period_of_coverage "2015"
                                      :lens_value "England"}
+                          :calculate-ci true
                           :format {:percentage :none}}]
 
  ;; Access to NHS Dental services
@@ -1517,4 +1532,5 @@
                                   :metadata {:sub_lens_resource_id ""
                                              :date "01-01-2015" :period_of_coverage "2015"
                                              :lens_value "England"}
+                                  :calculate-ci true
                                   :format {:percentage :none}}]}

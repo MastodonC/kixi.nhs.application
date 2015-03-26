@@ -45,7 +45,7 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Idicator 57: Bereaved carers' views on the quality of care                           ;;
+;; Indicator 57: Bereaved carers' views on the quality of care                           ;;
 ;;              in the last 3 months of life                                            ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -75,7 +75,8 @@
   [ckan-client recipe-map resource_id]
   (->> (storage/get-resource-data ckan-client resource_id)
        (transform/filter-dataset recipe-map)
-       (transform/enrich-dataset recipe-map)))
+       (transform/enrich-dataset recipe-map)
+       (transform/calculate-lci-uci (:calculate-ci recipe-map))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Process all recipes and update board report resource                                 ;;
@@ -158,4 +159,4 @@
 ;; To insert new resource into existing dataset:
 ;; (insert-board-report-resource (:ckan-client system) "resources/prod_config.edn" "board_report")
 ;; To update existing board resource (preferable):
-;; (update-board-report-dataset (:ckan-client system) "56879843-edf2-4b66-a8e1-f27a91befb7a" "resources/prod_config.edn")
+;; (update-board-report-dataset (:ckan-client system) "68ebcbee-177f-42b5-a31e-8f706d4ebf50" "resources/prod_config.edn")
