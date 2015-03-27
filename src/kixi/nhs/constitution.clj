@@ -226,6 +226,16 @@
        (mapcat #(process-quarters recipe %))
        (transform/enrich-dataset recipe)))
 
+(defn analysis-125 [ckan-client recipe]
+  (->> (xls/process-xls ckan-client recipe)
+       (transform/filter-dataset recipe)
+       (transform/enrich-dataset recipe)))
+
 (defn analysis [ckan-client]
-  (let [recipes (-> (slurp "resources/recipes/constitution.edn") edn/read-string :constitution)]
-    (mapcat #(process-recipe ckan-client %) recipes)))
+  (let [recipes (-> (slurp "resources/recipes/constitution.edn")
+                    edn/read-string)]
+    (into [] (concat
+              (mapcat #(process-recipe ckan-client %) (:constitution recipes))
+              (analysis-125 ckan-client (:constitution-125 recipes))))))
+
+

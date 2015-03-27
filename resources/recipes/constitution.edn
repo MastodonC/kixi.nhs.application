@@ -2,39 +2,21 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; NHS Constitution
 
-{:constitution [
-                ;;;;; 125
-
-                ;; Quarter 2 2014
-                {:resource-id "296b4781-220d-49f5-b7e2-2a0f67dd6616"
-                 :indicator-id "125"
-                 :headers "resources/headers/nhs_constitution.edn"
-                 :worksheet {:tab "Area Team" :headers ["Area Team" :generic]}
-                 :scrub-details {:offset 15
-                                 :last-row 41}
-                 :metadata {:sub_lens_resource_id "" :lens_value "England"
-                            :date "01-07-2014" :period_of_coverage "July 2014 to October 2014"}
-                 :fields-to-extract [:proportion_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care]
-                 :fields-to-rename {:sum :value}
-                 :format {:percentage :divide}
-                 :operation :sum
-                 :sum-field :proportion_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care}
-
-                ;; Quarter 3 2014
-                {:resource-id "b9fc43a5-e026-4519-8f84-d8087616ff94"
-                 :indicator-id "125"
-                 :headers "resources/headers/nhs_constitution.edn"
-                 :worksheet {:tab "Area Team" :headers ["Area Team" :generic]}
-                 :scrub-details {:offset 15
-                                 :last-row 41}
-                 :metadata {:sub_lens_resource_id "" :lens_value "England"
-                            :date "01-10-2014" :period_of_coverage "October 2014 to December 2014"}
-                 :fields-to-extract [:proportion_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care]
-                 :fields-to-rename {:sum :value}
-                 :format {:percentage :divide}
-                 :operation :sum
-                 :sum-field :proportion_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care}
-                ;;;;; 126
+{:constitution-125 {:resource-id "6abbea11-4ee2-46de-8ad7-3249d03cba46"
+                    :indicator-id "125"
+                    :headers "resources/headers/nhs_constitution.edn"
+                    :worksheet {:tab "England" :headers ["Mental health" :generic]}
+                    :scrub-details {:offset 15
+                                    :last-row 35}
+                    :metadata {:sub_lens_resource_id "" :lens_value "England"}
+                    :fields-to-extract [:year
+                                        :proportion_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care_qa]
+                    :fields-to-rename {:year :date
+                                       :proportion_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care_qa
+                                       :value}
+                    :format {:percentage :none}}
+ :constitution [
+                ;; 126
 
                 ;; December 2013
                 {:resource-id "a35e0ca9-6221-4ff6-80fc-1212f0f17e55"

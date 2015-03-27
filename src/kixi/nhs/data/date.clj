@@ -14,7 +14,8 @@
               #"\d{4} \w+"
               #"\d{4}-\d{2}-\d{2}"
               #"\d{4}-\d{2}-\d{2} to \d{4}-\d{2}-\d{2}"
-              #"\w+-\d{2}"])
+              #"\w+-\d{2}"
+              #"Q\d \d{4}-\d{2}"])
 
 (defn date->str [s]
   (tf/unparse (tf/formatter "yyyy-MM-dd") s))
@@ -105,6 +106,18 @@
   (let [[start-date end-date] (str/split s #" to ")]
     {:start_date start-date
      :end_date end-date}))
+
+;; Q1 2013-14 => :start_date "2013-04-06" :end_date "2013-06-05" 
+(defmethod s->uniform-date "Q\\d \\d{4}-\\d{2}" [s pattern]
+  (let [[quarter years] (str/split s #" ")]
+    (cond (= quarter "Q1") {:start_date (str (subs years 0 4) "-04-06")
+                            :end_date   (str (subs years 0 4) "-07-05")}
+          (= quarter "Q2") {:start_date (str (subs years 0 4) "-07-06")
+                            :end_date   (str (subs years 0 4) "-10-05")} 
+          (= quarter "Q3") {:start_date (str (subs years 0 4) "-10-06")
+                            :end_date   (str "20" (subs years 5) "-01-05")} 
+          (= quarter "Q4") {:start_date (str "20" (subs years 5) "-01-06")
+                            :end_date   (str "20" (subs years 5) "-04-05")})))
 
 (defn parse
   "Takes parser and a string, and tries to find a match for its
