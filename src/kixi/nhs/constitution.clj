@@ -229,7 +229,8 @@
 (defn analysis-125 [ckan-client recipe]
   (->> (xls/process-xls ckan-client recipe)
        (transform/filter-dataset recipe)
-       (transform/enrich-dataset recipe)))
+       (transform/enrich-dataset recipe)
+       (mapv #(update-in % [:value] str))))
 
 (defn analysis [ckan-client]
   (let [recipes (-> (slurp "resources/recipes/constitution.edn")
