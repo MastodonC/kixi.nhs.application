@@ -1,4 +1,4 @@
-(ns kixi.nhs.application
+(ns kixi.nhs.application.system
   (:require [kixi.ckan                                 :refer (new-ckan-client-session)]
             [kixi.nhs.application.pipeline             :refer (new-pipeline)]
             [com.stuartsierra.component                :as component]

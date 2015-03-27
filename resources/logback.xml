@@ -18,13 +18,19 @@
 
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
       <!-- rollover daily -->
-      <fileNamePattern>logs/hecuba-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+      <fileNamePattern>logs/nhs-application-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
       <timeBasedFileNamingAndTriggeringPolicy
           class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
         <!-- or whenever the file size reaches 64 MB -->
         <maxFileSize>64 MB</maxFileSize>
       </timeBasedFileNamingAndTriggeringPolicy>
     </rollingPolicy>
+
+    <appender name="SYSLOG" class="ch.qos.logback.classic.net.SyslogAppender">
+      <syslogHost>localhost</syslogHost>
+      <facility>LOCAL0</facility>
+      <suffixPattern>%logger{35} %X{pipejine.q} - %message%n</suffixPattern>
+   </appender>
 
     <!-- Safely log to the same file from multiple JVMs. Degrades performance! -->
     <prudent>false</prudent>

@@ -7,9 +7,9 @@
 (defn init
   "Constructs the current development system."
   []
-  (require '[kixi.nhs.application])
+  (require '[kixi.nhs.application.system])
 
-  (let [new-system (resolve 'kixi.nhs.application/new-system)]
+  (let [new-system (resolve 'kixi.nhs.application.system/new-system)]
     (alter-var-root #'system
                     (constantly (new-system)))))
 
