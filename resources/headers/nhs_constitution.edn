@@ -56,4 +56,13 @@
  "Time Series of Cancelled Ops" {:generic [:year :quarter :last_minute_operations_cancelled
                                            :patients_not_treated_within_28_days_of_cancellation
                                            :elective_admissions :cancelled_ops_as_percentage_of_elective_admissions
-                                           :patients_not_treated_within_28_days_of_cancellation_as_percentage_of_cancellations]}}
+                                           :patients_not_treated_within_28_days_of_cancellation_as_percentage_of_cancellations]}
+
+ ;; For indicator 125:
+ "Mental health" {:generic [:year :number_of_new_cases_of_psychosis_served_by_early_intervention_teams_ytd
+                            :number_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care_qa
+                            :total_number_of_patients_on_cpa_discharged_from_psychiatric_inpatient_care_qa
+                            :proportion_of_patients_on_cpa_who_were_followed_up_within_7_days_after_discharge_from_psychiatric_inpatient_care_qa
+                            :number_of_admissions_to_acute_wards_that_were_gate_kept_by_the_crht_teams_qa
+                            :total_number_of_admissions_to_acute_wards_qa
+                            :proportion_of_admissions_to_acute_wards_that_were_gate_kept_by_the_crht_teams_qa]}}
