@@ -20,12 +20,12 @@
     (defnconsumer board-report-update-q [item]
       (let [{:keys [resource-id]} item]
         (log/info "Updating board report resource.")
-        (board-report/update-board-report-dataset ckan-client resource-id "resources/config.edn")
+        (board-report/update-board-report-dataset ckan-client resource-id "resources/prod_config.edn")
         (log/info "Finished updating board report.")))
 
     (defnconsumer board-report-insert-q [item]
       (log/info "Inserting new board report dataset/resource.")
-      (board-report/insert-new-dataset-and-resource ckan-client "resources/config.edn")
+      (board-report/insert-new-dataset-and-resource ckan-client "resources/prod_config.edn")
       (log/info "Finished inserting new board report dataset/resource."))
 
     (producer-of fanout-q board-report-update-q board-report-insert-q)

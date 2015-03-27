@@ -1,7 +1,9 @@
 (ns kixi.nhs.application.main
   "Start up for application"
   (:gen-class)
-  (:require [com.stuartsierra.component :as component]))
+  (:require [com.stuartsierra.component  :as component]
+            [clojure.tools.logging       :as log]
+            [kixi.nhs.application.system :as s]))
 
 (def system)
 
@@ -9,4 +11,10 @@
 
   (org.slf4j.MDC/put "pipejine.q" "main")
 
-  (alter-var-root #'system (fn [_] (component/start 'kixi.nhs.application/new-system))))
+  (let [new-system (s/new-system)]
+
+    (log/info "Initialising system: " new-system)
+    (alter-var-root #'system (constantly new-system))
+
+    (log/info "Starting system: " system)
+    (alter-var-root #'system component/start)))

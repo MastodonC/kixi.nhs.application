@@ -1,3 +1,5 @@
 {
- :ckan-client {:site ""}
- }
+ :ckan-client {}
+ :schedule {:process-job-schedule
+            ;; s   m  h  d  M D
+            { "0  30 10  *  * ?" {:dest :board-report :type :update :resource-id "68ebcbee-177f-42b5-a31e-8f706d4ebf50"}}}}
