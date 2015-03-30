@@ -1,7 +1,7 @@
 kixi.nhs.application
 ====================
 
-Dev setup:
+## Dev setup:
 
 1. In your home directory create a `.nhs.edn` with the contents below:
    ```edn
@@ -37,3 +37,9 @@ Dev setup:
    ```clojure
    (update-board-report-dataset (:ckan-client system) "68ebcbee-177f-42b5-a31e-8f706d4ebf50" "resources/prod_config.edn")
    ```
+
+## Documentation
+
+1. [Deployment](https://github.com/MastodonC/kixi.nhs.application/blob/feature/add-docs/doc/deployment.md)
+2. [Schedule](https://github.com/MastodonC/kixi.nhs.application/blob/feature/add-docs/doc/schedule.md)
+3. [Recipes](https://github.com/MastodonC/kixi.nhs.application/blob/feature/add-docs/doc/recipes.md)
